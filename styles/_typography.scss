@@ -1,2 +1,312 @@
 /*Font*/
-@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+    /*Delicious Handrawn*/
+    @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+    .delicious-handrawn-regular {
+        font-family: "Delicious Handrawn", cursive;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    /*Buenos Aires*/
+
+        /*Regular*/
+            @font-face {
+            font-family: 'BuenosAires';          
+            src: url('../font/buenosaires/BuenosAires-Regular.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+            }
+
+        /*Book*/
+            @font-face {
+            font-family: 'BuenosAires';          
+            src: url('../font/buenosaires/BuenosAires-Book.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+            }
+        
+        /*Black*/
+            @font-face {
+            font-family: 'BuenosAires';          
+            src: url('../font/buenosaires/BuenosAires-Black.ttf') format('truetype');
+            font-weight: 900;
+            font-style: normal;
+            }
+
+/*Font-familly*/
+    $decor: "Delicious Handrawn";    
+    $heading: "BuenosAires"; 
+    $body: "BuenosAires"; 
+
+/*Font-size*/
+    $font-size-2xs: 10px; 
+    $font-size-xs: 12px; 
+    $font-size-sm:14px; 
+    $font-size-md: 16px; 
+    $font-size-lg: 18px; 
+    $font-size-xl: 20px; 
+    $font-size-2xl:24px; 
+    $font-size-3xl:30px; 
+    $font-size-4xl: 36px; 
+    $font-size-5xl: 48px; 
+    $font-size-huge: 74px; 
+
+/*Font-weight*/
+    $book: 400; 
+    $black: 900; 
+    $regular: 500; 
+
+/*Line-height*/
+    $line-height-2xs:12px; 
+    $line-height-xs: 14px; 
+    $line-height-sm: 16px; 
+    $line-height-md: 18px; 
+    $line-height-lg: 20px; 
+    $line-height-xl: 24px; 
+    $line-height-2xl: 28px; 
+    $line-height-3xl: 32px; 
+    $line-height-4xl: 36px; 
+    $line-height-5xl: 40px; 
+    $line-height-6xl: 48px; 
+    $line-height-7xl: 58px;
+    $line-height-huge: 80px; 
+
+/*=========================
+Styles
+===========================*/
+
+/*Heading*/
+
+.heading-xs{
+    font-family: $heading;
+    font-weight: $black;
+    font-size: $font-size-xs ;
+    line-height: $line-height-sm;
+}
+   
+.heading-sm{
+    font-family: $heading;
+    font-weight: $black;
+    font-size: $font-size-sm ;
+    line-height: $line-height-md;
+}
+
+.heading-md{
+    font-family: $heading;
+    font-weight: $black;
+    font-size: $font-size-md ;
+    line-height: $line-height-lg;
+}
+
+.heading-lg{
+    font-family: $heading;
+    font-weight: $black;
+    font-size: $font-size-lg ;
+    line-height: $line-height-xl;
+}
+
+.heading-xl{
+    font-family: $heading;
+    font-weight: $black;
+    font-size: $font-size-xl ;
+    line-height: $line-height-2xl;
+}
+
+.heading-2xl{
+    font-family: $heading;
+    font-weight: $black;
+    font-size: $font-size-2xl ;
+    line-height: $line-height-3xl;
+}
+
+.heading-3xl{
+    font-family: $heading;
+    font-weight: $black;
+    font-size: $font-size-3xl ;
+    line-height: $line-height-5xl;
+}
+
+.heading-4xl{
+    font-family: $heading;
+    font-weight: $black;
+    font-size: $font-size-4xl ;
+    line-height: $line-height-6xl;
+}
+
+.heading-5xl{
+    font-family: $heading;
+    font-weight: $black;
+    font-size: $font-size-5xl ;
+    line-height: $line-height-7xl;
+}
+
+.heading-huge{
+    font-family: $heading;
+    font-weight: $black;
+    font-size: $font-size-huge ;
+    line-height: $line-height-huge;
+}
+
+/*Preamble*/
+.preamble-xs{
+    font-family: $body;
+    font-weight: $regular;
+    font-size: $font-size-xs ;
+    line-height: $line-height-lg;
+}
+
+.preamble-sm{
+    font-family: $body;
+    font-weight: $regular;
+    font-size: $font-size-sm ;
+    line-height: $line-height-xl;
+}
+
+.preamble-md{
+    font-family: $body;
+    font-weight: $regular;
+    font-size: $font-size-md ;
+    line-height: $line-height-xl;
+}
+
+.preamble-lg{
+    font-family: $body;
+    font-weight: $regular;
+    font-size: $font-size-lg ;
+    line-height: $line-height-2xl;
+}
+
+.preamble-xl{
+    font-family: $body;
+    font-weight: $regular;
+    font-size: $font-size-xl;
+    line-height: $line-height-2xl;
+}
+
+.preamble-2xl{
+    font-family: $body;
+    font-weight: $regular;
+    font-size: $font-size-2xl;
+    line-height: $line-height-4xl;
+}
+
+.preamble-3xl{
+    font-family: $body;
+    font-weight: $regular;
+    font-size: $font-size-3xl;
+    line-height: $line-height-5xl;
+}
+
+.preamble-4xl{
+    font-family: $body;
+    font-weight: $regular;
+    font-size: $font-size-4xl;
+    line-height: $line-height-6xl;
+}
+
+/*Body*/
+    /*Book*/
+    .book-2xs{
+        font-family: $body;
+        font-weight: $book;
+        font-size: $font-size-2xs;
+        line-height: $line-height-xs;
+    }
+
+    .book-xs{
+        font-family: $body;
+        font-weight: $book;
+        font-size: $font-size-xs;
+        line-height: $line-height-sm;
+    }
+
+    .book-sm{
+        font-family: $body;
+        font-weight: $book;
+        font-size: $font-size-sm;
+        line-height: $line-height-lg;
+    }
+
+    .book-md{
+        font-family: $body;
+        font-weight: $book;
+        font-size: $font-size-md;
+        line-height: $line-height-xl;
+    }
+
+    .book-lg{
+        font-family: $body;
+        font-weight: $book;
+        font-size: $font-size-lg;
+        line-height: $line-height-2xl;
+    }
+
+    .book-xl{
+        font-family: $body;
+        font-weight: $book;
+        font-size: $font-size-xl;
+        line-height: $line-height-2xl;
+    }
+
+    .book-2xl{
+        font-family: $body;
+        font-weight: $book;
+        font-size: $font-size-2xl;
+        line-height: $line-height-3xl;
+    }
+
+    /*Black*/
+    .black-2xs{
+        font-family: $body;
+        font-weight: $black;
+        font-size: $font-size-2xs;
+        line-height: $line-height-xs;
+    }
+
+    .black-xs{
+        font-family: $body;
+        font-weight: $black;
+        font-size: $font-size-xs;
+        line-height: $line-height-sm;
+    }
+
+    .black-sm{
+        font-family: $body;
+        font-weight: $black;
+        font-size: $font-size-sm;
+        line-height: $line-height-lg;
+    }
+
+    .black-md{
+        font-family: $body;
+        font-weight: $black;
+        font-size: $font-size-md;
+        line-height: $line-height-xl;
+    }
+
+    .black-lg{
+        font-family: $body;
+        font-weight: $black;
+        font-size: $font-size-lg;
+        line-height: $line-height-2xl;
+    }
+
+    .black-xl{
+        font-family: $body;
+        font-weight: $black;
+        font-size: $font-size-xl;
+        line-height: $line-height-2xl;
+    }
+
+    .black-2xl{
+        font-family: $body;
+        font-weight: $black;
+        font-size: $font-size-2xl;
+        line-height: $line-height-3xl;
+    }
+
+    
+
+

@@ -1,0 +1,307 @@
+/* =============
+General 
+================*/
+@import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap");
+*, html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*=================
+Variables Core
+===================*/
+/*Gray*/
+/*Yellow*/
+/*Maroon*/
+/*Brown*/
+/*==================
+Variables Tockens
+====================*/
+/*Color*/
+/*Text*/
+/*Background*/
+/*Border*/
+/*Effects*/
+/*Illustrations*/
+/*Logo*/
+/*Button*/
+/*Outlined*/
+/*Primary*/
+/*Secondary*/
+/*Filled*/
+/*Primary*/
+/*Secondary*/
+/*Text*/
+/*Spacing*/
+/*Border-radius*/
+/*Border*/
+/*Font*/
+/*Delicious Handrawn*/
+.delicious-handrawn-regular {
+  font-family: "Delicious Handrawn", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Buenos Aires*/
+/*Regular*/
+@font-face {
+  font-family: "BuenosAires";
+  src: url("../font/buenosaires/BuenosAires-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+/*Book*/
+@font-face {
+  font-family: "BuenosAires";
+  src: url("../font/buenosaires/BuenosAires-Book.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+/*Black*/
+@font-face {
+  font-family: "BuenosAires";
+  src: url("../font/buenosaires/BuenosAires-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+/*Font-familly*/
+/*Font-size*/
+/*Font-weight*/
+/*Line-height*/
+/*=========================
+Styles
+===========================*/
+/*Heading*/
+.heading-xs {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.heading-sm {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.heading-md {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.heading-lg {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.heading-xl {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.heading-2xl {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.heading-3xl {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.heading-4xl {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 48px;
+}
+
+.heading-5xl {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.heading-huge {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 74px;
+  line-height: 80px;
+}
+
+/*Preamble*/
+.preamble-xs {
+  font-family: "BuenosAires";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.preamble-sm {
+  font-family: "BuenosAires";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.preamble-md {
+  font-family: "BuenosAires";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.preamble-lg {
+  font-family: "BuenosAires";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.preamble-xl {
+  font-family: "BuenosAires";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.preamble-2xl {
+  font-family: "BuenosAires";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.preamble-3xl {
+  font-family: "BuenosAires";
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.preamble-4xl {
+  font-family: "BuenosAires";
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 48px;
+}
+
+/*Body*/
+/*Book*/
+.book-2xs {
+  font-family: "BuenosAires";
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.book-xs {
+  font-family: "BuenosAires";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.book-sm {
+  font-family: "BuenosAires";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.book-md {
+  font-family: "BuenosAires";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.book-lg {
+  font-family: "BuenosAires";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.book-xl {
+  font-family: "BuenosAires";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.book-2xl {
+  font-family: "BuenosAires";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+/*Black*/
+.black-2xs {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.black-xs {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.black-sm {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.black-md {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.black-lg {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.black-xl {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.black-2xl {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
+}/*# sourceMappingURL=style.css.map */
