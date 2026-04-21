@@ -1,0 +1,160 @@
+/* =============
+General 
+================*/
+
+*,html {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*=================
+Variables Core
+===================*/
+
+    /*Gray*/
+    $gray-100: #f6f2ec; 
+    $gray-100-A-1: #f6f2ec01;
+    $gray-900: #1a1a1a;
+
+    /*Yellow*/
+    $yellow-100:#fff3cd;
+    $yellow-200:#fee69b;
+    $yellow-300:#feda68; 
+    $yellow-400:#fdcd36;
+    $yellow-500:#fdc104;
+
+    /*Maroon*/
+    $maroon-100:#dfccd4;
+    $maroon-200:#c09aa9;
+    $maroon-300:#a0677e;
+    $maroon-400:#813553;
+    $maroon-500:#610228;
+    $maroon-500-A-80:#61022880;
+
+    /*Brown*/
+    $brown-100:#d6d0ce;
+    $brown-200:#aea19d;
+    $brown-300:#85726d;
+    $brown-400:#5d433c;
+    $brown-500:#34140b;
+    $brown-500-A-60:#34140b60;
+    
+/*==================
+Variables Tockens
+====================*/
+
+/*Color*/
+
+    /*Text*/
+    $text-primary: $brown-500;
+    $text-invert: $gray-100;
+    $text-brand:$yellow-500; 
+
+    /*Background*/
+    $background-primary: $gray-100;
+    $background-secondary: $brown-500;
+    $background-brand: $brown-500; 
+
+    /*Border*/
+    $border-primary: $brown-500;
+    $border-secondary: $maroon-100;
+    $border-brand: $yellow-500; 
+
+    /*Effects*/
+    $effects-brand-a:$maroon-500; 
+    $effects-brown-a:$brown-500-A-60; 
+    $effects-transparent: $gray-100-A-1; 
+
+    /*Illustrations*/
+    $illustrations-primary: $gray-100;
+    $illustrations-secondary: $brown-500; 
+    $illustrations-brand:$maroon-400; 
+
+    /*Logo*/
+    $logo-primary: $gray-900; 
+    $logo-invert: $gray-100; 
+
+    /*Button*/
+
+        /*Outlined*/
+            /*Primary*/
+            $btn-outlined-primary-border:$brown-500; 
+            $btn-outlined-primary-text:$brown-500; 
+            $btn-outlined-primary-icon:$brown-500; 
+
+            /*Secondary*/
+            $btn-outlined-secondary-border: $gray-100; 
+            $btn-outlined-secondary-text: $gray-100; 
+            $btn-outlined-secondary-icon: $gray-100; 
+
+        /*Filled*/
+            /*Primary*/
+            $btn-filled-primary-bg:$yellow-500; 
+            $btn-filled-primary-text:$gray-900; 
+            $btn-filled-primary-icon:$gray-900; 
+
+            /*Secondary*/
+            $btn-filled-secondary-bg: $maroon-500; 
+            $btn-filled-secondary-text: $gray-100; 
+            $btn-filled-secondary-icon: $gray-100; 
+        
+        /*Text*/
+        $btn-text-text: $brown-500;
+        $btn-text-icon: $brown-500; 
+
+/*Spacing*/
+    $spacing-none:0px; 
+    $spacing-xs: 1px; 
+    $spacing-sm: 2px; 
+    $spacing-md: 4px; 
+    $spacing-lg: 8px; 
+    $spacing-xl: 10px; 
+    $spacing-2xl: 12px; 
+    $spacing-3xl: 16px; 
+    $spacing-4xl: 20px; 
+    $spacing-5xl: 24px; 
+    $spacing-6xl: 28px; 
+    $spacing-7xl: 32px; 
+    $spacing-8xl: 40px; 
+    $spacing-9xl: 48px; 
+    $spacing-10xl: 56px; 
+    $spacing-11xl: 64px; 
+    $spacing-12xl: 72px; 
+    $spacing-13xl: 80px; 
+
+/*Border-radius*/
+    $border-radius-none: 0px; 
+    $border-radius-xs: 8px; 
+    $border-radius-sm: 12px;
+    $border-radius-md: 20px;
+    $border-radius-lg: 38px;
+    $border-radius-full: 100000px;
+
+/*Border*/
+    $border-none: 0px; 
+    $border-xs: 0.5px;
+    $border-sm: 1px; 
+    $border-md: 1.5px;
+    $border-lg: 2px;
+    $border-xl: 3px;
+    $border-2xl: 4px;
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
