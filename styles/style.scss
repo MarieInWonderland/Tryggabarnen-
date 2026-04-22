@@ -1,4 +1,50 @@
 @import 'bases';       
 @import 'typography';
 
+/*===================
+GENERAL
+===================*/
+*{
+    background-color: $background-primary;
+}
 
+.highlight{
+    color: $text-brand;
+}
+
+/*===================
+HEADER
+===================*/
+
+/*===================
+MAIN
+===================*/
+
+.hero-statistics{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url('img/pictures/hero.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .hero-content{
+        max-width: 40%;
+        min-height: 100%;
+        padding: $spacing-9xl;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: flex-end;
+        gap: $spacing-9xl;
+        .text-container{
+            display: flex;
+            flex-direction: column;
+            gap:$spacing-4xl;
+        }
+    }
+}
+
+/*===================
+FOOTER
+===================*/
