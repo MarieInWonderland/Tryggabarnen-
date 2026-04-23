@@ -12,9 +12,16 @@ body{
     color: $text-brand;
 }
 
+a{
+    color: $text-invert;
+    text-decoration: none;
+}
+
 /*===================
 HEADER
 ===================*/
+
+//Logo and hamburger menu
 
 nav{
     position: fixed;
@@ -27,9 +34,7 @@ nav{
     padding: $spacing-2xl $spacing-9xl;
     justify-content: space-between;
     align-items: center;
-
-    background-color: $effects-brown-a;
-    backdrop-filter: blur (25px);
+    background-color: $background-secondary;
 
     .nav-header{
         display: flex;
@@ -37,31 +42,79 @@ nav{
         .nav-toggle{
             display: none;
         }
+    }
 
-        .nav-wrapper{
-            min-width: 60%;
-            display: flex;
-            
-            ul{
-            width: 100%;
-            display: flex;
-            align-items: center;
-            gap: $spacing-2xl;
-            list-style: none;
+//Links 
+    .nav-wrapper{
+
+        ul{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: $spacing-5xl;
+        list-style: none;
 
             li{
+                width: 100%;
                 display: flex;
+                position: relative;
+                padding:$spacing-lg;
+                
+                .menu-item{
+                    display: flex;
+                    align-items: center;
+                    
+                    .dropdown-toggle{
+                        cursor: pointer;
+
+                        svg {
+                            //to turn down icon
+                            transition: transform 0.3s ease;
+                            fill: $text-invert; 
+                        }
+                    }  
+                }
+                //under menu 
+                .subnav{
+                position: absolute;
+                min-width: max-content;
+                top: 100%;
+                left:0px;
+                display: none;
+                list-style: none;
+                padding: 1rem;
+                }
+
+                .subnav.open{
+                    margin-top:20px;
+                    display: flex;
+                    flex-direction: column;
+                    padding: $spacing-lg;
+                    border-radius: $border-radius-none $border-radius-none $border-radius-md $border-radius-md;
+                    background-color: $effects-brown-a;
+                    backdrop-filter: blur (25px);
+
+                    li{
+                        padding: $spacing-lg;
+                        border: $border-lg 0px;
+                        border-color: $border-primary;
+
+                        &:hover{
+                           background-color: $background-secondary; 
+                        }
+                    }
+                }
+
             }
         }
-        }
-
-
     }
 }
 
 /*===================
 MAIN
 ===================*/
+
+/*Herosection*/
 
 .hero-statistics{
     min-width: 100vw;
@@ -136,6 +189,38 @@ MAIN
             }
         }
 }
+}
+
+/*About us section*/
+.about-us{
+    display: flex;
+    padding:$spacing-none $spacing-10xl;
+    gap: $spacing-4xl;
+    margin-top: 15rem;
+
+    .about-us-content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $spacing-8xl;
+
+        .text-section{
+            gap: $spacing-3xl;
+            .title{
+                gap: $spacing-md;
+            }   
+        }
+        .about-us-btn{
+            display: flex;
+            justify-content: flex-start;
+            gap: $spacing-5xl;
+
+            .btn-primary-outlined{
+                color:$text-primary; 
+                fill:$text-primary;
+            }
+        }
+    }
 }
 
 
