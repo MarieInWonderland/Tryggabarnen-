@@ -189,28 +189,41 @@ Button
     color: $btn-outlined-primary-text;  
     fill: $btn-outlined-primary-icon;       
     border: $border-md solid $btn-outlined-secondary-border;  
-    border-image: url(../img/graphic-element/border-outlined-primary.svg) stretch;
     border-radius: $border-radius-full;                          
     cursor: pointer;  
 }
 
 .btn-secondary-outlined{
-    display: flex;
+    position: relative;
+    display: inline-grid;
+    place-items: center;
     height: 44px;
     min-height: 44px;
     max-height: 44px;
     padding: $spacing-md $spacing-8xl;
-    justify-content: center;
-    align-items: center;
-    gap: $spacing-lg;
-    
-    background: none;    
+    background: transparent;
+
     color: $btn-outlined-primary-text;  
     fill: $btn-outlined-primary-icon;       
-    border: $border-md solid $btn-outlined-secondary-border;  
-    border-image: url(../img/graphic-element/border-outlined-primary.svg) stretch;
     border-radius: $border-radius-full;                          
     cursor: pointer;  
+
+    .button__border {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+    }
+
+    span {
+    display: flex;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    }
 }
 
 
