@@ -202,6 +202,8 @@ Button
     max-height: 44px;
     padding: $spacing-md $spacing-8xl;
     background: transparent;
+    border: none;
+    outline: none;
 
     color: $btn-outlined-primary-text;  
     fill: $btn-outlined-primary-icon;       

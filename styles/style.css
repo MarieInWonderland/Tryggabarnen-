@@ -89,6 +89,8 @@ Button
   max-height: 44px;
   padding: 4px 40px;
   background: transparent;
+  border: none;
+  outline: none;
   color: #34140b;
   fill: #34140b;
   border-radius: 100000px;
@@ -546,7 +548,14 @@ MAIN
   margin-top: 15rem;
 }
 .about-us .picture {
-  min-width: 30%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.about-us .picture img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .about-us .about-us-content {
   display: flex;

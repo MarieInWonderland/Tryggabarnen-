@@ -200,8 +200,16 @@ MAIN
     margin-top: 15rem;
 
     .picture{
-                min-width: 30%;
-            }
+        width: 100%;;
+        display: flex;
+        align-items: center;
+
+        img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
 
     .about-us-content{
         display: flex;
