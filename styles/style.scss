@@ -16,6 +16,49 @@ body{
 HEADER
 ===================*/
 
+nav{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    min-width: 100%;
+    height: 4rem;
+    display: flex;
+    padding: $spacing-2xl $spacing-9xl;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: $effects-brown-a;
+    backdrop-filter: blur (25px);
+
+    .nav-header{
+        display: flex;
+
+        .nav-toggle{
+            display: none;
+        }
+
+        .nav-wrapper{
+            min-width: 60%;
+            display: flex;
+            
+            ul{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: $spacing-2xl;
+            list-style: none;
+
+            li{
+                display: flex;
+            }
+        }
+        }
+
+
+    }
+}
+
 /*===================
 MAIN
 ===================*/
@@ -23,27 +66,78 @@ MAIN
 .hero-statistics{
     min-width: 100vw;
     min-height: 100vh;
-    background-image: url('../img /pictures/hero.webp');
+    background-image: url('/img/pictures/hero.webp');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
 
     .hero-content{
         max-width: 50%;
         min-height: 100%;
-        padding: $spacing-9xl;
+        padding: 184px $spacing-9xl;
         display: flex;
         flex-direction: column;
-        align-content: flex-start;
-        justify-content: flex-end;
+        align-items: flex-start;
         gap: $spacing-9xl;
         .text-container{
             display: flex;
             flex-direction: column;
             gap:$spacing-4xl;
+
+            h1, p{
+                color: $text-invert;
+            }
+        }
+        .hero-btn{
+            display: flex;
+            justify-content: space-between;
+
+            .btn-secondary-outlined{
+                color:$text-invert; 
+                fill:$text-invert;
+            }
         }
     }
+    .statistics{
+        min-width: 80%;
+        height: fit-content;
+        justify-self: center;
+        position: absolute; 
+        bottom: -100px;   
+        padding: $spacing-6xl $spacing-9xl;        
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $effects-brand-a;
+        backdrop-filter: blur(25px);
+        border-radius: $border-radius-none $border-radius-lg $border-radius-lg $border-radius-lg;
+
+        display: flex;
+        justify-content: space-between;
+
+        .statistic{
+            max-width: 18.063rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: $spacing-2xl;
+            
+
+            h2, p, path{
+                color:$text-invert; 
+                fill: $text-invert;
+                text-align: centers;
+            }
+
+            svg{
+                width: 100%;
+            }
+        }
 }
+}
+
 
 /*===================
 FOOTER

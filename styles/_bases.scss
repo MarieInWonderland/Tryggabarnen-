@@ -66,7 +66,7 @@ Variables Tockens
     $border-brand: $yellow-500; 
 
     /*Effects*/
-    $effects-brand-a:$maroon-500; 
+    $effects-brand-a:$maroon-500-A-80; 
     $effects-brown-a:$brown-500-A-60; 
     $effects-transparent: $gray-100-A-1; 
 
@@ -152,6 +152,67 @@ Breakpoints
 $breakpoint-desktop: 1440px; 
 $breakpoint-tablet: 755px;
 $breakpont-mobile: 375px; 
+
+/*==================
+Button 
+====================*/
+
+.btn-filled{
+    display: flex;
+    height: 44px;
+    min-height: 44px;
+    max-height: 44px;
+    padding: $spacing-md $spacing-8xl;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-lg;
+    
+    background: $btn-filled-primary-bg;      
+    color: $btn-filled-primary-text;  
+    fill: $btn-filled-primary-icon;       
+    border: none;  
+    border-radius: $border-radius-full;                          
+    cursor: pointer;  
+}
+
+.btn-primary-outlined{
+    display: flex;
+    height: 44px;
+    min-height: 44px;
+    max-height: 44px;
+    padding: $spacing-md $spacing-8xl;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-lg;
+    
+    background: none;    
+    color: $btn-outlined-primary-text;  
+    fill: $btn-outlined-primary-icon;       
+    border: $border-md solid $btn-outlined-secondary-border;  
+    border-image: url(../img/graphic-element/border-outlined-primary.svg) stretch;
+    border-radius: $border-radius-full;                          
+    cursor: pointer;  
+}
+
+.btn-secondary-outlined{
+    display: flex;
+    height: 44px;
+    min-height: 44px;
+    max-height: 44px;
+    padding: $spacing-md $spacing-8xl;
+    justify-content: center;
+    align-items: center;
+    gap: $spacing-lg;
+    
+    background: none;    
+    color: $btn-outlined-primary-text;  
+    fill: $btn-outlined-primary-icon;       
+    border: $border-md solid $btn-outlined-secondary-border;  
+    border-image: url(../img/graphic-element/border-outlined-primary.svg) stretch;
+    border-radius: $border-radius-full;                          
+    cursor: pointer;  
+}
+
 
 
 

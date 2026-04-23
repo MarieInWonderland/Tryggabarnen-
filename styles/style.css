@@ -43,6 +43,64 @@ Variables Tockens
 /*==================
 Breakpoints 
 ====================*/
+/*==================
+Button 
+====================*/
+.btn-filled {
+  display: flex;
+  height: 44px;
+  min-height: 44px;
+  max-height: 44px;
+  padding: 4px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: #fdc104;
+  color: #1a1a1a;
+  fill: #1a1a1a;
+  border: none;
+  border-radius: 100000px;
+  cursor: pointer;
+}
+
+.btn-primary-outlined {
+  display: flex;
+  height: 44px;
+  min-height: 44px;
+  max-height: 44px;
+  padding: 4px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  color: #34140b;
+  fill: #34140b;
+  border: 1.5px solid #f6f2ec;
+  -o-border-image: url(../img/graphic-element/border-outlined-primary.svg) stretch;
+     border-image: url(../img/graphic-element/border-outlined-primary.svg) stretch;
+  border-radius: 100000px;
+  cursor: pointer;
+}
+
+.btn-secondary-outlined {
+  display: flex;
+  height: 44px;
+  min-height: 44px;
+  max-height: 44px;
+  padding: 4px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  color: #34140b;
+  fill: #34140b;
+  border: 1.5px solid #f6f2ec;
+  -o-border-image: url(../img/graphic-element/border-outlined-primary.svg) stretch;
+     border-image: url(../img/graphic-element/border-outlined-primary.svg) stretch;
+  border-radius: 100000px;
+  cursor: pointer;
+}
+
 /*Font*/
 /*Delicious Handrawn*/
 .delicious-handrawn-regular {
@@ -323,31 +381,110 @@ body {
 /*===================
 HEADER
 ===================*/
+nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  min-width: 100%;
+  height: 4rem;
+  display: flex;
+  padding: 12px 48px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(52, 20, 11, 0.3764705882);
+  backdrop-filter: blur 25px;
+}
+nav .nav-header {
+  display: flex;
+}
+nav .nav-header .nav-toggle {
+  display: none;
+}
+nav .nav-header .nav-wrapper {
+  min-width: 60%;
+  display: flex;
+}
+nav .nav-header .nav-wrapper ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+}
+nav .nav-header .nav-wrapper ul li {
+  display: flex;
+}
+
 /*===================
 MAIN
 ===================*/
 .hero-statistics {
   min-width: 100vw;
   min-height: 100vh;
-  background-image: url("../img /pictures/hero.webp");
+  background-image: url("/img/pictures/hero.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
 }
 .hero-statistics .hero-content {
   max-width: 50%;
   min-height: 100%;
-  padding: 48px;
+  padding: 184px 48px;
   display: flex;
   flex-direction: column;
-  align-content: flex-start;
-  justify-content: flex-end;
+  align-items: flex-start;
   gap: 48px;
 }
 .hero-statistics .hero-content .text-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+.hero-statistics .hero-content .text-container h1, .hero-statistics .hero-content .text-container p {
+  color: #f6f2ec;
+}
+.hero-statistics .hero-content .hero-btn {
+  display: flex;
+  justify-content: space-between;
+}
+.hero-statistics .hero-content .hero-btn .btn-secondary-outlined {
+  color: #f6f2ec;
+  fill: #f6f2ec;
+}
+.hero-statistics .statistics {
+  min-width: 80%;
+  height: -moz-fit-content;
+  height: fit-content;
+  justify-self: center;
+  position: absolute;
+  bottom: -100px;
+  padding: 28px 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(97, 2, 40, 0.5019607843);
+  backdrop-filter: blur(25px);
+  border-radius: 0px 38px 38px 38px;
+  display: flex;
+  justify-content: space-between;
+}
+.hero-statistics .statistics .statistic {
+  max-width: 18.063rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.hero-statistics .statistics .statistic h2, .hero-statistics .statistics .statistic p, .hero-statistics .statistics .statistic path {
+  color: #f6f2ec;
+  fill: #f6f2ec;
+  text-align: centers;
+}
+.hero-statistics .statistics .statistic svg {
+  width: 100%;
 }
 
 /*===================
