@@ -27,6 +27,7 @@ Variables Core
     $yellow-300:#feda68; 
     $yellow-400:#fdcd36;
     $yellow-500:#fdc104;
+    $yellow-600:#eab200;
 
     /*Maroon*/
     $maroon-100:#dfccd4;
@@ -43,6 +44,8 @@ Variables Core
     $brown-400:#5d433c;
     $brown-500:#34140b;
     $brown-500-A-60:#34140b60;
+    $brown-500-A-30: #34140b30;
+    $brown-500-A-10: #34140b10;
     
 /*==================
 Variables Tockens
@@ -86,22 +89,20 @@ Variables Tockens
             $btn-outlined-primary-border:$brown-500; 
             $btn-outlined-primary-text:$brown-500; 
             $btn-outlined-primary-icon:$brown-500; 
+            $btn-outlined-primary-hover:$brown-500-A-10; 
 
             /*Secondary*/
             $btn-outlined-secondary-border: $gray-100; 
             $btn-outlined-secondary-text: $gray-100; 
-            $btn-outlined-secondary-icon: $gray-100; 
+            $btn-outlined-secondary-icon: $gray-100;
+            $btn-outlined-secondary-hover:$brown-500-A-30;  
 
         /*Filled*/
             /*Primary*/
             $btn-filled-primary-bg:$yellow-500; 
             $btn-filled-primary-text:$gray-900; 
             $btn-filled-primary-icon:$gray-900; 
-
-            /*Secondary*/
-            $btn-filled-secondary-bg: $maroon-500; 
-            $btn-filled-secondary-text: $gray-100; 
-            $btn-filled-secondary-icon: $gray-100; 
+            $btn-filled-primary-hover:$yellow-600;
         
         /*Text*/
         $btn-text-text: $brown-500;
@@ -150,7 +151,7 @@ Breakpoints
 ====================*/
 
 $breakpoint-desktop: 1440px; 
-$breakpoint-tablet: 755px;
+$breakpoint-tablet: 768px;
 $breakpont-mobile: 375px; 
 
 /*==================
@@ -173,6 +174,10 @@ Button
     border: none;  
     border-radius: $border-radius-full;                          
     cursor: pointer;  
+
+    &:hover{
+        background-color: $yellow-600;
+    }
 }
 
 .btn-primary-outlined{
@@ -180,7 +185,7 @@ Button
     height: auto;
     min-width: fit-content;
     width: auto;
-    padding: $spacing-md $spacing-8xl;
+    padding: $spacing-md $spacing-2xl;
     position: relative;
     display: inline-grid;
     place-items: center;
@@ -202,6 +207,7 @@ Button
     pointer-events: none;
     overflow: visible;
     aspect-ratio: none;
+    transform: scaleX(1.5) scaleY(1.15);
     }
 
     .button-content{
@@ -216,6 +222,10 @@ Button
         display: inline-block;
         }
     } 
+
+    &:hover{
+        background-color: $btn-outlined-primary-hover;
+    }
 }
 
 .btn-secondary-outlined{
@@ -223,7 +233,7 @@ Button
     height: auto;
     min-width: fit-content;
     width: auto;
-    padding: $spacing-md $spacing-8xl;
+    padding: $spacing-md $spacing-2xl;
     position: relative;
     display: inline-grid;
     place-items: center;
@@ -245,11 +255,13 @@ Button
     pointer-events: none;
     overflow: visible;
     aspect-ratio: none;
+    transform: scaleX(1.5) scaleY(1.15);
     }
 
     .button-content{
         display: flex;
         padding: $spacing-md $spacing-8xl;
+        gap:$spacing-lg;
 
         span {
         display: flex;
@@ -260,8 +272,41 @@ Button
         }
     }
 
+    &:hover{
+        background-color: $btn-outlined-secondary-hover;
+    }
     
-    
+}
+
+/*==================
+Highlight 
+====================*/
+
+.highlight-content{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    /*justify-content: center;*/
+    padding: 0.05em 0.18em;
+    white-space: nowrap;
+    vertical-align: baseline;
+
+    .highlight {
+        position: absolute;
+        inset: 0;
+        width: auto;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+        overflow: visible;
+        transform: scaleX(1.05) scaleY(1.15);
+        /*transform-origin: center;*/
+    }
+
+    .text{
+    position: relative;
+    z-index: 1;
+    }
 }
 
 

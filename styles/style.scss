@@ -21,6 +21,8 @@ a{
 HEADER
 ===================*/
 
+//DESKTOP
+
 //Logo and hamburger menu
 
 nav{
@@ -77,11 +79,12 @@ nav{
                 .menu-item{
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
+                    align-items: flex-end;
 
                     .text-content{
+                        display: flex;
                         flex-direction: row;
-                        align-items: center;
+                        align-items: flex-end;
 
                         a{
                         width: fit-content;
@@ -143,6 +146,17 @@ nav{
     }
 }
 
+//TABLET
+
+@media (max-width:$breakpoint-tablet) {
+nav{
+    flex-direction: column;
+}
+    
+}
+
+//MOBILE
+
 /*===================
 MAIN
 ===================*/
@@ -181,6 +195,7 @@ MAIN
         .hero-btn{
             display: flex;
             justify-content: space-between;
+            gap: $spacing-5xl;
 
             .btn-secondary-outlined{
                 color:$text-invert; 
@@ -218,7 +233,7 @@ MAIN
                 text-align: centers;
             }
 
-            svg{
+            img{
                 width: 100%;
             }
         }
@@ -231,6 +246,7 @@ MAIN
     padding:$spacing-none $spacing-10xl;
     gap: $spacing-4xl;
     margin-top: 15rem;
+    margin-bottom: 11.25rem;
 
     .picture{
         width: 100%;;
@@ -251,41 +267,47 @@ MAIN
         gap: $spacing-8xl;
 
         .text-section{
+            display: flex;
+            flex-direction: column;
             gap: $spacing-3xl;
             
             .title{
+                display: flex;
+                flex-direction: column;
                 gap: $spacing-md;
 
-                h4{
-                    .highlight-brand{
-                        width: fit-content;
-                        padding: $spacing-md $spacing-8xl;
-                        position: relative;
-                        display: inline-block;
-                        place-items: center;
-                        white-space: nowrap;
-                        
-                        background: transparent;
-                        border: none;
-                        outline: none;
+                h2 {
+                    line-height: 1.05;
 
-                        .highlight{
+                    /*.highlight-brand{
+                        position: relative;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0.05em 0.18em;
+                        white-space: nowrap;
+                        vertical-align: baseline;
+
+                        .highlight {
+                            position: absolute;
+                            inset: 0;
                             width: 100%;
                             height: 100%;
                             z-index: 0;
                             pointer-events: none;
                             overflow: visible;
+                            transform: scaleX(1) scaleY(1.15);
+                            transform-origin: center;
                         }
-                        .text{
-                            display: flex;
-                            width: 100%;
-                            position: absolute;
-                            z-index: 1;
 
+                        .text{
+                            position: relative;
+                            z-index: 1;
                         }
-                    }
+                    }*/
                 }
             }   
+        }
         }
         .about-us-btn{
             display: flex;
@@ -298,8 +320,37 @@ MAIN
             }
         }
     }
-}
 
+.events{
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-3xl;
+    padding: $spacing-none spacing-9xl;
+
+    .preamble-lg{
+        max-width: 40%
+    }
+    .cards-event{
+        width: 100%;
+        height: auto;
+        display: flex;
+
+        .event-card{
+            &:first-child{
+                background-image: url(../img/pictures/Badminton\ 2.webp);
+                background-position: center;
+            }
+            .date{
+            display: flex;
+            flex-direction: column; 
+            }
+            
+            
+        }
+    }
+    
+
+}
 
 /*===================
 FOOTER
