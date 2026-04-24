@@ -47,11 +47,11 @@ Breakpoints
 Button 
 ====================*/
 .btn-filled {
-  display: flex;
   height: 44px;
-  min-height: 44px;
-  max-height: 44px;
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 4px 40px;
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
@@ -64,30 +64,54 @@ Button
 }
 
 .btn-primary-outlined {
-  display: flex;
-  height: 44px;
   min-height: 44px;
-  max-height: 44px;
+  height: auto;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  width: auto;
   padding: 4px 40px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  background: none;
-  color: #34140b;
-  fill: #34140b;
-  border: 1.5px solid #f6f2ec;
-  border-radius: 100000px;
-  cursor: pointer;
-}
-
-.btn-secondary-outlined {
   position: relative;
   display: inline-grid;
   place-items: center;
-  height: 44px;
-  min-height: 44px;
-  max-height: 44px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #34140b;
+  fill: #34140b;
+  border-radius: 100000px;
+  cursor: pointer;
+}
+.btn-primary-outlined .button__border {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+  aspect-ratio: none;
+}
+.btn-primary-outlined .button-content {
+  display: flex;
   padding: 4px 40px;
+}
+.btn-primary-outlined .button-content span {
+  display: flex;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+.btn-secondary-outlined {
+  min-height: 44px;
+  height: auto;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  width: auto;
+  padding: 4px 40px;
+  position: relative;
+  display: inline-grid;
+  place-items: center;
   background: transparent;
   border: none;
   outline: none;
@@ -103,8 +127,13 @@ Button
   height: 100%;
   pointer-events: none;
   overflow: visible;
+  aspect-ratio: none;
 }
-.btn-secondary-outlined span {
+.btn-secondary-outlined .button-content {
+  display: flex;
+  padding: 4px 40px;
+}
+.btn-secondary-outlined .button-content span {
   display: flex;
   width: 100%;
   position: relative;
@@ -385,7 +414,7 @@ body {
   background-color: #f6f2ec;
 }
 
-.highlight {
+.highlight-text {
   color: #fdc104;
 }
 
@@ -417,27 +446,50 @@ nav .nav-header .nav-toggle {
   display: none;
 }
 nav .nav-wrapper ul {
-  width: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
   align-items: center;
   gap: 24px;
   list-style: none;
 }
 nav .nav-wrapper ul li {
-  width: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
+  flex-direction: column;
   position: relative;
   padding: 8px;
+  cursor: pointer;
+}
+nav .nav-wrapper ul li:hover .dropdown-toggle {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+nav .nav-wrapper ul li:hover .under-link {
+  display: block;
 }
 nav .nav-wrapper ul li .menu-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
-nav .nav-wrapper ul li .menu-item .dropdown-toggle {
-  cursor: pointer;
+nav .nav-wrapper ul li .menu-item .text-content {
+  flex-direction: row;
+  align-items: center;
 }
-nav .nav-wrapper ul li .menu-item .dropdown-toggle svg {
-  transition: transform 0.3s ease;
+nav .nav-wrapper ul li .menu-item .text-content a {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+nav .nav-wrapper ul li .menu-item .text-content a, nav .nav-wrapper ul li .menu-item .text-content svg {
+  fill: #f6f2ec;
+  color: #f6f2ec;
+}
+nav .nav-wrapper ul li .under-link {
+  display: none;
+  width: 100%;
+  height: 4px;
   fill: #f6f2ec;
 }
 nav .nav-wrapper ul li .subnav {
@@ -451,18 +503,24 @@ nav .nav-wrapper ul li .subnav {
   padding: 1rem;
 }
 nav .nav-wrapper ul li .subnav.open {
-  margin-top: 20px;
+  margin-top: 0px;
+  top: 100%;
+  padding: 0px;
   display: flex;
   flex-direction: column;
-  padding: 8px;
   border-radius: 0px 0px 20px 20px;
   background-color: rgba(52, 20, 11, 0.3764705882);
   backdrop-filter: blur 25px;
+  gap: 0px;
 }
 nav .nav-wrapper ul li .subnav.open li {
-  padding: 8px;
-  border: 2px 0px;
-  border-color: #34140b;
+  padding: 10px 20px;
+  border-bottom: 1px solid #34140b;
+  width: 100%;
+}
+nav .nav-wrapper ul li .subnav.open li:last-child {
+  border-radius: 0px 0px 20px 20px;
+  border-bottom: none;
 }
 nav .nav-wrapper ul li .subnav.open li:hover {
   background-color: #34140b;
@@ -514,7 +572,7 @@ MAIN
   height: fit-content;
   justify-self: center;
   position: absolute;
-  bottom: -100px;
+  bottom: -150px;
   padding: 28px 48px;
   left: 50%;
   transform: translateX(-50%);
@@ -568,6 +626,31 @@ MAIN
 }
 .about-us .about-us-content .text-section .title {
   gap: 4px;
+}
+.about-us .about-us-content .text-section .title h4 .highlight-brand {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4px 40px;
+  position: relative;
+  display: inline-block;
+  place-items: center;
+  white-space: nowrap;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.about-us .about-us-content .text-section .title h4 .highlight-brand .highlight {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+.about-us .about-us-content .text-section .title h4 .highlight-brand .text {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
 }
 .about-us .about-us-content .about-us-btn {
   display: flex;
