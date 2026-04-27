@@ -1,3 +1,12 @@
+/*==================
+Breakpoints 
+====================*/
+
+$breakpoint-desktop: 1440px; 
+$breakpoint-tablet: 769px;
+$breakpoint-mobile: 375px;
+
+
 /*Font*/
 
     /*Delicious Handrawn*/
@@ -373,21 +382,21 @@ Styles
 }
 
     /*Black*/
-    .book-lg{
+    .black-lg{
         font-family: $body;
-        font-weight: $book;
+        font-weight: $black;
         font-size: $font-size-lg;
         line-height: $line-height-2xl;
     }
 
-    .book-md{
+    .black-md{
         font-family: $body;
-        font-weight: $book;
+        font-weight: $black;
         font-size: $font-size-md;
         line-height: $line-height-xl;
     }
 
-    .book-sm{
+    .black-sm{
         font-family: $body;
         font-weight: $book;
         font-size: $font-size-sm;

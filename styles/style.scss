@@ -88,7 +88,7 @@ nav{
 
                         a{
                         width: fit-content;
-                        color:$text-invert
+                        color:$text-invert;
                         }
                 
                         path{
@@ -153,9 +153,69 @@ nav{
 @media (max-width:$breakpoint-tablet) {
 nav{
     flex-direction: column;
-}
+    .nav-header{
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav-toggle{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            // gap: 7px;
+            z-index: 100000;
+            position: relative;
+            border: none;
+            cursor: pointer;
+            background: transparent;
+
+                .bar {
+                height: 3px;
+                width: 100%;
+                position: absolute;
+                transition: all 0.3s ease;
+                border-radius: 24px;
+                }
+
+                .bar:nth-child(1) {
+                top: 0;
+                }
+                .bar:nth-child(3) {
+                bottom: 0;
+                }
+
+                &.open {
+                    .bar {
+                        top: 0;
+                        bottom: 100%;
+                    }
+
+                    .bar:nth-child(1) {
+                        transform: rotate(45deg);
+                    }
+                    .bar:nth-child(2) {
+                        opacity: 0;
+                    }
+                    .bar:nth-child(3) {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-wrapper{
+        .menu-panel{
+            flex-direction: column;
+        }
+            
+    }
     
 }
+    
+
 
 //MOBILE
 
@@ -210,7 +270,7 @@ MAIN
         height: fit-content;
         justify-self: center;
         position: absolute; 
-        bottom: -150px;   
+        bottom: -100px;   
         padding: $spacing-6xl $spacing-9xl;        
         left: 50%;
         transform: translateX(-50%);
@@ -222,7 +282,7 @@ MAIN
         justify-content: space-between;
 
         .statistic{
-            max-width: 18.063rem;
+            max-width: 80%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -240,6 +300,21 @@ MAIN
             }
         }
 }
+}
+
+@media (max-width:$breakpoint-tablet) {
+    .hero-statistics{
+        .hero-content{
+            max-width: 80%;
+        }
+        .statistics{
+            padding: $spacing-3xl $spacing-2xl;
+            flex: 1;
+            gap: $spacing-lg;
+
+        
+        }
+    }
 }
 
 /*About us section*/
@@ -322,6 +397,11 @@ MAIN
             }
         }
     }
+@media (max-width:$breakpoint-tablet) {
+    .about-us{
+        padding:$spacing-none $spacing-5xl;
+    }
+}  
 
 /*Events*/
 

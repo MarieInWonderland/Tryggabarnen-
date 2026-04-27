@@ -182,6 +182,9 @@ Highlight
   z-index: 1;
 }
 
+/*==================
+Breakpoints 
+====================*/
 /*Font*/
 /*Delicious Handrawn*/
 .delicious-handrawn-regular {
@@ -220,60 +223,11 @@ Highlight
 Styles
 ===========================*/
 /*Heading*/
-.heading-xs {
+.heading-huge {
   font-family: "BuenosAires";
   font-weight: 900;
-  font-size: 12px;
-  line-height: 16px;
-}
-
-.heading-sm {
-  font-family: "BuenosAires";
-  font-weight: 900;
-  font-size: 14px;
-  line-height: 18px;
-}
-
-.heading-md {
-  font-family: "BuenosAires";
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 20px;
-}
-
-.heading-lg {
-  font-family: "BuenosAires";
-  font-weight: 900;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.heading-xl {
-  font-family: "BuenosAires";
-  font-weight: 900;
-  font-size: 20px;
-  line-height: 28px;
-}
-
-.heading-2xl {
-  font-family: "BuenosAires";
-  font-weight: 900;
-  font-size: 24px;
-  line-height: 32px;
-}
-
-.heading-3xl {
-  font-family: "BuenosAires";
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 40px;
-}
-
-.heading-4xl {
-  font-family: "BuenosAires";
-  font-weight: 900;
-  font-size: 36px;
-  line-height: 48px;
+  font-size: 74px;
+  line-height: 80px;
 }
 
 .heading-5xl {
@@ -283,54 +237,135 @@ Styles
   line-height: 58px;
 }
 
-.heading-huge {
+.heading-4xl {
   font-family: "BuenosAires";
   font-weight: 900;
-  font-size: 74px;
-  line-height: 80px;
+  font-size: 36px;
+  line-height: 48px;
 }
 
-/*Preamble*/
-.preamble-xs {
+.heading-3xl {
   font-family: "BuenosAires";
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 20px;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 40px;
 }
 
-.preamble-sm {
+.heading-2xl {
   font-family: "BuenosAires";
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 24px;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
 }
 
-.preamble-md {
+.heading-xl {
   font-family: "BuenosAires";
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.preamble-lg {
-  font-family: "BuenosAires";
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 28px;
-}
-
-.preamble-xl {
-  font-family: "BuenosAires";
-  font-weight: 500;
+  font-weight: 900;
   font-size: 20px;
   line-height: 28px;
 }
 
-.preamble-2xl {
+.heading-md {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (max-width: 769px) {
+  .heading-huge {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 72px;
+  }
+  .heading-5xl {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .heading-4xl {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .heading-3xl {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .heading-2xl {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .heading-xl {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .heading-md {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 375px) {
+  .heading-huge {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .heading-5xl {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .heading-4xl {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .heading-3xl {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .heading-2xl {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .heading-xl {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .heading-md {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+/*Preamble*/
+.preamble-5xl {
   font-family: "BuenosAires";
   font-weight: 500;
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 48px;
+  line-height: 58px;
 }
 
 .preamble-3xl {
@@ -340,34 +375,60 @@ Styles
   line-height: 40px;
 }
 
-.preamble-4xl {
+.preamble-lg {
   font-family: "BuenosAires";
   font-weight: 500;
-  font-size: 36px;
-  line-height: 48px;
+  font-size: 18px;
+  line-height: 28px;
 }
 
+@media (max-width: 769px) {
+  .preamble-5xl {
+    font-family: "BuenosAires";
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .preamble-3xl {
+    font-family: "BuenosAires";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .preamble-lg {
+    font-family: "BuenosAires";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 375px) {
+  .preamble-5xl {
+    font-family: "BuenosAires";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .preamble-3xl {
+    font-family: "BuenosAires";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .preamble-lg {
+    font-family: "BuenosAires";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
 /*Body*/
 /*Book*/
-.book-2xs {
+.book-lg {
   font-family: "BuenosAires";
   font-weight: 400;
-  font-size: 10px;
-  line-height: 14px;
-}
-
-.book-xs {
-  font-family: "BuenosAires";
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-}
-
-.book-sm {
-  font-family: "BuenosAires";
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 .book-md {
@@ -377,47 +438,59 @@ Styles
   line-height: 24px;
 }
 
-.book-lg {
+.book-sm {
   font-family: "BuenosAires";
   font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-}
-
-.book-xl {
-  font-family: "BuenosAires";
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-}
-
-.book-2xl {
-  font-family: "BuenosAires";
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 32px;
-}
-
-/*Black*/
-.black-2xs {
-  font-family: "BuenosAires";
-  font-weight: 900;
-  font-size: 10px;
-  line-height: 14px;
-}
-
-.black-xs {
-  font-family: "BuenosAires";
-  font-weight: 900;
-  font-size: 12px;
-  line-height: 16px;
-}
-
-.black-sm {
-  font-family: "BuenosAires";
-  font-weight: 900;
   font-size: 14px;
   line-height: 20px;
+}
+
+@media (max-width: 769px) {
+  .book-lg {
+    font-family: "BuenosAires";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .book-md {
+    font-family: "BuenosAires";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .book-sm {
+    font-family: "BuenosAires";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 375px) {
+  .book-lg {
+    font-family: "BuenosAires";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .book-md {
+    font-family: "BuenosAires";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .book-sm {
+    font-family: "BuenosAires";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+/*Black*/
+.black-lg {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 .black-md {
@@ -427,40 +500,74 @@ Styles
   line-height: 24px;
 }
 
-.black-lg {
+.black-sm {
   font-family: "BuenosAires";
-  font-weight: 900;
-  font-size: 18px;
-  line-height: 28px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
 }
 
-.black-xl {
-  font-family: "BuenosAires";
-  font-weight: 900;
-  font-size: 20px;
-  line-height: 28px;
+@media (max-width: 769px) {
+  .black-lg {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .black-md {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .black-sm {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
-
-.black-2xl {
-  font-family: "BuenosAires";
-  font-weight: 900;
-  font-size: 24px;
-  line-height: 32px;
+@media (max-width: 375px) {
+  .black-lg {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .black-md {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .black-sm {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
-
 /*Decor*/
-.decor-sm {
-  font-family: "Delicious Handrawn";
-  font-size: 24px;
-  line-height: 32px;
-}
-
 .decor-md {
   font-family: "Delicious Handrawn";
   font-size: 30px;
   line-height: 36px;
 }
 
+@media (max-width: 769px) {
+  .decor-md {
+    font-family: "Delicious Handrawn";
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+@media (max-width: 375px) {
+  .decor-md {
+    font-family: "Delicious Handrawn";
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
 /*===================
 GENERAL
 ===================*/
@@ -583,8 +690,54 @@ nav .nav-wrapper ul li .subnav.open li:hover {
   background-color: #34140b;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   nav {
+    flex-direction: column;
+  }
+  nav .nav-header {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .nav-header .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    z-index: 100000;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+  }
+  nav .nav-header .nav-toggle .bar {
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    transition: all 0.3s ease;
+    border-radius: 24px;
+  }
+  nav .nav-header .nav-toggle .bar:nth-child(1) {
+    top: 0;
+  }
+  nav .nav-header .nav-toggle .bar:nth-child(3) {
+    bottom: 0;
+  }
+  nav .nav-header .nav-toggle.open .bar {
+    top: 0;
+    bottom: 100%;
+  }
+  nav .nav-header .nav-toggle.open .bar:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  nav .nav-header .nav-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  nav .nav-header .nav-toggle.open .bar:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  .nav-wrapper .menu-panel {
     flex-direction: column;
   }
 }
@@ -635,7 +788,7 @@ MAIN
   height: fit-content;
   justify-self: center;
   position: absolute;
-  bottom: -150px;
+  bottom: -100px;
   padding: 28px 48px;
   left: 50%;
   transform: translateX(-50%);
@@ -646,7 +799,7 @@ MAIN
   justify-content: space-between;
 }
 .hero-statistics .statistics .statistic {
-  max-width: 18.063rem;
+  max-width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -661,6 +814,16 @@ MAIN
   width: 100%;
 }
 
+@media (max-width: 769px) {
+  .hero-statistics .hero-content {
+    max-width: 80%;
+  }
+  .hero-statistics .statistics {
+    padding: 16px 12px;
+    flex: 1;
+    gap: 8px;
+  }
+}
 /*About us section*/
 .about-us {
   display: flex;
@@ -734,6 +897,11 @@ MAIN
   fill: #34140b;
 }
 
+@media (max-width: 769px) {
+  .about-us {
+    padding: 0px 24px;
+  }
+}
 /*Events*/
 .events {
   display: flex;
