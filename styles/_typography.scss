@@ -51,6 +51,7 @@
     $font-size-3xl:30px; 
     $font-size-4xl: 36px; 
     $font-size-5xl: 48px; 
+    $font-size-6xl:64px;
     $font-size-huge: 74px; 
 
 /*Font-weight*/
@@ -71,6 +72,7 @@
     $line-height-5xl: 40px; 
     $line-height-6xl: 48px; 
     $line-height-7xl: 58px;
+    $line-height-8xl:72px;
     $line-height-huge: 80px; 
 
 /*=========================
@@ -79,60 +81,11 @@ Styles
 
 /*Heading*/
 
-.heading-xs{
+.heading-huge{
     font-family: $heading;
     font-weight: $black;
-    font-size: $font-size-xs ;
-    line-height: $line-height-sm;
-}
-   
-.heading-sm{
-    font-family: $heading;
-    font-weight: $black;
-    font-size: $font-size-sm ;
-    line-height: $line-height-md;
-}
-
-.heading-md{
-    font-family: $heading;
-    font-weight: $black;
-    font-size: $font-size-md ;
-    line-height: $line-height-lg;
-}
-
-.heading-lg{
-    font-family: $heading;
-    font-weight: $black;
-    font-size: $font-size-lg ;
-    line-height: $line-height-xl;
-}
-
-.heading-xl{
-    font-family: $heading;
-    font-weight: $black;
-    font-size: $font-size-xl ;
-    line-height: $line-height-2xl;
-}
-
-.heading-2xl{
-    font-family: $heading;
-    font-weight: $black;
-    font-size: $font-size-2xl ;
-    line-height: $line-height-3xl;
-}
-
-.heading-3xl{
-    font-family: $heading;
-    font-weight: $black;
-    font-size: $font-size-3xl ;
-    line-height: $line-height-5xl;
-}
-
-.heading-4xl{
-    font-family: $heading;
-    font-weight: $black;
-    font-size: $font-size-4xl ;
-    line-height: $line-height-6xl;
+    font-size: $font-size-huge ;
+    line-height: $line-height-huge;
 }
 
 .heading-5xl{
@@ -142,54 +95,152 @@ Styles
     line-height: $line-height-7xl;
 }
 
-.heading-huge{
+.heading-4xl{
     font-family: $heading;
     font-weight: $black;
-    font-size: $font-size-huge ;
-    line-height: $line-height-huge;
+    font-size: $font-size-4xl ;
+    line-height: $line-height-6xl;
 }
 
-/*Preamble*/
-.preamble-xs{
-    font-family: $body;
-    font-weight: $regular;
-    font-size: $font-size-xs ;
+.heading-3xl{
+    font-family: $heading;
+    font-weight: $black;
+    font-size: $font-size-3xl ;
+    line-height: $line-height-5xl;
+}
+
+.heading-2xl{
+    font-family: $heading;
+    font-weight: $black;
+    font-size: $font-size-2xl ;
+    line-height: $line-height-3xl;
+}
+
+.heading-xl{
+    font-family: $heading;
+    font-weight: $black;
+    font-size: $font-size-xl ;
+    line-height: $line-height-2xl;
+}
+
+.heading-md{
+    font-family: $heading;
+    font-weight: $black;
+    font-size: $font-size-md ;
     line-height: $line-height-lg;
 }
 
-.preamble-sm{
-    font-family: $body;
-    font-weight: $regular;
-    font-size: $font-size-sm ;
-    line-height: $line-height-xl;
+@media (max-width:$breakpoint-tablet){
+    .heading-huge{
+    font-family: $heading;
+    font-weight: $black;
+    font-size: $font-size-6xl;
+    line-height: $line-height-8xl;
+    }
+
+    .heading-5xl{
+        font-family: $heading;
+        font-weight: $black;
+        font-size: $font-size-4xl ;
+        line-height: $line-height-6xl;
+    }
+
+    .heading-4xl{
+        font-family: $heading;
+        font-weight: $black;
+        font-size: $font-size-3xl ;
+        line-height: $line-height-5xl;
+    }
+
+    .heading-3xl{
+        font-family: $heading;
+        font-weight: $black;
+        font-size: $font-size-2xl ;
+        line-height: $line-height-3xl;
+    }
+
+    .heading-2xl{
+        font-family: $heading;
+        font-weight: $black;
+        font-size: $font-size-xl ;
+        line-height: $line-height-2xl;
+    }
+
+    .heading-xl{
+        font-family: $heading;
+        font-weight: $black;
+        font-size: $font-size-lg ;
+        line-height: $line-height-xl;
+    }
+
+    .heading-md{
+        font-family: $heading;
+        font-weight: $black;
+        font-size: $font-size-sm ;
+        line-height: $line-height-md;
+    }
+
 }
 
-.preamble-md{
-    font-family: $body;
-    font-weight: $regular;
-    font-size: $font-size-md ;
-    line-height: $line-height-xl;
+@media (max-width:$breakpoint-mobile){
+    .heading-huge{
+    font-family: $heading;
+    font-weight: $black;
+    font-size: $font-size-4xl;
+    line-height: $line-height-6xl;
+    }
+
+    .heading-5xl{
+        font-family: $heading;
+        font-weight: $black;
+        font-size: $font-size-4xl ;
+        line-height: $line-height-6xl;
+    }
+
+    .heading-4xl{
+        font-family: $heading;
+        font-weight: $black;
+        font-size: $font-size-2xl ;
+        line-height: $line-height-3xl;
+    }
+
+    .heading-3xl{
+        font-family: $heading;
+        font-weight: $black;
+        font-size: $font-size-xl ;
+        line-height: $line-height-2xl;
+    }
+
+    .heading-2xl{
+        font-family: $heading;
+        font-weight: $black;
+        font-size: $font-size-lg ;
+        line-height: $line-height-xl;
+    }
+
+    .heading-xl{
+        font-family: $heading;
+        font-weight: $black;
+        font-size: $font-size-sm ;
+        line-height: $line-height-md;
+    }
+
+    .heading-md{
+        font-family: $heading;
+        font-weight: $black;
+        font-size: $font-size-sm ;
+        line-height: $line-height-md;
+    }
+
 }
 
-.preamble-lg{
-    font-family: $body;
-    font-weight: $regular;
-    font-size: $font-size-lg ;
-    line-height: $line-height-2xl;
-}
+/*Preamble*/
 
-.preamble-xl{
+.preamble-5xl{
     font-family: $body;
     font-weight: $regular;
-    font-size: $font-size-xl;
-    line-height: $line-height-2xl;
-}
-
-.preamble-2xl{
-    font-family: $body;
-    font-weight: $regular;
-    font-size: $font-size-2xl;
-    line-height: $line-height-4xl;
+    font-size: $font-size-5xl;
+    line-height: $line-height-7xl;
 }
 
 .preamble-3xl{
@@ -199,23 +250,114 @@ Styles
     line-height: $line-height-5xl;
 }
 
-.preamble-4xl{
+.preamble-lg{
+    font-family: $body;
+    font-weight: $regular;
+    font-size: $font-size-lg ;
+    line-height: $line-height-2xl;
+}
+
+@media (max-width:$breakpoint-tablet){
+    .preamble-5xl{
     font-family: $body;
     font-weight: $regular;
     font-size: $font-size-4xl;
     line-height: $line-height-6xl;
+    }
+
+    .preamble-3xl{
+        font-family: $body;
+        font-weight: $regular;
+        font-size: $font-size-2xl;
+        line-height: $line-height-4xl;
+    }
+
+    .preamble-lg{
+        font-family: $body;
+        font-weight: $regular;
+        font-size: $font-size-md ;
+        line-height: $line-height-xl;
+    }  
+}
+
+@media (max-width:$breakpoint-mobile){
+    .preamble-5xl{
+    font-family: $body;
+    font-weight: $regular;
+    font-size: $font-size-2xl;
+    line-height: $line-height-4xl;
+    }
+
+    .preamble-3xl{
+        font-family: $body;
+        font-weight: $regular;
+        font-size: $font-size-xl;
+        line-height: $line-height-2xl;
+    }
+
+    .preamble-lg{
+        font-family: $body;
+        font-weight: $regular;
+        font-size: $font-size-sm ;
+        line-height: $line-height-xl;
+    }  
 }
 
 /*Body*/
     /*Book*/
-    .book-2xs{
+    .book-lg{
         font-family: $body;
         font-weight: $book;
-        font-size: $font-size-2xs;
-        line-height: $line-height-xs;
+        font-size: $font-size-lg;
+        line-height: $line-height-2xl;
     }
 
-    .book-xs{
+    .book-md{
+        font-family: $body;
+        font-weight: $book;
+        font-size: $font-size-md;
+        line-height: $line-height-xl;
+    }
+
+    .book-sm{
+        font-family: $body;
+        font-weight: $book;
+        font-size: $font-size-sm;
+        line-height: $line-height-lg;
+    }
+
+@media (max-width:$breakpoint-tablet){
+    .book-lg{
+        font-family: $body;
+        font-weight: $book;
+        font-size: $font-size-md;
+        line-height: $line-height-xl;
+    }
+
+    .book-md{
+        font-family: $body;
+        font-weight: $book;
+        font-size: $font-size-sm;
+        line-height: $line-height-lg;
+    }
+
+    .book-sm{
+        font-family: $body;
+        font-weight: $book;
+        font-size: $font-size-sm;
+        line-height: $line-height-lg;
+    }
+}
+
+@media (max-width:$breakpoint-mobile){
+    .book-lg{
+        font-family: $body;
+        font-weight: $book;
+        font-size: $font-size-md;
+        line-height: $line-height-xl;
+    }
+
+    .book-md{
         font-family: $body;
         font-weight: $book;
         font-size: $font-size-xs;
@@ -228,6 +370,15 @@ Styles
         font-size: $font-size-sm;
         line-height: $line-height-lg;
     }
+}
+
+    /*Black*/
+    .book-lg{
+        font-family: $body;
+        font-weight: $book;
+        font-size: $font-size-lg;
+        line-height: $line-height-2xl;
+    }
 
     .book-md{
         font-family: $body;
@@ -236,36 +387,45 @@ Styles
         line-height: $line-height-xl;
     }
 
-    .book-lg{
+    .book-sm{
         font-family: $body;
         font-weight: $book;
-        font-size: $font-size-lg;
-        line-height: $line-height-2xl;
+        font-size: $font-size-sm;
+        line-height: $line-height-lg;
     }
 
-    .book-xl{
-        font-family: $body;
-        font-weight: $book;
-        font-size: $font-size-xl;
-        line-height: $line-height-2xl;
-    }
-
-    .book-2xl{
-        font-family: $body;
-        font-weight: $book;
-        font-size: $font-size-2xl;
-        line-height: $line-height-3xl;
-    }
-
-    /*Black*/
-    .black-2xs{
+@media (max-width:$breakpoint-tablet){
+    .black-lg{
         font-family: $body;
         font-weight: $black;
-        font-size: $font-size-2xs;
-        line-height: $line-height-xs;
+        font-size: $font-size-md;
+        line-height: $line-height-xl;
     }
 
-    .black-xs{
+    .black-md{
+        font-family: $body;
+        font-weight: $black;
+        font-size: $font-size-sm;
+        line-height: $line-height-lg;
+    }
+
+    .black-sm{
+        font-family: $body;
+        font-weight: $black;
+        font-size: $font-size-xs;
+        line-height: $line-height-md;
+    }
+}
+
+@media (max-width:$breakpoint-mobile){
+    .black-lg{
+        font-family: $body;
+        font-weight: $black;
+        font-size: $font-size-md;
+        line-height: $line-height-xl;
+    }
+
+    .black-md{
         font-family: $body;
         font-weight: $black;
         font-size: $font-size-xs;
@@ -278,47 +438,30 @@ Styles
         font-size: $font-size-sm;
         line-height: $line-height-lg;
     }
-
-    .black-md{
-        font-family: $body;
-        font-weight: $black;
-        font-size: $font-size-md;
-        line-height: $line-height-xl;
-    }
-
-    .black-lg{
-        font-family: $body;
-        font-weight: $black;
-        font-size: $font-size-lg;
-        line-height: $line-height-2xl;
-    }
-
-    .black-xl{
-        font-family: $body;
-        font-weight: $black;
-        font-size: $font-size-xl;
-        line-height: $line-height-2xl;
-    }
-
-    .black-2xl{
-        font-family: $body;
-        font-weight: $black;
-        font-size: $font-size-2xl;
-        line-height: $line-height-3xl;
-    }
-
-/*Decor*/
-
-.decor-sm{
-    font-family: $decor;
-    font-size: $font-size-2xl;
-    line-height: $line-height-3xl;
 }
 
+
+/*Decor*/
 .decor-md{
     font-family: $decor;
     font-size: $font-size-3xl;
     line-height: $line-height-4xl;
+}
+
+@media (max-width:$breakpoint-tablet){
+    .decor-md{
+    font-family: $decor;
+    font-size: $font-size-3xl;
+    line-height: $line-height-4xl;
+    }
+}
+
+@media (max-width:$breakpoint-mobile){
+    .decor-md{
+    font-family: $decor;
+    font-size: $font-size-2xl;
+    line-height: $line-height-3xl;
+    }
 }
 
     
