@@ -352,7 +352,7 @@ MAIN
             justify-content: space-between;
 
             &:first-child{
-                background-image: url(../img/pictures/img-prova-på-badminton.png);
+                background-image: url(../img/pictures/img-prova-på-badminton.webp);
                 border-radius: $border-radius-lg $border-radius-none $border-radius-none $border-radius-lg;
             }
 
@@ -361,7 +361,7 @@ MAIN
             }
 
             &:nth-child(3){
-                background-image: url(../img/pictures/img-skaparverkstad.png);
+                background-image: url(../img/pictures/img-skaparverkstad.webp);
             }
 
             &:nth-child(4){
@@ -482,6 +482,10 @@ MAIN
             &:first-child{
                 border-top-right-radius: $border-radius-lg;
             }
+
+            &:last-child{
+                border-bottom-right-radius: $border-radius-lg;
+            }
         }
       }
     }
@@ -543,47 +547,73 @@ MAIN
 FOOTER
 ===================*/
 footer{
+    width: 100vw;
+    height: auto;
     display: flex;
+    justify-content: space-between;
     background-image: url(../img/graphic-element/footer.svg);
     background-repeat: no-repeat;
-    background-position: cover;
+    background-size: 100% auto;
+    background-position: center top;
 
     padding: 33px $spacing-9xl;
 
-    .footer-wrapper{
+    .footer-left{
         display: flex;
+        flex-direction: column;
         gap: $spacing-9xl;
 
-        .footer-items{
-            display: flex;
-            flex-direction: column;
+        img{
+            max-height: 40px;
+            margin-right: auto;
+        }
 
-            .footer-item{
+        .footer-wrapper{
+
+            display: flex;
+            gap: $spacing-9xl;
+
+            .footer-items{
+                width: 100%;
                 display: flex;
                 flex-direction: column;
-                .book-md{
-                    color: $text-primary;
+
+                .footer-item{
+                    width: fit-content;
+                    display: flex;
+                    flex-direction: column;
+
+                    .book-md{
+                        color: $text-primary;
+                    }
+
+                    a{
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
                 }
-
-                a{
-                    a::after {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    bottom: -4px; /* distance du texte */
-                    width: 0;
-                    height: 2px;
-                    background: currentColor;
-                    transition: width 0.3s ease;
-                    }
-
-                    a:hover::after {
-                    width: 100%;
-                    }
-        }
             }
         }
+        .footer-bottom{
+                display: inline-flex;
 
-        
+                .kakor{
+                    display: inline-flex;
+                    flex-direction: column;
+                }
+
+                .under-link{
+                    width: 100%;
+                }
+            }  
+    }
+
+    .footer-right{
+        max-width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
     }
 }

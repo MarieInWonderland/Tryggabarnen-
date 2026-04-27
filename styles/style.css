@@ -763,14 +763,14 @@ MAIN
   justify-content: space-between;
 }
 .events .cards-event .event-card:first-child {
-  background-image: url(../img/pictures/img-prova-på-badminton.png);
+  background-image: url(../img/pictures/img-prova-på-badminton.webp);
   border-radius: 38px 0px 0px 38px;
 }
 .events .cards-event .event-card:nth-child(2) {
   background-image: url(../img/pictures/img-grillkväll.webp);
 }
 .events .cards-event .event-card:nth-child(3) {
-  background-image: url(../img/pictures/img-skaparverkstad.png);
+  background-image: url(../img/pictures/img-skaparverkstad.webp);
 }
 .events .cards-event .event-card:nth-child(4) {
   background-image: url(../img/pictures/picknikochkubb.webp);
@@ -877,6 +877,9 @@ MAIN
 .to-the-adult .landscape-section .cards-section .landscape-card:first-child {
   border-top-right-radius: 38px;
 }
+.to-the-adult .landscape-section .cards-section .landscape-card:last-child {
+  border-bottom-right-radius: 38px;
+}
 
 /*Donation*/
 .donation {
@@ -927,37 +930,60 @@ MAIN
 FOOTER
 ===================*/
 footer {
+  width: 100vw;
+  height: auto;
   display: flex;
+  justify-content: space-between;
   background-image: url(../img/graphic-element/footer.svg);
   background-repeat: no-repeat;
-  background-position: cover;
+  background-size: 100% auto;
+  background-position: center top;
   padding: 33px 48px;
 }
-footer .footer-wrapper {
+footer .footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+footer .footer-left img {
+  max-height: 40px;
+  margin-right: auto;
+}
+footer .footer-left .footer-wrapper {
   display: flex;
   gap: 48px;
 }
-footer .footer-wrapper .footer-items {
+footer .footer-left .footer-wrapper .footer-items {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
-footer .footer-wrapper .footer-items .footer-item {
+footer .footer-left .footer-wrapper .footer-items .footer-item {
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
   flex-direction: column;
 }
-footer .footer-wrapper .footer-items .footer-item .book-md {
+footer .footer-left .footer-wrapper .footer-items .footer-item .book-md {
   color: #34140b;
 }
-footer .footer-wrapper .footer-items .footer-item a a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px; /* distance du texte */
-  width: 0;
-  height: 2px;
-  background: currentColor;
-  transition: width 0.3s ease;
+footer .footer-left .footer-wrapper .footer-items .footer-item a:hover {
+  text-decoration: underline;
 }
-footer .footer-wrapper .footer-items .footer-item a a:hover::after {
+footer .footer-left .footer-bottom {
+  display: inline-flex;
+}
+footer .footer-left .footer-bottom .kakor {
+  display: inline-flex;
+  flex-direction: column;
+}
+footer .footer-left .footer-bottom .under-link {
   width: 100%;
+}
+footer .footer-right {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */
