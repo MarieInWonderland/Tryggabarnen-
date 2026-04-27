@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* =============
 General 
 ================*/
@@ -28,6 +29,7 @@ Variables Tockens
 /*Border*/
 /*Effects*/
 /*Illustrations*/
+/*Highlights*/
 /*Logo*/
 /*Button*/
 /*Outlined*/
@@ -446,6 +448,19 @@ Styles
   line-height: 32px;
 }
 
+/*Decor*/
+.decor-sm {
+  font-family: "Delicious Handrawn";
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.decor-md {
+  font-family: "Delicious Handrawn";
+  font-size: 30px;
+  line-height: 36px;
+}
+
 /*===================
 GENERAL
 ===================*/
@@ -470,7 +485,7 @@ nav {
   top: 0px;
   left: 0px;
   z-index: 1000;
-  min-width: 100%;
+  width: 100vw;
   height: 4rem;
   display: flex;
   padding: 12px 48px;
@@ -521,10 +536,12 @@ nav .nav-wrapper ul li .menu-item .text-content {
 nav .nav-wrapper ul li .menu-item .text-content a {
   width: -moz-fit-content;
   width: fit-content;
-}
-nav .nav-wrapper ul li .menu-item .text-content a, nav .nav-wrapper ul li .menu-item .text-content svg {
-  fill: #f6f2ec;
   color: #f6f2ec;
+}
+nav .nav-wrapper ul li .menu-item .text-content path {
+  width: 24px;
+  height: 24px;
+  fill: #f6f2ec;
 }
 nav .nav-wrapper ul li .under-link {
   display: none;
@@ -717,29 +734,230 @@ MAIN
   fill: #34140b;
 }
 
+/*Events*/
 .events {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 0px spacing-9xl;
+  padding: 0px 48px;
 }
 .events .preamble-lg {
   max-width: 40%;
 }
 .events .cards-event {
   width: 100%;
-  height: auto;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   display: flex;
+  gap: 20px;
+}
+.events .cards-event .event-card {
+  width: 20.063rem;
+  height: 26.875rem;
+  padding: 16px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .events .cards-event .event-card:first-child {
-  background-image: url(../img/pictures/Badminton\ 2.webp);
-  background-position: center;
+  background-image: url(../img/pictures/img-prova-på-badminton.png);
+  border-radius: 38px 0px 0px 38px;
+}
+.events .cards-event .event-card:nth-child(2) {
+  background-image: url(../img/pictures/img-grillkväll.webp);
+}
+.events .cards-event .event-card:nth-child(3) {
+  background-image: url(../img/pictures/img-skaparverkstad.png);
+}
+.events .cards-event .event-card:nth-child(4) {
+  background-image: url(../img/pictures/picknikochkubb.webp);
+  border-radius: 0px 38px 38px 0px;
 }
 .events .cards-event .event-card .date {
   display: flex;
   flex-direction: column;
+  padding: 4px 8px;
+}
+.events .cards-event .event-card .date h3 {
+  color: #f6f2ec;
+  text-align: center;
+}
+.events .cards-event .event-card .date .month {
+  font-family: "BuenosAires";
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
+.events .cards-event .event-card .highlight-content .highlight {
+  fill: #f6f2ec;
+}
+.events .cards-event .event-card .highlight-content .title-event {
+  display: flex;
+  color: #f6f2ec;
+  fill: #f6f2ec;
+}
+.events .btn-event {
+  align-self: flex-end;
+}
+
+/*Testionial*/
+.testimonial {
+  max-width: 45%;
+  margin: 5.938rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+}
+.testimonial .testimonial-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  gap: 12px;
+}
+.testimonial .testimonial-text .quote {
+  position: absolute;
+  left: -10%;
+  top: -50%;
+  width: auto;
+  height: 100%;
+  z-index: 0;
+  overflow: visible;
+}
+.testimonial .testimonial-text .preamble-4xl {
+  position: relative;
+  z-index: 1;
+}
+.testimonial .testimonial-text .name {
+  display: flex;
+  gap: 1px;
+}
+
+/*To the adult*/
+.to-the-adult {
+  width: 100%;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0px 48px;
+}
+.to-the-adult .landscape-section {
+  display: flex;
+  gap: 20px;
+}
+.to-the-adult .landscape-section .för-dig-som-vuxen {
+  width: 30%;
+  height: auto;
+  border-radius: 38px 0px 0px 38px;
+}
+.to-the-adult .landscape-section .cards-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.to-the-adult .landscape-section .cards-section .landscape-card {
+  background-color: #610228;
+  padding: 16px 24px;
+}
+.to-the-adult .landscape-section .cards-section .landscape-card .title {
+  display: flex;
+  align-items: center;
+  color: #f6f2ec;
+  fill: #f6f2ec;
+}
+.to-the-adult .landscape-section .cards-section .landscape-card p {
+  max-width: 70%;
+  color: #f6f2ec;
+}
+.to-the-adult .landscape-section .cards-section .landscape-card:first-child {
+  border-top-right-radius: 38px;
+}
+
+/*Donation*/
+.donation {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0px 48px;
+  margin-top: 11.625rem;
+  margin-bottom: 11.625rem;
+}
+.donation .preamble-lg {
+  max-width: 40%;
+}
+.donation .donation-links {
+  min-width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  gap: 48px;
+}
+.donation .donation-links .donation-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.donation .donation-links img {
+  text-align: center;
+}
+.donation .donation-links .btn-donation {
+  border: 0px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.donation .donation-links .btn-donation:hover .under-link {
+  display: block;
+}
+.donation .donation-links .btn-donation .btn-text {
+  display: flex;
+}
+.donation .donation-links .btn-donation .under-link {
+  display: none;
+  width: 100%;
+  height: 4px;
+  fill: #f6f2ec;
 }
 
 /*===================
 FOOTER
-===================*//*# sourceMappingURL=style.css.map */
+===================*/
+footer {
+  display: flex;
+  background-image: url(../img/graphic-element/footer.svg);
+  background-repeat: no-repeat;
+  background-position: cover;
+  padding: 33px 48px;
+}
+footer .footer-wrapper {
+  display: flex;
+  gap: 48px;
+}
+footer .footer-wrapper .footer-items {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-wrapper .footer-items .footer-item {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-wrapper .footer-items .footer-item .book-md {
+  color: #34140b;
+}
+footer .footer-wrapper .footer-items .footer-item a a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* distance du texte */
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+footer .footer-wrapper .footer-items .footer-item a a:hover::after {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

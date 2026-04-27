@@ -61,7 +61,9 @@ Variables Tockens
     /*Background*/
     $background-primary: $gray-100;
     $background-secondary: $brown-500;
-    $background-brand: $brown-500; 
+    $background-brand: $maroon-500; 
+    $background-brand2: $yellow-500;
+    $background-warning:$yellow-100;
 
     /*Border*/
     $border-primary: $brown-500;
@@ -76,7 +78,15 @@ Variables Tockens
     /*Illustrations*/
     $illustrations-primary: $gray-100;
     $illustrations-secondary: $brown-500; 
-    $illustrations-brand:$maroon-400; 
+    $illustrations-maroon-dark:$maroon-400;
+    $illustrations-maroon:$maroon-300;
+    $illustrations-maroon-light:$maroon-100;
+    $illustrations-brand-yellow:$yellow-200;
+    
+    /*Highlights*/
+    $highlights-primary:$maroon-100;
+    $highlights-primary-dark: $maroon-500;
+    $hightlights-brand: $yellow-500;
 
     /*Logo*/
     $logo-primary: $gray-900; 
