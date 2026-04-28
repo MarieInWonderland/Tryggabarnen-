@@ -611,14 +611,16 @@ nav .nav-wrapper ul {
   width: fit-content;
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 0px;
   list-style: none;
+  padding: 20px 0px;
 }
 nav .nav-wrapper ul li {
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   position: relative;
   padding: 8px;
   cursor: pointer;
@@ -673,8 +675,8 @@ nav .nav-wrapper ul li .subnav.open {
   display: flex;
   flex-direction: column;
   border-radius: 0px 0px 20px 20px;
-  background-color: rgba(52, 20, 11, 0.3764705882);
-  backdrop-filter: blur 25px;
+  background-color: rgba(52, 20, 11, 0.6);
+  backdrop-filter: blur(25px);
   gap: 0px;
 }
 nav .nav-wrapper ul li .subnav.open li {
@@ -693,6 +695,7 @@ nav .nav-wrapper ul li .subnav.open li:hover {
 @media (max-width: 769px) {
   nav {
     flex-direction: column;
+    position: relative;
   }
   nav .nav-header {
     width: 100%;
@@ -737,8 +740,47 @@ nav .nav-wrapper ul li .subnav.open li:hover {
   nav .nav-header .nav-toggle.open .bar:nth-child(3) {
     transform: rotate(-45deg);
   }
-  .nav-wrapper .menu-panel {
+  nav .nav-wrapper {
+    position: fixed;
+    top: 4rem;
+    right: -100%;
+    width: 50%;
+    height: 100vh;
+    transition: right 0.3s ease;
+  }
+  nav .nav-wrapper.open {
+    right: 0;
+  }
+  nav .menu-panel {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(52, 20, 11, 0.6);
+    backdrop-filter: blur(25px);
+  }
+  nav .menu-panel ul {
+    width: 100%;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+    padding: 0px;
+  }
+  nav .menu-panel ul li {
+    width: 100%;
+    padding: 20px 10px;
+    border-bottom: 1px solid;
+    border-color: #f6f2ec;
+  }
+  nav .menu-panel ul li:hover .under-link {
+    display: none;
+  }
+  nav .menu-panel .subnav {
+    position: static;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  nav .menu-panel .subnav.open {
+    display: flex;
   }
 }
 /*===================
@@ -783,10 +825,12 @@ MAIN
   fill: #f6f2ec;
 }
 .hero-statistics .statistics {
-  min-width: 80%;
+  min-width: 90%;
+  display: flex;
   height: -moz-fit-content;
   height: fit-content;
   justify-self: center;
+  gap: 50px;
   position: absolute;
   bottom: -100px;
   padding: 28px 48px;
@@ -795,20 +839,19 @@ MAIN
   background-color: rgba(97, 2, 40, 0.5019607843);
   backdrop-filter: blur(25px);
   border-radius: 0px 38px 38px 38px;
-  display: flex;
-  justify-content: space-between;
 }
 .hero-statistics .statistics .statistic {
-  max-width: 80%;
+  max-width: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
 }
 .hero-statistics .statistics .statistic h2, .hero-statistics .statistics .statistic p, .hero-statistics .statistics .statistic path {
   color: #f6f2ec;
   fill: #f6f2ec;
-  text-align: centers;
+  text-align: center;
 }
 .hero-statistics .statistics .statistic img {
   width: 100%;
@@ -887,6 +930,14 @@ MAIN
       }
   }*/
 }
+.about-us .about-us-content .text-section .title h2 .text-highlight {
+  background-image: url(../img/graphic-element/highlight.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: visible;
+  position: relative;
+  z-index: -1;
+}
 .about-us .about-us-btn {
   display: flex;
   justify-content: flex-start;
@@ -900,6 +951,9 @@ MAIN
 @media (max-width: 769px) {
   .about-us {
     padding: 0px 24px;
+  }
+  .about-us .about-us-content .about-us-btn {
+    flex-direction: column;
   }
 }
 /*Events*/
@@ -971,6 +1025,14 @@ MAIN
   align-self: flex-end;
 }
 
+@media (max-width: 769px) {
+  .events .preamble-lg {
+    width: 80%;
+  }
+  .events .cards-event .event-card {
+    width: 15.5rem;
+  }
+}
 /*Testionial*/
 .testimonial {
   max-width: 45%;
@@ -996,7 +1058,7 @@ MAIN
   z-index: 0;
   overflow: visible;
 }
-.testimonial .testimonial-text .preamble-4xl {
+.testimonial .testimonial-text .preamble-5xl {
   position: relative;
   z-index: 1;
 }
@@ -1005,6 +1067,12 @@ MAIN
   gap: 1px;
 }
 
+@media (max-width: 769px) {
+  .testimonial {
+    max-width: 100%;
+    padding: 56px;
+  }
+}
 /*To the adult*/
 .to-the-adult {
   width: 100%;
@@ -1019,8 +1087,11 @@ MAIN
   gap: 20px;
 }
 .to-the-adult .landscape-section .för-dig-som-vuxen {
-  width: 30%;
+  width: 60%;
   height: auto;
+  background-image: url(../img/pictures/img-för-dig-som-vuxen.webp);
+  background-size: cover;
+  background-position: center;
   border-radius: 38px 0px 0px 38px;
 }
 .to-the-adult .landscape-section .cards-section {
@@ -1049,6 +1120,14 @@ MAIN
   border-bottom-right-radius: 38px;
 }
 
+@media (max-width: 769px) {
+  .to-the-adult .landscape-section .för-dig-som-vuxen {
+    width: 100%;
+  }
+  .to-the-adult .landscape-section .cards-section .landscape-card .book-md {
+    width: 100%;
+  }
+}
 /*Donation*/
 .donation {
   display: flex;
@@ -1098,7 +1177,7 @@ MAIN
 FOOTER
 ===================*/
 footer {
-  width: 100vw;
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: space-between;

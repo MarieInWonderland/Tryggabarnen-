@@ -50,16 +50,18 @@ nav{
     .nav-wrapper{
 
         ul{
-        width: fit-content;
+        width:fit-content;
         display: flex;
         align-items: center;
-        gap: $spacing-5xl;
+        gap: $spacing-none;
         list-style: none;
+        padding: $spacing-4xl $spacing-none;
 
             li{
                 width: fit-content;
                 display: flex;
                 flex-direction: column;
+                align-items: flex-start;
                 position: relative;
                 padding:$spacing-lg;
                 cursor: pointer;
@@ -68,11 +70,11 @@ nav{
                     .dropdown-toggle {
                     transform: rotate(180deg);
                     transition: transform 0.3s ease;
-                }
+                    }
 
-                .under-link {              
-                    display: block;
-                  }
+                    .under-link {              
+                        display: block;
+                    }
 
                 }
                 
@@ -124,7 +126,7 @@ nav{
                     flex-direction: column;
                     border-radius: $border-radius-none $border-radius-none $border-radius-md $border-radius-md;
                     background-color: $effects-brown-a;
-                    backdrop-filter: blur (25px);
+                    backdrop-filter: blur(25px);
                     gap: 0px;
 
                     li {
@@ -153,6 +155,7 @@ nav{
 @media (max-width:$breakpoint-tablet) {
 nav{
     flex-direction: column;
+    position: relative;
     .nav-header{
         width: 100%;
         justify-content: space-between;
@@ -204,13 +207,59 @@ nav{
                 }
             }
         }
-    }
 
     .nav-wrapper{
-        .menu-panel{
-            flex-direction: column;
+        position: fixed;
+        top: 4rem;
+        right: -100%;
+        width: 50%;
+        height: 100vh;
+        transition: right 0.3s ease;
         }
-            
+
+        .nav-wrapper.open{
+            right: 0; 
+        }
+        
+        .menu-panel{
+            width: 100%;
+            height: 100%;
+            background-color: $effects-brown-a;
+            backdrop-filter: blur(25px);
+
+            ul{
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: $spacing-none;
+                padding: $spacing-none;
+                
+
+                li{
+                    width: 100%;
+                    padding: $spacing-4xl $spacing-xl;
+                    border-bottom: 1px solid;
+                    border-color: $text-invert;
+
+                    &:hover{
+                        .under-link{
+                            display:none; 
+                        }
+                    }
+                }
+            }
+            .subnav {
+                position: static;
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                }
+
+                .subnav.open{
+                    display: flex;
+                }
+        
+        }
     }
     
 }
@@ -266,9 +315,12 @@ MAIN
         }
     }
     .statistics{
-        min-width: 80%;
+        min-width: 90%;
+        display: flex;
         height: fit-content;
         justify-self: center;
+        gap:50px;
+
         position: absolute; 
         bottom: -100px;   
         padding: $spacing-6xl $spacing-9xl;        
@@ -278,21 +330,21 @@ MAIN
         backdrop-filter: blur(25px);
         border-radius: $border-radius-none $border-radius-lg $border-radius-lg $border-radius-lg;
 
-        display: flex;
-        justify-content: space-between;
+
 
         .statistic{
-            max-width: 80%;
+            max-width: 100%;
+            flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: $spacing-2xl;
+            gap: $spacing-4xl;
             
 
             h2, p, path{
                 color:$text-invert; 
                 fill: $text-invert;
-                text-align: centers;
+                text-align: center;
             }
 
             img{
@@ -382,6 +434,14 @@ MAIN
                             z-index: 1;
                         }
                     }*/
+                    .text-highlight{
+                        background-image: url(../img/graphic-element/highlight.svg);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        overflow: visible;
+                        position: relative;
+                        z-index: -1;
+                    }
                 }
             }   
         }
@@ -400,6 +460,12 @@ MAIN
 @media (max-width:$breakpoint-tablet) {
     .about-us{
         padding:$spacing-none $spacing-5xl;
+
+        .about-us-content{
+            .about-us-btn{
+                flex-direction: column;
+            }
+        }
     }
 }  
 
@@ -481,6 +547,21 @@ MAIN
     }
 }
 
+@media (max-width:$breakpoint-tablet) {
+    .events{
+
+        .preamble-lg{
+            width: 80%;
+        }
+
+        .cards-event{
+            .event-card{
+                width: 15.5rem;
+            }
+        }
+    }
+}
+
 /*Testionial*/
 .testimonial{
     max-width: 45%;
@@ -506,7 +587,7 @@ MAIN
             z-index: 0;
             overflow: visible;
         }
-        .preamble-4xl{
+        .preamble-5xl{
             position: relative;
             z-index: 1;
         }
@@ -514,6 +595,14 @@ MAIN
             display: flex;
             gap: $spacing-xs;
         }
+    }
+}
+
+@media (max-width:$breakpoint-tablet) {
+    .testimonial{
+        max-width: 100%;
+        padding: $spacing-10xl;
+
     }
 }
 
@@ -532,8 +621,11 @@ MAIN
       gap: $spacing-4xl; 
        
       .för-dig-som-vuxen{
-        width: 30%;
+        width: 60%;
         height: auto;
+        background-image: url(../img/pictures/img-för-dig-som-vuxen.webp);
+        background-size: cover;
+        background-position: center;
         border-radius: $border-radius-lg $border-radius-none $border-radius-none $border-radius-lg;
       }
 
@@ -570,6 +662,24 @@ MAIN
       }
     }
 }
+
+@media (max-width:$breakpoint-tablet) {
+    .to-the-adult{
+        .landscape-section{
+            .för-dig-som-vuxen{
+                width: 100%;
+            }
+            .cards-section{
+                .landscape-card{
+                    .book-md{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 /*Donation*/
 .donation{
@@ -627,7 +737,7 @@ MAIN
 FOOTER
 ===================*/
 footer{
-    width: 100vw;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: space-between;
