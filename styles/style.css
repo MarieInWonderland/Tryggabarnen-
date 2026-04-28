@@ -169,17 +169,35 @@ Highlight
 .highlight-content .highlight {
   position: absolute;
   inset: 0;
-  width: auto;
+  width: 100%;
   height: 100%;
   z-index: 0;
   pointer-events: none;
+  -o-object-fit: fill;
+     object-fit: fill;
   overflow: visible;
-  transform: scaleX(1.05) scaleY(1.15);
-  /*transform-origin: center;*/
+  transform: scaleX(1.05);
 }
 .highlight-content .text {
   position: relative;
   z-index: 1;
+}
+
+.highlight-header {
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 0.15rem;
+}
+.highlight-header .highlight-bg {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  inset: 0;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: scaleX(1.05);
 }
 
 /*==================
@@ -625,9 +643,11 @@ nav .nav-wrapper ul li {
   padding: 8px;
   cursor: pointer;
 }
+nav .nav-wrapper ul li .dropdown-toggle {
+  transition: transform 0.3s ease;
+}
 nav .nav-wrapper ul li:hover .dropdown-toggle {
   transform: rotate(180deg);
-  transition: transform 0.3s ease;
 }
 nav .nav-wrapper ul li:hover .under-link {
   display: block;
@@ -769,6 +789,8 @@ nav .nav-wrapper ul li .subnav.open li:hover {
     padding: 20px 10px;
     border-bottom: 1px solid;
     border-color: #f6f2ec;
+    position: relative;
+    background-color: transparent;
   }
   nav .menu-panel ul li:hover .under-link {
     display: none;
@@ -778,9 +800,17 @@ nav .nav-wrapper ul li .subnav.open li:hover {
     display: none;
     flex-direction: column;
     width: 100%;
+    background-color: transparent;
   }
   nav .menu-panel .subnav.open {
     display: flex;
+    position: relative;
+    background-color: transparent;
+    border-radius: 0px;
+  }
+  nav .menu-panel .subnav.open li {
+    border: none;
+    background-color: transparent;
   }
 }
 /*===================
@@ -870,6 +900,7 @@ MAIN
 /*About us section*/
 .about-us {
   display: flex;
+  align-items: center;
   padding: 0px 56px;
   gap: 20px;
   margin-top: 15rem;
@@ -952,6 +983,9 @@ MAIN
   .about-us {
     padding: 0px 24px;
   }
+  .about-us .about-us-content {
+    width: 50%;
+  }
   .about-us .about-us-content .about-us-btn {
     flex-direction: column;
   }
@@ -960,6 +994,7 @@ MAIN
 .events {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 16px;
   padding: 0px 48px;
 }
@@ -970,7 +1005,9 @@ MAIN
   width: 100%;
   min-height: -moz-fit-content;
   min-height: fit-content;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow-x: scroll;
   gap: 20px;
 }
 .events .cards-event .event-card {
@@ -983,6 +1020,7 @@ MAIN
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
 }
 .events .cards-event .event-card:first-child {
   background-image: url(../img/pictures/img-prova-på-badminton.webp);
@@ -1027,7 +1065,7 @@ MAIN
 
 @media (max-width: 769px) {
   .events .preamble-lg {
-    width: 80%;
+    max-width: 80%;
   }
   .events .cards-event .event-card {
     width: 15.5rem;
@@ -1079,6 +1117,7 @@ MAIN
   margin-top: 10rem;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 16px;
   padding: 0px 48px;
 }
@@ -1110,7 +1149,7 @@ MAIN
   fill: #f6f2ec;
 }
 .to-the-adult .landscape-section .cards-section .landscape-card p {
-  max-width: 70%;
+  width: 70%;
   color: #f6f2ec;
 }
 .to-the-adult .landscape-section .cards-section .landscape-card:first-child {
@@ -1123,6 +1162,7 @@ MAIN
 @media (max-width: 769px) {
   .to-the-adult .landscape-section .för-dig-som-vuxen {
     width: 100%;
+    background-position: 80%;
   }
   .to-the-adult .landscape-section .cards-section .landscape-card .book-md {
     width: 100%;
@@ -1132,6 +1172,7 @@ MAIN
 .donation {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 16px;
   padding: 0px 48px;
   margin-top: 11.625rem;
@@ -1173,64 +1214,88 @@ MAIN
   fill: #f6f2ec;
 }
 
+@media (max-width: 769px) {
+  .donation .preamble-lg {
+    max-width: 100%;
+  }
+}
 /*===================
 FOOTER
 ===================*/
-footer {
+.desktop {
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10%;
   background-image: url(../img/graphic-element/footer.svg);
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   background-position: center top;
   padding: 33px 48px;
 }
-footer .footer-left {
+.desktop .footer-left {
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 48px;
 }
-footer .footer-left img {
+.desktop .footer-left img {
   max-height: 40px;
   margin-right: auto;
 }
-footer .footer-left .footer-wrapper {
+.desktop .footer-left .footer-wrapper {
   display: flex;
   gap: 48px;
 }
-footer .footer-left .footer-wrapper .footer-items {
+.desktop .footer-left .footer-wrapper .footer-items {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-footer .footer-left .footer-wrapper .footer-items .footer-item {
+.desktop .footer-left .footer-wrapper .footer-items .footer-item {
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
   flex-direction: column;
 }
-footer .footer-left .footer-wrapper .footer-items .footer-item .book-md {
-  color: #34140b;
+.desktop .footer-left .footer-wrapper .footer-items .footer-item a {
+  color: #34140b !important;
 }
-footer .footer-left .footer-wrapper .footer-items .footer-item a:hover {
+.desktop .footer-left .footer-wrapper .footer-items .footer-item a:hover {
   text-decoration: underline;
 }
-footer .footer-left .footer-bottom {
+.desktop .footer-left .footer-bottom {
   display: inline-flex;
+  gap: 10px;
 }
-footer .footer-left .footer-bottom .kakor {
+.desktop .footer-left .footer-bottom .kakor {
   display: inline-flex;
   flex-direction: column;
+  align-items: flex-start;
+  color: #34140b;
 }
-footer .footer-left .footer-bottom .under-link {
-  width: 100%;
-}
-footer .footer-right {
+.desktop .footer-right {
   max-width: 40%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
+}
+
+.tablet {
+  display: none;
+}
+
+@media (max-width: 769px) {
+  .desktop {
+    display: none;
+  }
+  .tablet {
+    width: 100%;
+    background-image: url(../img/graphic-element/footer-tablet.svg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */

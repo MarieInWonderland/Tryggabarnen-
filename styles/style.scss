@@ -66,10 +66,14 @@ nav{
                 padding:$spacing-lg;
                 cursor: pointer;
 
+                .dropdown-toggle{
+                    transition: transform 0.3s ease;
+                }
+
                 &:hover{
                     .dropdown-toggle {
                     transform: rotate(180deg);
-                    transition: transform 0.3s ease;
+                    
                     }
 
                     .under-link {              
@@ -240,6 +244,8 @@ nav{
                     padding: $spacing-4xl $spacing-xl;
                     border-bottom: 1px solid;
                     border-color: $text-invert;
+                    position: relative;
+                    background-color: transparent;
 
                     &:hover{
                         .under-link{
@@ -253,10 +259,19 @@ nav{
                 display: none;
                 flex-direction: column;
                 width: 100%;
+                background-color: transparent;
                 }
 
                 .subnav.open{
                     display: flex;
+                    position: relative;
+                    background-color: transparent;
+                    border-radius: $border-radius-none;
+                    
+                    li{
+                        border: none;
+                        background-color: transparent;
+                    }
                 }
         
         }
@@ -372,6 +387,7 @@ MAIN
 /*About us section*/
 .about-us{
     display: flex;
+    align-items: center;
     padding:$spacing-none $spacing-10xl;
     gap: $spacing-4xl;
     margin-top: 15rem;
@@ -462,6 +478,7 @@ MAIN
         padding:$spacing-none $spacing-5xl;
 
         .about-us-content{
+            width: 50%;
             .about-us-btn{
                 flex-direction: column;
             }
@@ -474,6 +491,7 @@ MAIN
 .events{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: $spacing-3xl;
     padding: $spacing-none $spacing-9xl;
 
@@ -483,7 +501,9 @@ MAIN
     .cards-event{
         width: 100%;
         min-height: fit-content;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        overflow-x: scroll;
         gap: $spacing-4xl;
 
         .event-card{
@@ -496,6 +516,7 @@ MAIN
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            align-items: flex-start;
 
             &:first-child{
                 background-image: url(../img/pictures/img-prova-på-badminton.webp);
@@ -551,7 +572,7 @@ MAIN
     .events{
 
         .preamble-lg{
-            width: 80%;
+            max-width: 80%;
         }
 
         .cards-event{
@@ -613,6 +634,7 @@ MAIN
     margin-top: 10rem;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: $spacing-3xl;
     padding: $spacing-none $spacing-9xl;
 
@@ -647,7 +669,7 @@ MAIN
             }
 
             p{
-                max-width: 70%;
+                width: 70%;
                 color: $text-invert;
             }
 
@@ -668,6 +690,7 @@ MAIN
         .landscape-section{
             .för-dig-som-vuxen{
                 width: 100%;
+                background-position: 80%;
             }
             .cards-section{
                 .landscape-card{
@@ -685,6 +708,7 @@ MAIN
 .donation{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: $spacing-3xl;
     padding: $spacing-none $spacing-9xl;
     margin-top: 11.625rem;
@@ -732,23 +756,33 @@ MAIN
             }
     }
 }
+@media (max-width:$breakpoint-tablet) {
+    .donation{
+        .preamble-lg{
+            max-width: 100%;
+        }
+    }
+}
+
 
 /*===================
 FOOTER
 ===================*/
-footer{
+.desktop{
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 10%;
     background-image: url(../img/graphic-element/footer.svg);
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     background-position: center top;
 
     padding: 33px $spacing-9xl;
 
     .footer-left{
+        width: 50%;
         display: flex;
         flex-direction: column;
         gap: $spacing-9xl;
@@ -773,11 +807,8 @@ footer{
                     display: flex;
                     flex-direction: column;
 
-                    .book-md{
-                        color: $text-primary;
-                    }
-
                     a{
+                        color: $text-primary !important;
                         &:hover{
                             text-decoration: underline;
                         }
@@ -787,14 +818,13 @@ footer{
         }
         .footer-bottom{
                 display: inline-flex;
+                gap: $spacing-xl;
 
                 .kakor{
                     display: inline-flex;
                     flex-direction: column;
-                }
-
-                .under-link{
-                    width: 100%;
+                    align-items: flex-start;
+                    color: $text-primary;
                 }
             }  
     }
@@ -805,5 +835,22 @@ footer{
         flex-direction: column;
         align-items: flex-end;
         justify-content: space-between;
+    }
+}
+.tablet{
+    display: none;
+}
+
+@media (max-width:$breakpoint-tablet) {
+    .desktop{
+        display: none;
+    }
+    .tablet{
+        width: 100%;
+        background-image: url(../img/graphic-element/footer-tablet.svg);
+        background-size: cover;
+
+        display: flex;
+        flex-direction: column;
     }
 }
