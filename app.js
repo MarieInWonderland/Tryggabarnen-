@@ -72,3 +72,8 @@ window.addEventListener('scroll', () => {
   closeMenu();
 });
 
+//panik button 
+document.getElementById("panik").addEventListener("click", () => {
+  window.location.href = "https://www.google.com";
+});
+

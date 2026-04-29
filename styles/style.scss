@@ -6,6 +6,7 @@ GENERAL
 ===================*/
 body{
     background-color: $background-primary;
+    position: relative;
 }
 
 .highlight-text{
@@ -891,6 +892,7 @@ footer{
         padding: $spacing-7xl $spacing-5xl $spacing-7xl $spacing-5xl;
         background-image: url(../img/graphic-element/footer-tablet.svg);
         background-size: cover ;
+        background-position: center top;
 
         .footer-top{
            flex-direction: column;

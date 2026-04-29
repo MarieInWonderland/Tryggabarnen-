@@ -132,6 +132,13 @@ Styles
     line-height: $line-height-2xl;
 }
 
+.heading-lg{
+    font-family: $heading;
+    font-weight: $black;
+    font-size: $font-size-lg;
+    line-height: $line-height-xl;
+}
+
 .heading-md{
     font-family: $heading;
     font-weight: $black;
@@ -266,6 +273,13 @@ Styles
     line-height: $line-height-2xl;
 }
 
+.preamble-md{
+        font-family: $body;
+        font-weight: $regular;
+        font-size: $font-size-md ;
+        line-height: $line-height-xl;
+    } 
+
 @media (max-width:$breakpoint-tablet){
     .preamble-5xl{
     font-family: $body;
@@ -286,7 +300,14 @@ Styles
         font-weight: $regular;
         font-size: $font-size-md ;
         line-height: $line-height-xl;
-    }  
+    } 
+    
+    .preamble-md{
+        font-family: $body;
+        font-weight: $regular;
+        font-size: $font-size-sm ;
+        line-height: $line-height-lg;
+    } 
 }
 
 @media (max-width:$breakpoint-mobile){
@@ -310,6 +331,13 @@ Styles
         font-size: $font-size-sm ;
         line-height: $line-height-xl;
     }  
+
+     .preamble-md{
+        font-family: $body;
+        font-weight: $regular;
+        font-size: $font-size-sm ;
+        line-height: $line-height-lg;
+    } 
 }
 
 /*Body*/

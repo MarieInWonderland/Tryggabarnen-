@@ -1,0 +1,53 @@
+@import 'bases';       
+@import 'typography';
+
+.hero-for-barn{
+    width: 100vw;
+    height: 29rem;
+    background-image: url(../img/pictures/för-barn-och-unga-hero.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: $spacing-13xl $spacing-9xl;
+    position: relative;
+
+
+    .in-danger{
+        width: 20%;
+        margin-left: auto;
+        display:flex;
+        flex-direction: column;
+        gap: $spacing-sm;
+
+        padding: $spacing-lg $spacing-4xl;
+        border-radius: $border-radius-md $border-radius-md $border-radius-md $border-radius-none;
+        background-color:$background-warning ;
+    }
+    .hero-information{
+        width: 50%;
+        padding:$spacing-5xl;
+        background-color: $effects-brown-a;
+        backdrop-filter: blur(25%);
+        border-radius: $border-radius-lg;
+        position: absolute;
+        bottom:-100px;
+
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-xl;
+        color: $text-invert;
+
+    }
+}
+@media (max-width:$breakpoint-mobile){
+    .hero-for-barn{
+        padding: $spacing-3xl ;
+        .in-danger{
+            width: 80%;
+        }
+
+        .hero-information{
+            width: 100%;
+        }
+    }
+}

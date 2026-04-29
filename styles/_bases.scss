@@ -247,10 +247,9 @@ Button
 }
 
 .btn-secondary-outlined{
-    min-height: 44px;
+    width: auto;
     height: auto;
     min-width: fit-content;
-    width: auto;
     padding: $spacing-md $spacing-2xl;
     position: relative;
     display: inline-grid;
@@ -304,6 +303,30 @@ Button
     
 }
 
+.panik{
+    padding: $spacing-lg $spacing-5xl;
+    display: flex;
+    align-items: center;
+    gap:$spacing-lg;
+    background-color: #FEDA68;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+    border: none;
+    border-radius: $border-radius-none $border-radius-md $border-radius-md $border-radius-md;
+    position: fixed;
+    right: 48px;
+    top:668px;
+    z-index: 1000000;
+    cursor: pointer;
+
+    h6{
+        color: $text-primary;
+    }
+
+    &:hover{
+        background-color: $btn-filled-primary-bg;
+    }
+}
+
 /*==================
 Highlight 
 ====================*/
@@ -332,6 +355,7 @@ Highlight
     .text{
     position: relative;
     z-index: 1;
+    color: $text-primary;
     }
 }
 

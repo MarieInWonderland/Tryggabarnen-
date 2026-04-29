@@ -119,11 +119,10 @@ Button
 }
 
 .btn-secondary-outlined {
-  min-height: 44px;
+  width: auto;
   height: auto;
   min-width: -moz-fit-content;
   min-width: fit-content;
-  width: auto;
   padding: 4px 12px;
   position: relative;
   display: inline-grid;
@@ -170,6 +169,28 @@ Button
   background-color: rgba(52, 20, 11, 0.1882352941);
 }
 
+.panik {
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #FEDA68;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 0px 20px 20px 20px;
+  position: fixed;
+  right: 48px;
+  top: 668px;
+  z-index: 1000000;
+  cursor: pointer;
+}
+.panik h6 {
+  color: #34140b;
+}
+.panik:hover {
+  background-color: #fdc104;
+}
+
 /*==================
 Highlight 
 ====================*/
@@ -197,6 +218,7 @@ Highlight
 .highlight-content .text {
   position: relative;
   z-index: 1;
+  color: #34140b;
 }
 
 .highlight-header {
@@ -297,6 +319,13 @@ Styles
   font-weight: 900;
   font-size: 20px;
   line-height: 28px;
+}
+
+.heading-lg {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .heading-md {
@@ -416,6 +445,13 @@ Styles
   line-height: 28px;
 }
 
+.preamble-md {
+  font-family: "BuenosAires";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 @media (max-width: 769px) {
   .preamble-5xl {
     font-family: "BuenosAires";
@@ -434,6 +470,12 @@ Styles
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+  }
+  .preamble-md {
+    font-family: "BuenosAires";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 @media (max-width: 572px) {
@@ -454,6 +496,12 @@ Styles
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
+  }
+  .preamble-md {
+    font-family: "BuenosAires";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 /*Body*/
@@ -607,6 +655,7 @@ GENERAL
 ===================*/
 body {
   background-color: #f6f2ec;
+  position: relative;
 }
 
 .highlight-text {
@@ -1340,6 +1389,7 @@ footer .footer-bottom .footer-logos {
     padding: 32px 24px 32px 24px;
     background-image: url(../img/graphic-element/footer-tablet.svg);
     background-size: cover;
+    background-position: center top;
   }
   footer .footer-top {
     flex-direction: column;
