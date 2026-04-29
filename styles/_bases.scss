@@ -162,7 +162,7 @@ Breakpoints
 
 $breakpoint-desktop: 1440px; 
 $breakpoint-tablet: 769px;
-$breakpoint-mobile: 375px; 
+$breakpoint-mobile: 572px; 
 
 /*==================
 Button 
@@ -191,7 +191,7 @@ Button
 }
 
 .btn-primary-outlined{
-     min-height: 44px;
+    min-height: 44px;
     height: auto;
     min-width: fit-content;
     width: auto;
@@ -218,11 +218,19 @@ Button
     overflow: visible;
     aspect-ratio: none;
     transform: scaleX(1.5) scaleY(1.15);
+
+    @media (max-width:breakpoint-mobile) {
+        transform: scaleX(1.4);
+    }
     }
 
     .button-content{
         display: flex;
         padding: $spacing-md $spacing-8xl;
+
+        .heading-md{
+            white-space: nowrap;
+        }
 
         span {
         display: flex;
@@ -266,12 +274,19 @@ Button
     overflow: visible;
     aspect-ratio: none;
     transform: scaleX(1.5) scaleY(1.15);
+    @media (max-width:breakpoint-mobile) {
+        transform: scaleX(1.4);
+    }
     }
 
     .button-content{
         display: flex;
         padding: $spacing-md $spacing-8xl;
         gap:$spacing-lg;
+
+        .heading-md{
+            white-space: nowrap;
+        }
 
         span {
         display: flex;
@@ -280,6 +295,7 @@ Button
         z-index: 1;
         display: inline-block;
         }
+    
     }
 
     &:hover{
