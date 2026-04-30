@@ -70,6 +70,7 @@ nav{
 
                 .dropdown-toggle{
                     transition: transform 0.3s ease;
+                    color: $text-invert;
                 }
 
                 &:hover{
@@ -331,6 +332,9 @@ MAIN
         flex-direction: column;
         align-items: flex-start;
         gap: $spacing-9xl;
+    @media(max-with:$breakpoint-desktop){
+        max-width: 70%;
+    }
         
         .text-container{
             display: flex;
@@ -445,6 +449,7 @@ MAIN
     }
 
     .about-us-content{
+        max-width: 50%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -793,7 +798,6 @@ MAIN
                 }
                 .under-link{
                     display: none;
-                    width: 100%;
                     height: 4px;
                     fill: $text-invert;
                 } 
@@ -865,18 +869,23 @@ footer{
 
             .footer-kakor{
                 display: flex;
-                justify-content: center;
-                gap: $spacing-xl;
+                justify-content: flex-start;
+                align-items: flex-start;
 
                 .kakor{
                     display: flex;
                     flex-direction: column;
+                    align-items: flex-start;
                     gap: $spacing-sm;
 
                     a{
                         color: $text-primary !important;
                     }
                     
+                    .under-link{
+                        height: 4px;
+                        width: 100%;
+                    } 
                 }
             }
 

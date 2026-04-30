@@ -160,7 +160,7 @@ Variables Tockens
 Breakpoints 
 ====================*/
 
-$breakpoint-desktop: 1440px; 
+$breakpoint-desktop: 1025px; 
 $breakpoint-tablet: 769px;
 $breakpoint-mobile: 572px; 
 
@@ -168,139 +168,76 @@ $breakpoint-mobile: 572px;
 Button 
 ====================*/
 
-.btn-filled{
-    height: 44px;
-    width: fit-content;
-    padding: $spacing-md $spacing-8xl;
-
+.button {
+    border-radius: $border-radius-full;
+    padding: $spacing-2xl $spacing-8xl;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: $spacing-lg;
-    
+    gap: 1rem;
+    border: none;
+    cursor: pointer;
+
+    .button__icon {
+        transition: all .3s ease;
+    }
+
+    &:hover {
+        .button__icon {
+            transform: translateX(10px);
+        }
+    }
+}
+
+.button--filled {
     background: $btn-filled-primary-bg;      
     color: $btn-filled-primary-text;  
-    fill: $btn-filled-primary-icon;       
-    border: none;  
-    border-radius: $border-radius-full;                          
-    cursor: pointer;  
+    fill: $btn-filled-primary-icon;
 
-    &:hover{
+    &:hover {
         background-color: $yellow-600;
     }
 }
 
-.btn-primary-outlined{
-    min-height: 44px;
-    height: auto;
-    min-width: fit-content;
-    width: auto;
-    padding: $spacing-md $spacing-2xl;
-    position: relative;
-    display: inline-grid;
-    place-items: center;
+.button--outlined {
     
+    position: relative;
     background: transparent;
     border: none;
     outline: none;
-
-    color: $btn-outlined-primary-text;  
-    fill: $btn-outlined-primary-icon;       
-    border-radius: $border-radius-full;                          
-    cursor: pointer;  
-
-    .button__border {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    overflow: visible;
-    aspect-ratio: none;
-    transform: scaleX(1.5) scaleY(1.15);
-
-    @media (max-width:breakpoint-mobile) {
-        transform: scaleX(1.4);
-    }
-    }
-
-    .button-content{
-        display: flex;
-        padding: $spacing-md $spacing-8xl;
-
-        .heading-md{
-            white-space: nowrap;
-        }
-
-        span {
-        display: flex;
-        width: 100%;
-        position: relative;
-        z-index: 1;
-        display: inline-block;
-        }
-    } 
 
     &:hover{
         background-color: $btn-outlined-primary-hover;
     }
-}
-
-.btn-secondary-outlined{
-    width: auto;
-    height: auto;
-    min-width: fit-content;
-    padding: $spacing-md $spacing-2xl;
-    position: relative;
-    display: inline-grid;
-    place-items: center;
     
-    background: transparent;
-    border: none;
-    outline: none;
 
-    color: $btn-outlined-primary-text;  
-    fill: $btn-outlined-primary-icon;       
-    border-radius: $border-radius-full;                          
-    cursor: pointer;  
+    .button__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
 
     .button__border {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    overflow: visible;
-    aspect-ratio: none;
-    transform: scaleX(1.5) scaleY(1.15);
-    @media (max-width:breakpoint-mobile) {
-        transform: scaleX(1.4);
-    }
-    }
-
-    .button-content{
-        display: flex;
-        padding: $spacing-md $spacing-8xl;
-        gap:$spacing-lg;
-
-        .heading-md{
-            white-space: nowrap;
-        }
-
-        span {
-        display: flex;
+        position: absolute;
+        inset: 0;
         width: 100%;
-        position: relative;
-        z-index: 1;
-        display: inline-block;
-        }
-    
+        height: 100%;
+        pointer-events: none;
+        pointer-events: none;
+        overflow: visible;
+        aspect-ratio: none;
+    }
+    .long-btn{
+        transform: scaleX(1.30);
     }
 
-    &:hover{
-        background-color: $btn-outlined-secondary-hover;
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .button {
+        padding: $spacing-2xl $spacing-6xl;
     }
-    
 }
 
 .panik{
@@ -322,8 +259,8 @@ Button
         color: $text-primary;
     }
 
-    &:hover{
-        background-color: $btn-filled-primary-bg;
+    .exit-icon{
+        color: $text-primary;
     }
 }
 
@@ -375,6 +312,23 @@ Highlight
         transform: scaleX(1.05);
     }
 }
+
+/*==================
+Icon 
+====================*/
+.icon{
+    width: 24px;
+    height: 24px;
+    padding: auto;
+}
+.primary{
+    fill: $text-primary;
+}
+
+.invert{
+    fill:$btn-outlined-secondary-border;
+}
+
 
 
 

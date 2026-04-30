@@ -47,128 +47,66 @@ Breakpoints
 /*==================
 Button 
 ====================*/
-.btn-filled {
-  height: 44px;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 4px 40px;
+.button {
+  border-radius: 100000px;
+  padding: 12px 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 1rem;
+  border: none;
+  cursor: pointer;
+}
+.button .button__icon {
+  transition: all 0.3s ease;
+}
+.button:hover .button__icon {
+  transform: translateX(10px);
+}
+
+.button--filled {
   background: #fdc104;
   color: #1a1a1a;
   fill: #1a1a1a;
-  border: none;
-  border-radius: 100000px;
-  cursor: pointer;
 }
-.btn-filled:hover {
+.button--filled:hover {
   background-color: #eab200;
 }
 
-.btn-primary-outlined {
-  min-height: 44px;
-  height: auto;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-  width: auto;
-  padding: 4px 12px;
+.button--outlined {
   position: relative;
-  display: inline-grid;
-  place-items: center;
   background: transparent;
   border: none;
   outline: none;
-  color: #34140b;
-  fill: #34140b;
-  border-radius: 100000px;
-  cursor: pointer;
 }
-.btn-primary-outlined .button__border {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: visible;
-  aspect-ratio: none;
-  transform: scaleX(1.5) scaleY(1.15);
-}
-@media (max-width: breakpoint-mobile) {
-  .btn-primary-outlined .button__border {
-    transform: scaleX(1.4);
-  }
-}
-.btn-primary-outlined .button-content {
-  display: flex;
-  padding: 4px 40px;
-}
-.btn-primary-outlined .button-content .heading-md {
-  white-space: nowrap;
-}
-.btn-primary-outlined .button-content span {
-  display: flex;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-}
-.btn-primary-outlined:hover {
+.button--outlined:hover {
   background-color: rgba(52, 20, 11, 0.062745098);
 }
-
-.btn-secondary-outlined {
-  width: auto;
-  height: auto;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-  padding: 4px 12px;
-  position: relative;
-  display: inline-grid;
-  place-items: center;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: #34140b;
-  fill: #34140b;
-  border-radius: 100000px;
-  cursor: pointer;
+.button--outlined .button__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
-.btn-secondary-outlined .button__border {
+.button--outlined .button__border {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
+  pointer-events: none;
   overflow: visible;
   aspect-ratio: none;
-  transform: scaleX(1.5) scaleY(1.15);
 }
-@media (max-width: breakpoint-mobile) {
-  .btn-secondary-outlined .button__border {
-    transform: scaleX(1.4);
-  }
-}
-.btn-secondary-outlined .button-content {
-  display: flex;
-  padding: 4px 40px;
-  gap: 8px;
-}
-.btn-secondary-outlined .button-content .heading-md {
-  white-space: nowrap;
-}
-.btn-secondary-outlined .button-content span {
-  display: flex;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-}
-.btn-secondary-outlined:hover {
-  background-color: rgba(52, 20, 11, 0.1882352941);
+.button--outlined .long-btn {
+  transform: scaleX(1.3);
 }
 
+@media (max-width: 572px) {
+  .button {
+    padding: 12px 28px;
+  }
+}
 .panik {
   padding: 8px 24px;
   display: flex;
@@ -187,8 +125,8 @@ Button
 .panik h6 {
   color: #34140b;
 }
-.panik:hover {
-  background-color: #fdc104;
+.panik .exit-icon {
+  color: #34140b;
 }
 
 /*==================
@@ -236,6 +174,23 @@ Highlight
   -o-object-fit: cover;
      object-fit: cover;
   transform: scaleX(1.05);
+}
+
+/*==================
+Icon 
+====================*/
+.icon {
+  width: 24px;
+  height: 24px;
+  padding: auto;
+}
+
+.primary {
+  fill: #34140b;
+}
+
+.invert {
+  fill: #f6f2ec;
 }
 
 /*==================
