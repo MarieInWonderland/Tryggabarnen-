@@ -1,16 +1,14 @@
 @import 'bases';       
 @import 'typography';
 
-.hero-for-barn{
+.hero{
     width: 100vw;
     height: 29rem;
-    background-image: url(../img/pictures/för-barn-och-unga-hero.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: $spacing-13xl $spacing-9xl;
     position: relative;
-
 
     .in-danger{
         width: 20%;
@@ -40,7 +38,7 @@
     }
 }
 @media (max-width:$breakpoint-mobile){
-    .hero-for-barn{
+    .hero{
         padding: $spacing-3xl ;
         .in-danger{
             width: 80%;
@@ -103,6 +101,13 @@
         align-self: flex-end;
     }
 }
+.for-barn{
+        background-image: url(../img/pictures/för-barn-och-unga-hero.png);
+    }
+
+    .stodverksamhet{
+        background-image: url(../img/pictures/stodverksamhet-hero.png);
+    }
 @media (max-width:$breakpoint-tablet){
     .your-right{
         .your-right-content{
@@ -184,4 +189,85 @@
             }
         }
     }
+}
+/*================================================
+
+Stödversamhet
+
+==================================================*/
+
+.different-groups{
+    margin-top: 14.75rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: $spacing-4xl;
+    justify-content: center;
+    align-items: center;
+    padding: $spacing-none 155px;
+
+    .group-card{
+        height: 100%;
+        background-color: $background-brand;
+        gap: $spacing-2xl;
+        padding: $spacing-5xl $spacing-3xl;
+        border-radius: $border-radius-md;
+
+        .group-title{
+            display: flex;
+            align-items: center;
+            color: $text-invert;
+            fill: $text-invert;
+        }
+        p{
+            color: $text-invert;
+        }
+    }
+}
+
+@media (max-width:$breakpoint-tablet){
+    .different-groups{
+        padding: $spacing-none $spacing-5xl;
+    }
+}
+
+@media (max-width:$breakpoint-mobile){
+    .different-groups{
+        padding: $spacing-none $spacing-4xl;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/*Information bottom*/
+.information-bottom{
+    padding: $spacing-none $spacing-9xl;
+    display: flex;
+    justify-content: space-between;
+
+    .other-testimony{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: $spacing-8xl;
+
+        .info-title-and-lign{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            .icon .lign{
+                color: $text-primary;
+            }
+
+            .info-title{
+                display: flex;
+            }
+            p{
+                text-align: center;
+            }
+        }
+
+    }
+
 }

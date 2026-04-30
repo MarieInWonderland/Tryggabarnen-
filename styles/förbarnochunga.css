@@ -3,16 +3,18 @@
 General 
 ================*/
 @import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap");
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
   width: 100%;
   max-width: 100%;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
 }
 
@@ -639,17 +641,16 @@ Styles
     line-height: 32px;
   }
 }
-.hero-for-barn {
+.hero {
   width: 100vw;
   height: 29rem;
-  background-image: url(../img/pictures/för-barn-och-unga-hero.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 80px 48px;
   position: relative;
 }
-.hero-for-barn .in-danger {
+.hero .in-danger {
   width: 20%;
   margin-left: auto;
   display: flex;
@@ -659,7 +660,7 @@ Styles
   border-radius: 20px 20px 20px 0px;
   background-color: #fff3cd;
 }
-.hero-for-barn .hero-information {
+.hero .hero-information {
   width: 50%;
   padding: 24px;
   background-color: rgba(52, 20, 11, 0.6);
@@ -674,13 +675,13 @@ Styles
 }
 
 @media (max-width: 572px) {
-  .hero-for-barn {
+  .hero {
     padding: 16px;
   }
-  .hero-for-barn .in-danger {
+  .hero .in-danger {
     width: 80%;
   }
-  .hero-for-barn .hero-information {
+  .hero .hero-information {
     width: 100%;
   }
 }
@@ -727,6 +728,14 @@ Styles
 }
 .your-right .läs-mer {
   align-self: flex-end;
+}
+
+.for-barn {
+  background-image: url(../img/pictures/för-barn-och-unga-hero.png);
+}
+
+.stodverksamhet {
+  background-image: url(../img/pictures/stodverksamhet-hero.png);
 }
 
 @media (max-width: 769px) {
@@ -795,4 +804,74 @@ Styles
   .stories .story-cards .story-card {
     padding: 8px;
   }
+}
+/*================================================
+
+Stödversamhet
+
+==================================================*/
+.different-groups {
+  margin-top: 14.75rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 155px;
+}
+.different-groups .group-card {
+  height: 100%;
+  background-color: #610228;
+  gap: 12px;
+  padding: 24px 16px;
+  border-radius: 20px;
+}
+.different-groups .group-card .group-title {
+  display: flex;
+  align-items: center;
+  color: #f6f2ec;
+  fill: #f6f2ec;
+}
+.different-groups .group-card p {
+  color: #f6f2ec;
+}
+
+@media (max-width: 769px) {
+  .different-groups {
+    padding: 0px 24px;
+  }
+}
+@media (max-width: 572px) {
+  .different-groups {
+    padding: 0px 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/*Information bottom*/
+.information-bottom {
+  padding: 0px 48px;
+  display: flex;
+  justify-content: space-between;
+}
+.information-bottom .other-testimony {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+.information-bottom .other-testimony .info-title-and-lign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.information-bottom .other-testimony .info-title-and-lign .icon .lign {
+  color: #34140b;
+}
+.information-bottom .other-testimony .info-title-and-lign .info-title {
+  display: flex;
+}
+.information-bottom .other-testimony .info-title-and-lign p {
+  text-align: center;
 }/*# sourceMappingURL=förbarnochunga.css.map */
