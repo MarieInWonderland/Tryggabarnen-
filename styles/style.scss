@@ -532,6 +532,10 @@ MAIN
 @media (max-width:$breakpoint-mobile) {
     .about-us{
         flex-direction: column;
+        .about-us-content{
+            max-width: 100%;
+            width: 100%;
+        }
     }
 }
 
@@ -767,14 +771,14 @@ MAIN
         max-width: 40%;
     }
 
-    .donation-links{
+    .donation-content{
         min-width: 60%;
         margin: auto;
         display: flex;
         justify-content: space-around;
         gap: $spacing-9xl;
 
-        .donation-div{
+        .donation-item{
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -808,6 +812,14 @@ MAIN
     .donation{
         .preamble-lg{
             max-width: 100%;
+        }
+    }
+}
+
+@media (max-width:$breakpoint-mobile) {
+    .donation{
+        .donation-content{
+            flex-direction: column;
         }
     }
 }

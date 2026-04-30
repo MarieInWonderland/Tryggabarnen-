@@ -51,3 +51,137 @@
         }
     }
 }
+
+/*Your right*/
+.your-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $spacing-3xl;
+    padding: $spacing-none $spacing-9xl;
+    position: relative;
+
+    .lign{
+        width: 90px;
+        height: auto;
+        fill: $text-primary;
+        rotate: -55.72°;
+        position: absolute;
+    }
+
+    .lign1{
+        left: 347.76px;
+        top: 126.09px;
+    }
+
+    
+
+    .your-right-content{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        gap: -6px;
+        width: 100%;
+
+        .your-right-item{
+            height: 328px;
+            width: 305px;
+            display: flex;
+            flex-direction: column;
+            gap:$spacing-2xl; 
+            text-align: center;
+        }
+        .flexstart{
+            justify-content: flex-start;
+        }
+
+        .flexend{
+            justify-content: flex-end;
+        }
+    }
+    .läs-mer{
+        align-self: flex-end;
+    }
+}
+@media (max-width:$breakpoint-tablet){
+    .your-right{
+        .your-right-content{
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2,1fr);
+        }
+    }
+}
+
+/*Stories*/
+.stories{
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-3xl;
+    align-items: flex-start;
+    padding: $spacing-none $spacing-9xl;
+    margin: 7.5rem 0rem;
+
+    .story-cards{
+        max-width: 100%;
+        display: flex;
+        gap: $spacing-2xl;
+        justify-content: flex-start;
+        
+        .story-card{
+            background-image: url(../img/graphic-element/testimonial-card.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            display: flex;
+            flex-direction: column;
+            border-top-left-radius: $border-radius-lg;
+            padding: 88px 65px 55px 76px;
+
+            .story-wrapper{
+                display: flex;
+                gap: -2px;
+                .icon-quote{
+                    width: 62px;
+                    height: 62px;
+                    color: $illustrations-brand-yellow;
+                }
+                .story{
+                        width: 80%;
+                        flex:1;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        .autor{
+                            display: flex;
+                        }
+                        p{
+                            color:$text-invert;
+                        }
+
+                    }
+            }
+        }
+    }
+    .läs-mer{
+        align-self: flex-end;
+    }
+
+}
+@media (max-width:$breakpoint-tablet){
+    .stories{
+        .story-cards{
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width:$breakpoint-mobile){
+    .stories{
+        .story-cards{
+            .story-card{
+                padding: $spacing-lg;
+            }
+        }
+    }
+}

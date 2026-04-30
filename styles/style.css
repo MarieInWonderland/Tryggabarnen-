@@ -3,10 +3,17 @@
 General 
 ================*/
 @import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap");
-*, html {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 html {
@@ -129,6 +136,14 @@ Button
   color: #34140b;
 }
 
+@media (max-width: 572px) {
+  .panik {
+    padding: 12px 12px;
+  }
+  h6 {
+    margin: 0px;
+  }
+}
 /*==================
 Highlight 
 ====================*/
@@ -461,6 +476,13 @@ Styles
 }
 /*Body*/
 /*Book*/
+.book-xl {
+  font-family: "BuenosAires";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+}
+
 .book-lg {
   font-family: "BuenosAires";
   font-weight: 400;
@@ -483,6 +505,12 @@ Styles
 }
 
 @media (max-width: 769px) {
+  .book-xl {
+    font-family: "BuenosAires";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+  }
   .book-lg {
     font-family: "BuenosAires";
     font-weight: 400;
@@ -503,6 +531,12 @@ Styles
   }
 }
 @media (max-width: 572px) {
+  .book-xl {
+    font-family: "BuenosAires";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+  }
   .book-lg {
     font-family: "BuenosAires";
     font-weight: 400;
@@ -1051,6 +1085,10 @@ MAIN
   .about-us {
     flex-direction: column;
   }
+  .about-us .about-us-content {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 /*Events*/
 .events {
@@ -1243,33 +1281,33 @@ MAIN
 .donation .preamble-lg {
   max-width: 40%;
 }
-.donation .donation-links {
+.donation .donation-content {
   min-width: 60%;
   margin: auto;
   display: flex;
   justify-content: space-around;
   gap: 48px;
 }
-.donation .donation-links .donation-div {
+.donation .donation-content .donation-item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.donation .donation-links img {
+.donation .donation-content img {
   text-align: center;
 }
-.donation .donation-links .btn-donation {
+.donation .donation-content .btn-donation {
   border: 0px;
   background-color: transparent;
   cursor: pointer;
 }
-.donation .donation-links .btn-donation:hover .under-link {
+.donation .donation-content .btn-donation:hover .under-link {
   display: block;
 }
-.donation .donation-links .btn-donation .btn-text {
+.donation .donation-content .btn-donation .btn-text {
   display: flex;
 }
-.donation .donation-links .btn-donation .under-link {
+.donation .donation-content .btn-donation .under-link {
   display: none;
   height: 4px;
   fill: #f6f2ec;
@@ -1278,6 +1316,11 @@ MAIN
 @media (max-width: 769px) {
   .donation .preamble-lg {
     max-width: 100%;
+  }
+}
+@media (max-width: 572px) {
+  .donation .donation-content {
+    flex-direction: column;
   }
 }
 /*===================

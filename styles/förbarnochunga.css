@@ -3,10 +3,17 @@
 General 
 ================*/
 @import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap");
-*, html {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 html {
@@ -129,6 +136,14 @@ Button
   color: #34140b;
 }
 
+@media (max-width: 572px) {
+  .panik {
+    padding: 12px 12px;
+  }
+  h6 {
+    margin: 0px;
+  }
+}
 /*==================
 Highlight 
 ====================*/
@@ -461,6 +476,13 @@ Styles
 }
 /*Body*/
 /*Book*/
+.book-xl {
+  font-family: "BuenosAires";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+}
+
 .book-lg {
   font-family: "BuenosAires";
   font-weight: 400;
@@ -483,6 +505,12 @@ Styles
 }
 
 @media (max-width: 769px) {
+  .book-xl {
+    font-family: "BuenosAires";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+  }
   .book-lg {
     font-family: "BuenosAires";
     font-weight: 400;
@@ -503,6 +531,12 @@ Styles
   }
 }
 @media (max-width: 572px) {
+  .book-xl {
+    font-family: "BuenosAires";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+  }
   .book-lg {
     font-family: "BuenosAires";
     font-weight: 400;
@@ -648,5 +682,117 @@ Styles
   }
   .hero-for-barn .hero-information {
     width: 100%;
+  }
+}
+/*Your right*/
+.your-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0px 48px;
+  position: relative;
+}
+.your-right .lign {
+  width: 90px;
+  height: auto;
+  fill: #34140b;
+  rotate: -55.72°;
+  position: absolute;
+}
+.your-right .lign1 {
+  left: 347.76px;
+  top: 126.09px;
+}
+.your-right .your-right-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap: -6px;
+  width: 100%;
+}
+.your-right .your-right-content .your-right-item {
+  height: 328px;
+  width: 305px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+.your-right .your-right-content .flexstart {
+  justify-content: flex-start;
+}
+.your-right .your-right-content .flexend {
+  justify-content: flex-end;
+}
+.your-right .läs-mer {
+  align-self: flex-end;
+}
+
+@media (max-width: 769px) {
+  .your-right .your-right-content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+/*Stories*/
+.stories {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 0px 48px;
+  margin: 7.5rem 0rem;
+}
+.stories .story-cards {
+  max-width: 100%;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+}
+.stories .story-cards .story-card {
+  background-image: url(../img/graphic-element/testimonial-card.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 38px;
+  padding: 88px 65px 55px 76px;
+}
+.stories .story-cards .story-card .story-wrapper {
+  display: flex;
+  gap: -2px;
+}
+.stories .story-cards .story-card .story-wrapper .icon-quote {
+  width: 62px;
+  height: 62px;
+  color: #fee69b;
+}
+.stories .story-cards .story-card .story-wrapper .story {
+  width: 80%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.stories .story-cards .story-card .story-wrapper .story .autor {
+  display: flex;
+}
+.stories .story-cards .story-card .story-wrapper .story p {
+  color: #f6f2ec;
+}
+.stories .läs-mer {
+  align-self: flex-end;
+}
+
+@media (max-width: 769px) {
+  .stories .story-cards {
+    flex-direction: column;
+  }
+}
+@media (max-width: 572px) {
+  .stories .story-cards .story-card {
+    padding: 8px;
   }
 }/*# sourceMappingURL=förbarnochunga.css.map */

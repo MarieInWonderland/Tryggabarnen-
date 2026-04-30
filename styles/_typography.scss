@@ -342,6 +342,13 @@ Styles
 
 /*Body*/
     /*Book*/
+     .book-xl{
+        font-family: $body;
+        font-weight: $book;
+        font-size: $font-size-2xl;
+        line-height: $line-height-3xl;
+    }
+
     .book-lg{
         font-family: $body;
         font-weight: $book;
@@ -364,6 +371,13 @@ Styles
     }
 
 @media (max-width:$breakpoint-tablet){
+       .book-xl{
+        font-family: $body;
+        font-weight: $book;
+        font-size: $font-size-2xl;
+        line-height: $line-height-3xl;
+    }
+
     .book-lg{
         font-family: $body;
         font-weight: $book;
@@ -387,6 +401,13 @@ Styles
 }
 
 @media (max-width:$breakpoint-mobile){
+       .book-xl{
+        font-family: $body;
+        font-weight: $book;
+        font-size: $font-size-lg;
+        line-height: $line-height-2xl;
+    } 
+
     .book-lg{
         font-family: $body;
         font-weight: $book;
