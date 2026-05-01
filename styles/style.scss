@@ -332,6 +332,7 @@ MAIN
         flex-direction: column;
         align-items: flex-start;
         gap: $spacing-9xl;
+
     @media(max-with:$breakpoint-desktop){
         max-width: 70%;
     }
@@ -427,17 +428,16 @@ MAIN
 }
 
 
-/*About us section*/
-.about-us{
+/*Content block section*/
+.content-block{
     display: flex;
     align-items: center;
     padding:$spacing-none $spacing-10xl;
     gap: $spacing-4xl;
-    margin-top: 15rem;
     margin-bottom: 11.25rem;
 
     .picture{
-        width: 100%;;
+        width: 50%;;
         display: flex;
         align-items: center;
 
@@ -448,7 +448,7 @@ MAIN
         }
     }
 
-    .about-us-content{
+    .article-content{
         max-width: 50%;
         display: flex;
         flex-direction: column;
@@ -496,7 +496,7 @@ MAIN
                     }*/
                     .text-highlight{
                         background-image: url(../img/graphic-element/highlight.svg);
-                        background-size: contain;
+                        background-size: cover;
                         background-repeat: no-repeat;
                         overflow: visible;
                         position: relative;
@@ -509,7 +509,7 @@ MAIN
         .about-us-btn{
             display: flex;
             justify-content: flex-start;
-            gap: $spacing-5xl;
+            gap: $spacing-xl;
 
             .btn-primary-outlined{
                 color:$text-primary; 
@@ -517,11 +517,17 @@ MAIN
             }
         }
     }
+.about-us{
+    margin-top: 15rem;
+}
+.stodchat{
+    margin-top: 15rem;
+}
 @media (max-width:$breakpoint-tablet) {
-    .about-us{
+    .content-block{
         padding:$spacing-none $spacing-5xl;
 
-        .about-us-content{
+        .article-content{
             width: 50%;
             .about-us-btn{
                 flex-direction: column;
@@ -530,12 +536,18 @@ MAIN
     }
 }  
 @media (max-width:$breakpoint-mobile) {
-    .about-us{
+    .content-block{
         flex-direction: column;
-        .about-us-content{
+        .picture{
+            width: 100%;
+        }
+        .article-content{
             max-width: 100%;
             width: 100%;
         }
+    }
+    .about-us{
+        margin-top: 30rem;
     }
 }
 
@@ -605,9 +617,24 @@ MAIN
                 }
             }
             .highlight-content{
-                .highlight{
-                    fill:$text-invert;
+                cursor: pointer;
+                display: flex;
+                justify-content: flex-start;
+
+                &:hover{
+                    .highlight-title{
+                        color:$highlights-primary-dark;
+                    }
                 }
+
+                .highlight-title{
+                    color: $effects-brown-a;
+                    opacity: 60%;
+                    width: 95%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                
                 .title-event{
                     display: flex;
                     color: $text-invert;
@@ -633,6 +660,11 @@ MAIN
                 width: 15.5rem;
             }
         }
+    }
+}
+@media (max-width:$breakpoint-mobile) {
+    .events{
+        padding: $spacing-none $spacing-3xl;;
     }
 }
 
@@ -696,7 +728,7 @@ MAIN
       gap: $spacing-4xl; 
        
       .för-dig-som-vuxen{
-        width: 60%;
+        width: 80%;
         height: auto;
         background-image: url(../img/pictures/img-för-dig-som-vuxen.webp);
         background-size: cover;
@@ -705,6 +737,7 @@ MAIN
       }
 
       .cards-section{
+        width: 100%;
         display: flex; 
         flex-direction: column;
         gap: $spacing-3xl;
@@ -756,6 +789,37 @@ MAIN
     }
 }
 
+@media (max-width:$breakpoint-mobile){
+    .to-the-adult{
+        padding: $spacing-none $spacing-3xl;
+        margin-top: 5rem;
+
+        .landscape-section{
+            flex-direction: column;
+            gap: $spacing-lg;
+
+            .för-dig-som-vuxen{
+                height: 120px;
+                width: 100%;
+                border-radius: $border-radius-lg $border-radius-lg $border-radius-none $border-radius-none;
+            }
+
+            .cards-section{
+                .landscape-card{
+                &:first-child{
+                border-top-right-radius: $border-radius-none;
+            }
+
+            &:last-child{
+                border-radius: $border-radius-none $border-radius-none $border-radius-lg $border-radius-lg ;
+            }
+
+                }
+            }
+        }
+    }
+}
+
 
 /*Donation*/
 .donation{
@@ -783,13 +847,15 @@ MAIN
             flex-direction: column;
             align-items: center;
            } 
-            img{
-                text-align: center;
-            }
             .btn-donation{
+                width: fit-content;
                 border: $border-none;
                 background-color: transparent;
                 cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
 
                 &:hover{
                     .under-link{
@@ -818,6 +884,8 @@ MAIN
 
 @media (max-width:$breakpoint-mobile) {
     .donation{
+        padding: $spacing-none $spacing-3xl;
+        margin-top: 5rem;
         .donation-content{
             flex-direction: column;
         }
@@ -883,6 +951,7 @@ footer{
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-start;
+                gap: $spacing-5xl;
 
                 .kakor{
                     display: flex;
@@ -894,9 +963,14 @@ footer{
                         color: $text-primary !important;
                     }
                     
-                    .under-link{
+                    .under-link-kakor{
                         height: 4px;
-                        width: 100%;
+                        width: 20%;
+                    } 
+
+                    .under-link-integritetspolicy{
+                        height: 4px;
+                        width: 70%;
                     } 
                 }
             }
@@ -910,20 +984,20 @@ footer{
 }
 @media (max-width:$breakpoint-tablet) {
     footer{
-        padding: $spacing-7xl $spacing-5xl $spacing-7xl $spacing-5xl;
+        padding: $spacing-10xl $spacing-5xl $spacing-7xl $spacing-5xl;
         background-image: url(../img/graphic-element/footer-tablet.svg);
-        background-size: cover ;
+        background-size: cover;
         background-position: center top;
 
         .footer-top{
            flex-direction: column;
            justify-content: flex-start;
+           align-items: flex-start;
+           gap: $spacing-5xl;
 
            img{
             display: block;
             height: 40px;
-            left: 0px;
-
            }
 
            .book-md{
@@ -932,5 +1006,26 @@ footer{
         }
     }
 }
+@media (max-width:$breakpoint-mobile) {
+    footer{
+        justify-content: flex-start;
+        padding: $spacing-10xl $spacing-7xl $spacing-7xl $spacing-5xl;
+        background-image: url(../img/graphic-element/footer-mobile.svg);
+        background-size: cover;
+        .footer-wrapper{
+            flex-direction: column;
+            gap: $spacing-5xl;
+        }
+        .footer-bottom{
+            flex-direction: column;
+            gap: $spacing-2xl;
+            
+            .footer-logos{
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
 
 

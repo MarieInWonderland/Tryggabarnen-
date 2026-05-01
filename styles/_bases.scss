@@ -244,10 +244,17 @@ Button
 
 }
 
+
+
 @media (max-width: $breakpoint-mobile) {
+.button--outlined{
     .button {
         padding: $spacing-2xl $spacing-6xl;
     }
+    .long-btn{
+        transform: scaleX(1.2);
+    }
+}
 }
 
 .panik{
@@ -312,6 +319,8 @@ Highlight
     z-index: 1;
     color: $text-primary;
     }
+
+    
 }
 
 .highlight-header{
@@ -344,7 +353,7 @@ Icon
 }
 
 .invert{
-    fill:$btn-outlined-secondary-border;
+    color:$btn-outlined-secondary-border;
 }
 
 

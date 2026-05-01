@@ -117,6 +117,13 @@
     }
 }
 
+@media (max-width:$breakpoint-mobile){
+   .your-right{ 
+    padding: $spacing-none $spacing-3xl;
+   }
+}
+
+
 /*Stories*/
 .stories{
     display: flex;
@@ -128,15 +135,16 @@
 
     .story-cards{
         max-width: 100%;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: $spacing-2xl;
-        justify-content: flex-start;
         
         .story-card{
             background-image: url(../img/graphic-element/testimonial-card.svg);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            flex: 1;
 
             display: flex;
             flex-direction: column;
@@ -176,16 +184,17 @@
 @media (max-width:$breakpoint-tablet){
     .stories{
         .story-cards{
-            flex-direction: column;
+           grid-template-columns: repeat(1, 1fr);
         }
     }
 }
 
 @media (max-width:$breakpoint-mobile){
     .stories{
+        padding: $spacing-none $spacing-3xl;
         .story-cards{
             .story-card{
-                padding: $spacing-lg;
+                padding: $spacing-5xl $spacing-xl;
             }
         }
     }
@@ -233,7 +242,7 @@ Stödversamhet
 
 @media (max-width:$breakpoint-mobile){
     .different-groups{
-        padding: $spacing-none $spacing-4xl;
+        padding: $spacing-none $spacing-3xl;
         grid-template-columns: repeat(1, 1fr);
     }
 }

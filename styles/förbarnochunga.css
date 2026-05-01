@@ -112,8 +112,11 @@ Button
 }
 
 @media (max-width: 572px) {
-  .button {
+  .button--outlined .button {
     padding: 12px 28px;
+  }
+  .button--outlined .long-btn {
+    transform: scaleX(1.2);
   }
 }
 .panik {
@@ -207,7 +210,7 @@ Icon
 }
 
 .invert {
-  fill: #f6f2ec;
+  color: #f6f2ec;
 }
 
 /*==================
@@ -744,6 +747,11 @@ Styles
     grid-template-rows: repeat(2, 1fr);
   }
 }
+@media (max-width: 572px) {
+  .your-right {
+    padding: 0px 16px;
+  }
+}
 /*Stories*/
 .stories {
   display: flex;
@@ -755,15 +763,16 @@ Styles
 }
 .stories .story-cards {
   max-width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
-  justify-content: flex-start;
 }
 .stories .story-cards .story-card {
   background-image: url(../img/graphic-element/testimonial-card.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  flex: 1;
   display: flex;
   flex-direction: column;
   border-top-left-radius: 38px;
@@ -797,12 +806,15 @@ Styles
 
 @media (max-width: 769px) {
   .stories .story-cards {
-    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 @media (max-width: 572px) {
+  .stories {
+    padding: 0px 16px;
+  }
   .stories .story-cards .story-card {
-    padding: 8px;
+    padding: 24px 10px;
   }
 }
 /*================================================
@@ -844,7 +856,7 @@ Stödversamhet
 }
 @media (max-width: 572px) {
   .different-groups {
-    padding: 0px 20px;
+    padding: 0px 16px;
     grid-template-columns: repeat(1, 1fr);
   }
 }

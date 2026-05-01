@@ -112,8 +112,11 @@ Button
 }
 
 @media (max-width: 572px) {
-  .button {
+  .button--outlined .button {
     padding: 12px 28px;
+  }
+  .button--outlined .long-btn {
+    transform: scaleX(1.2);
   }
 }
 .panik {
@@ -207,7 +210,7 @@ Icon
 }
 
 .invert {
-  fill: #f6f2ec;
+  color: #f6f2ec;
 }
 
 /*==================
@@ -989,43 +992,42 @@ MAIN
     bottom: -350px;
   }
 }
-/*About us section*/
-.about-us {
+/*Content block section*/
+.content-block {
   display: flex;
   align-items: center;
   padding: 0px 56px;
   gap: 20px;
-  margin-top: 15rem;
   margin-bottom: 11.25rem;
 }
-.about-us .picture {
-  width: 100%;
+.content-block .picture {
+  width: 50%;
   display: flex;
   align-items: center;
 }
-.about-us .picture img {
+.content-block .picture img {
   display: block;
   width: 100%;
   height: auto;
 }
-.about-us .about-us-content {
+.content-block .article-content {
   max-width: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 40px;
 }
-.about-us .about-us-content .text-section {
+.content-block .article-content .text-section {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.about-us .about-us-content .text-section .title {
+.content-block .article-content .text-section .title {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-.about-us .about-us-content .text-section .title h2 {
+.content-block .article-content .text-section .title h2 {
   line-height: 1.05;
   /*.highlight-brand{
       position: relative;
@@ -1054,42 +1056,56 @@ MAIN
       }
   }*/
 }
-.about-us .about-us-content .text-section .title h2 .text-highlight {
+.content-block .article-content .text-section .title h2 .text-highlight {
   background-image: url(../img/graphic-element/highlight.svg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   overflow: visible;
   position: relative;
   z-index: -1;
 }
-.about-us .about-us-btn {
+.content-block .about-us-btn {
   display: flex;
   justify-content: flex-start;
-  gap: 24px;
+  gap: 10px;
 }
-.about-us .about-us-btn .btn-primary-outlined {
+.content-block .about-us-btn .btn-primary-outlined {
   color: #34140b;
   fill: #34140b;
 }
 
+.about-us {
+  margin-top: 15rem;
+}
+
+.stodchat {
+  margin-top: 15rem;
+}
+
 @media (max-width: 769px) {
-  .about-us {
+  .content-block {
     padding: 0px 24px;
   }
-  .about-us .about-us-content {
+  .content-block .article-content {
     width: 50%;
   }
-  .about-us .about-us-content .about-us-btn {
+  .content-block .article-content .about-us-btn {
     flex-direction: column;
   }
 }
 @media (max-width: 572px) {
-  .about-us {
+  .content-block {
     flex-direction: column;
   }
-  .about-us .about-us-content {
+  .content-block .picture {
+    width: 100%;
+  }
+  .content-block .article-content {
     max-width: 100%;
     width: 100%;
+  }
+  .about-us {
+    margin-top: 30rem;
   }
 }
 /*Events*/
@@ -1153,8 +1169,21 @@ MAIN
   line-height: 20px;
   font-weight: 700;
 }
-.events .cards-event .event-card .highlight-content .highlight {
-  fill: #f6f2ec;
+.events .cards-event .event-card .highlight-content {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+}
+.events .cards-event .event-card .highlight-content:hover .highlight-title {
+  color: #610228;
+}
+.events .cards-event .event-card .highlight-content .highlight-title {
+  color: rgba(52, 20, 11, 0.6);
+  opacity: 60%;
+  width: 95%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .events .cards-event .event-card .highlight-content .title-event {
   display: flex;
@@ -1171,6 +1200,11 @@ MAIN
   }
   .events .cards-event .event-card {
     width: 15.5rem;
+  }
+}
+@media (max-width: 572px) {
+  .events {
+    padding: 0px 16px;
   }
 }
 /*Testionial*/
@@ -1228,7 +1262,7 @@ MAIN
   gap: 20px;
 }
 .to-the-adult .landscape-section .för-dig-som-vuxen {
-  width: 60%;
+  width: 80%;
   height: auto;
   background-image: url(../img/pictures/img-för-dig-som-vuxen.webp);
   background-size: cover;
@@ -1236,6 +1270,7 @@ MAIN
   border-radius: 38px 0px 0px 38px;
 }
 .to-the-adult .landscape-section .cards-section {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -1270,6 +1305,27 @@ MAIN
     width: 100%;
   }
 }
+@media (max-width: 572px) {
+  .to-the-adult {
+    padding: 0px 16px;
+    margin-top: 5rem;
+  }
+  .to-the-adult .landscape-section {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .to-the-adult .landscape-section .för-dig-som-vuxen {
+    height: 120px;
+    width: 100%;
+    border-radius: 38px 38px 0px 0px;
+  }
+  .to-the-adult .landscape-section .cards-section .landscape-card:first-child {
+    border-top-right-radius: 0px;
+  }
+  .to-the-adult .landscape-section .cards-section .landscape-card:last-child {
+    border-radius: 0px 0px 38px 38px;
+  }
+}
 /*Donation*/
 .donation {
   display: flex;
@@ -1295,13 +1351,15 @@ MAIN
   flex-direction: column;
   align-items: center;
 }
-.donation .donation-content img {
-  text-align: center;
-}
 .donation .donation-content .btn-donation {
+  width: -moz-fit-content;
+  width: fit-content;
   border: 0px;
   background-color: transparent;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .donation .donation-content .btn-donation:hover .under-link {
   display: block;
@@ -1321,6 +1379,10 @@ MAIN
   }
 }
 @media (max-width: 572px) {
+  .donation {
+    padding: 0px 16px;
+    margin-top: 5rem;
+  }
   .donation .donation-content {
     flex-direction: column;
   }
@@ -1375,6 +1437,7 @@ footer .footer-bottom .footer-kakor {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  gap: 24px;
 }
 footer .footer-bottom .footer-kakor .kakor {
   display: flex;
@@ -1385,9 +1448,13 @@ footer .footer-bottom .footer-kakor .kakor {
 footer .footer-bottom .footer-kakor .kakor a {
   color: #34140b !important;
 }
-footer .footer-bottom .footer-kakor .kakor .under-link {
+footer .footer-bottom .footer-kakor .kakor .under-link-kakor {
   height: 4px;
-  width: 100%;
+  width: 20%;
+}
+footer .footer-bottom .footer-kakor .kakor .under-link-integritetspolicy {
+  height: 4px;
+  width: 70%;
 }
 footer .footer-bottom .footer-logos {
   display: flex;
@@ -1397,7 +1464,7 @@ footer .footer-bottom .footer-logos {
 
 @media (max-width: 769px) {
   footer {
-    padding: 32px 24px 32px 24px;
+    padding: 56px 24px 32px 24px;
     background-image: url(../img/graphic-element/footer-tablet.svg);
     background-size: cover;
     background-position: center top;
@@ -1405,13 +1472,33 @@ footer .footer-bottom .footer-logos {
   footer .footer-top {
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
   }
   footer .footer-top img {
     display: block;
     height: 40px;
-    left: 0px;
   }
   footer .footer-top .book-md {
     width: 100%;
+  }
+}
+@media (max-width: 572px) {
+  footer {
+    justify-content: flex-start;
+    padding: 56px 32px 32px 24px;
+    background-image: url(../img/graphic-element/footer-mobile.svg);
+    background-size: cover;
+  }
+  footer .footer-wrapper {
+    flex-direction: column;
+    gap: 24px;
+  }
+  footer .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+  }
+  footer .footer-bottom .footer-logos {
+    justify-content: space-between;
   }
 }/*# sourceMappingURL=style.css.map */
