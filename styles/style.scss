@@ -439,13 +439,56 @@ MAIN
     .picture{
         width: 50%;;
         display: flex;
-        align-items: center;
+        align-items:  center;
+
+        .trygga-hang-info{
+            align-self: flex-end;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: $spacing-7xl;
+            gap: $spacing-5xl;
+            background-color: $background-brand;
+            border-radius: $border-radius-lg $border-radius-lg $border-radius-none $border-radius-lg ;
+
+            .title-text{
+                display: flex;
+                flex-direction: column;
+                gap: $spacing-lg;
+            }
+
+            .info{
+                display: flex;
+                gap: $spacing-lg;
+
+                .icon-info{
+
+                    .icon{
+                        width: 48px;
+                        height: 48px;
+                    }
+                }
+    
+                .text-info{
+                    display: flex;
+                    flex-direction: column;
+
+                    .email{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
 
         img{
             display: block;
             width: 100%;
             height: auto;
         }
+    }
+
+    .card-info{
+        align-self: flex-end;
     }
 
     .article-content{
@@ -517,12 +560,10 @@ MAIN
             }
         }
     }
-.about-us{
+.about-us, .stodchat, .what-is-trygga-hang{
     margin-top: 15rem;
 }
-.stodchat{
-    margin-top: 15rem;
-}
+
 @media (max-width:$breakpoint-tablet) {
     .content-block{
         padding:$spacing-none $spacing-5xl;

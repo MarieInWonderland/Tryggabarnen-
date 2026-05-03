@@ -677,6 +677,18 @@ Styles
   color: #f6f2ec;
 }
 
+.for-barn {
+  background-image: url(../img/pictures/för-barn-och-unga-hero.png);
+}
+
+.stodverksamhet {
+  background-image: url(../img/pictures/stodverksamhet-hero.png);
+}
+
+.trygga-hang {
+  background-image: url(../img/pictures/trygga-hang-hero.png);
+}
+
 @media (max-width: 572px) {
   .hero {
     padding: 16px;
@@ -731,14 +743,6 @@ Styles
 }
 .your-right .läs-mer {
   align-self: flex-end;
-}
-
-.for-barn {
-  background-image: url(../img/pictures/för-barn-och-unga-hero.png);
-}
-
-.stodverksamhet {
-  background-image: url(../img/pictures/stodverksamhet-hero.png);
 }
 
 @media (max-width: 769px) {
@@ -838,6 +842,7 @@ Stödversamhet
   gap: 12px;
   padding: 24px 16px;
   border-radius: 20px;
+  cursor: pointer;
 }
 .different-groups .group-card .group-title {
   display: flex;
@@ -865,6 +870,7 @@ Stödversamhet
   padding: 0px 48px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 10rem;
 }
 .information-bottom .other-testimony {
   width: 80%;
@@ -881,9 +887,161 @@ Stödversamhet
 .information-bottom .other-testimony .info-title-and-lign .icon .lign {
   color: #34140b;
 }
+.information-bottom .other-testimony .info-title-and-lign .lign {
+  height: 4px;
+  width: 100%;
+}
 .information-bottom .other-testimony .info-title-and-lign .info-title {
   display: flex;
 }
 .information-bottom .other-testimony .info-title-and-lign p {
   text-align: center;
+}
+
+/*================================================
+
+Trygga-häng
+
+==================================================*/
+/*Heart-information*/
+.heart-informations {
+  padding: 0px 48px;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+.heart-informations .heart-card {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.heart-informations .heart-card .heart-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/*Activities*/
+.activities {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0px 48px;
+}
+.activities .preamble-lg {
+  max-width: 40%;
+}
+.activities .cards-activities {
+  width: 100%;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat 4, 1fr;
+  gap: 20px;
+}
+.activities .cards-activities .activity-card {
+  width: 20.063rem;
+  height: 26.875rem;
+  padding: 16px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.activities .cards-activities .activity-card:first-child {
+  background-image: url(../img/pictures/img-prova-på-badminton.webp);
+  border-radius: 38px 0px 0px 38px;
+}
+.activities .cards-activities .activity-card:nth-child(2) {
+  background-image: url(../img/pictures/img-grillkväll.webp);
+}
+.activities .cards-activities .activity-card:nth-child(3) {
+  background-image: url(../img/pictures/img-skaparverkstad.webp);
+}
+.activities .cards-activities .activity-card:nth-child(4) {
+  background-image: url(../img/pictures/picknikochkubb.webp);
+  border-radius: 0px 38px 0px 0px;
+}
+.activities .cards-activities .activity-card:nth-child(5) {
+  background-image: url(../img/pictures/spelkväll.webp);
+}
+.activities .cards-activities .activity-card:nth-child(6) {
+  background-image: url(../img/pictures/prova-pa-drejning.webp);
+}
+.activities .cards-activities .activity-card:nth-child(7) {
+  background-image: url(../img/pictures/browling.webp);
+}
+.activities .cards-activities .activity-card:nth-child(8) {
+  background-image: url(../img/pictures/diy-smycken.webp);
+}
+.activities .cards-activities .activity-card:nth-child(9) {
+  background-image: url(../img/pictures/mello-and-taccos.webp);
+  border-radius: 0px 0px 0px 38px;
+}
+.activities .cards-activities .activity-card:nth-child(10) {
+  background-image: url(../img/pictures/kvallbad.webp);
+}
+.activities .cards-activities .activity-card:nth-child(11) {
+  background-image: url(../img/pictures/lar-dig-baka-buller.webp);
+}
+.activities .cards-activities .activity-card:nth-child(12) {
+  background-image: url(../img/pictures/prova-pa-klatring.webp);
+  border-radius: 0px 0px 38px 0px;
+}
+.activities .cards-activities .activity-card .date {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 8px;
+}
+.activities .cards-activities .activity-card .date h3 {
+  color: #f6f2ec;
+  text-align: center;
+}
+.activities .cards-activities .activity-card .date .month {
+  font-family: "BuenosAires";
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
+.activities .cards-activities .activity-card .highlight-content {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+}
+.activities .cards-activities .activity-card .highlight-content:hover .highlight-title {
+  color: #610228;
+}
+.activities .cards-activities .activity-card .highlight-content .highlight-title {
+  color: rgba(52, 20, 11, 0.6);
+  opacity: 60%;
+  width: 95%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.activities .cards-activities .activity-card .highlight-content .title-event {
+  display: flex;
+  color: #f6f2ec;
+  fill: #f6f2ec;
+}
+
+@media (max-width: 769px) {
+  .activites .preamble-lg {
+    max-width: 80%;
+  }
+  .activites .cards-event .event-card {
+    width: 15.5rem;
+  }
+}
+@media (max-width: 572px) {
+  .activities {
+    padding: 0px 16px;
+  }
 }/*# sourceMappingURL=förbarnochunga.css.map */

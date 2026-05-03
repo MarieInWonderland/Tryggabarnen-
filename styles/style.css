@@ -1005,10 +1005,43 @@ MAIN
   display: flex;
   align-items: center;
 }
+.content-block .picture .trygga-hang-info {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px;
+  gap: 24px;
+  background-color: #610228;
+  border-radius: 38px 38px 0px 38px;
+}
+.content-block .picture .trygga-hang-info .title-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.content-block .picture .trygga-hang-info .info {
+  display: flex;
+  gap: 8px;
+}
+.content-block .picture .trygga-hang-info .info .icon-info .icon {
+  width: 48px;
+  height: 48px;
+}
+.content-block .picture .trygga-hang-info .info .text-info {
+  display: flex;
+  flex-direction: column;
+}
+.content-block .picture .trygga-hang-info .info .text-info .email {
+  text-decoration: underline;
+}
 .content-block .picture img {
   display: block;
   width: 100%;
   height: auto;
+}
+.content-block .card-info {
+  align-self: flex-end;
 }
 .content-block .article-content {
   max-width: 50%;
@@ -1074,11 +1107,7 @@ MAIN
   fill: #34140b;
 }
 
-.about-us {
-  margin-top: 15rem;
-}
-
-.stodchat {
+.about-us, .stodchat, .what-is-trygga-hang {
   margin-top: 15rem;
 }
 
