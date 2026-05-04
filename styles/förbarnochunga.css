@@ -667,7 +667,7 @@ Styles
   width: 50%;
   padding: 24px;
   background-color: rgba(52, 20, 11, 0.6);
-  backdrop-filter: blur(25%);
+  backdrop-filter: blur(25px);
   border-radius: 38px;
   position: absolute;
   bottom: -100px;
@@ -675,6 +675,51 @@ Styles
   flex-direction: column;
   gap: 10px;
   color: #f6f2ec;
+}
+.hero .hero-information-activity {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 24px;
+  background-color: rgba(97, 2, 40, 0.8);
+  backdrop-filter: blur(25px);
+  border-radius: 38px;
+  position: absolute;
+  bottom: -400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.hero .hero-information-activity .activity-coordinates {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+.hero .hero-information-activity .activity-coordinates .iconxl {
+  width: 48px;
+  height: 48px;
+}
+.hero .hero-information-activity .activity-coordinates .underline {
+  text-decoration: underline;
+}
+.hero .hero-information-activity .activity-coordinates .info-onelign {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  align-items: center;
+}
+.hero .hero-information-activity .activity-coordinates .info-twolign {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.hero .hero-information-activity .activity-coordinates .info-twolign .detail-information {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .for-barn {
@@ -687,6 +732,10 @@ Styles
 
 .trygga-hang {
   background-image: url(../img/pictures/trygga-hang-hero.png);
+}
+
+.activity {
+  background-image: url(../img/pictures/activitiet-hero.webp);
 }
 
 @media (max-width: 572px) {
@@ -866,35 +915,39 @@ Stödversamhet
   }
 }
 /*Information bottom*/
-.information-bottom {
+.informations {
+  margin-top: 14.75rem;
+  padding: 0px 48px;
+}
+.informations .information-bottom {
   padding: 0px 48px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10rem;
 }
-.information-bottom .other-testimony {
+.informations .information-bottom .other-information {
   width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px;
 }
-.information-bottom .other-testimony .info-title-and-lign {
+.informations .information-bottom .other-information .info-title-and-lign {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.information-bottom .other-testimony .info-title-and-lign .icon .lign {
+.informations .information-bottom .other-information .info-title-and-lign .icon .lign {
   color: #34140b;
 }
-.information-bottom .other-testimony .info-title-and-lign .lign {
+.informations .information-bottom .other-information .info-title-and-lign .lign {
   height: 4px;
   width: 100%;
 }
-.information-bottom .other-testimony .info-title-and-lign .info-title {
+.informations .information-bottom .other-information .info-title-and-lign .info-title {
   display: flex;
 }
-.information-bottom .other-testimony .info-title-and-lign p {
+.informations .information-bottom .other-information .info-title-and-lign p {
   text-align: center;
 }
 
@@ -930,6 +983,7 @@ Trygga-häng
   align-items: flex-start;
   gap: 16px;
   padding: 0px 48px;
+  margin-top: 8.75rem;
 }
 .activities .preamble-lg {
   max-width: 40%;
@@ -1031,17 +1085,65 @@ Trygga-häng
   color: #f6f2ec;
   fill: #f6f2ec;
 }
+.activities .btn-las-mer {
+  display: none;
+}
 
 @media (max-width: 769px) {
-  .activites .preamble-lg {
+  .activities {
+    width: 100%;
+  }
+  .activities .preamble-lg {
     max-width: 80%;
   }
-  .activites .cards-event .event-card {
-    width: 15.5rem;
+  .activities .cards-activities {
+    width: 100%;
+    grid-template-columns: repeat 3, 1fr;
+  }
+  .activities .cards-activities .activity-card {
+    width: 100%;
+    height: 430px;
+  }
+  .activities .cards-activities .activity-card:nth-child(+13) {
+    display: none;
+  }
+  .activities .btn-las-mer {
+    display: flex;
+    align-self: center;
   }
 }
 @media (max-width: 572px) {
   .activities {
     padding: 0px 16px;
   }
+}
+/*================================================
+
+Aktivitet
+
+==================================================*/
+.formulaire {
+  margin: 40rem auto 0px;
+  width: 60%;
+}
+.formulaire form {
+  display: flex;
+  flex-direction: column;
+}
+.formulaire form .form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.formulaire form .form-wrapper .form-group .input-wrapper {
+  display: flex;
+  align-items: center;
+}
+.formulaire form .form-wrapper .form-group .input-wrapper input {
+  background-color: transparent;
+  border: none;
+  font-family: "BuenosAires";
+  font-size: 14px;
+  line-height: 20px;
+  color: #85726d;
 }/*# sourceMappingURL=förbarnochunga.css.map */

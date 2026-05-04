@@ -25,7 +25,7 @@
         width: 50%;
         padding:$spacing-5xl;
         background-color: $effects-brown-a;
-        backdrop-filter: blur(25%);
+        backdrop-filter: blur(25px);
         border-radius: $border-radius-lg;
         position: absolute;
         bottom:-100px;
@@ -35,6 +35,59 @@
         gap: $spacing-xl;
         color: $text-invert;
 
+    }
+
+    .hero-information-activity{
+        width: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        padding:$spacing-5xl;
+        background-color: $effects-brand-a;
+        backdrop-filter: blur(25px);
+        border-radius: $border-radius-lg;
+        position: absolute;
+        bottom:-400px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $spacing-4xl;
+
+        .activity-coordinates{
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-4xl;
+            align-items: flex-start;
+
+            .iconxl{
+                width: 48px;
+                height: 48px;
+            }
+            
+            .underline{
+                text-decoration: underline;
+            }
+
+            .info-onelign{
+            display: flex;
+            justify-content: flex-start;
+            gap: $spacing-lg;
+            align-items: center;
+            }
+
+            .info-twolign{
+                display: flex;
+                gap: $spacing-lg;
+                align-items: center;
+
+                .detail-information{
+                    display: flex;
+                    flex-direction: column;
+                    gap:$spacing-lg;
+                }
+            }
+        }  
     }
 }
 .for-barn{
@@ -47,6 +100,10 @@
 
 .trygga-hang{
     background-image: url(../img/pictures/trygga-hang-hero.png);
+}
+
+.activity{
+    background-image: url(../img/pictures/activitiet-hero.webp);
 }
 @media (max-width:$breakpoint-mobile){
     .hero{
@@ -254,38 +311,42 @@ Stödversamhet
 }
 
 /*Information bottom*/
-.information-bottom{
+.informations{
+    margin-top: 14.75rem;
     padding: $spacing-none $spacing-9xl;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10rem;
-
-    .other-testimony{
-        width: 80%;
+    .information-bottom{
+        padding: $spacing-none $spacing-9xl;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: $spacing-8xl;
+        justify-content: space-between;
+        margin-bottom: 10rem;
 
-        .info-title-and-lign{
+        .other-information{
+            width: 80%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            
-            .icon .lign{
-                color: $text-primary;
-            }
+            padding: $spacing-8xl;
 
-            .lign{
-                height: 4px;
-                width: 100%;
-            }
-
-            .info-title{
+            .info-title-and-lign{
                 display: flex;
-            }
-            p{
-                text-align: center;
+                flex-direction: column;
+                align-items: center;
+                
+                .icon .lign{
+                    color: $text-primary;
+                }
+
+                .lign{
+                    height: 4px;
+                    width: 100%;
+                }
+
+                .info-title{
+                    display: flex;
+                }
+                p{
+                    text-align: center;
+                }
             }
         }
     }
@@ -327,6 +388,7 @@ Trygga-häng
     align-items: flex-start;
     gap: $spacing-3xl;
     padding: $spacing-none $spacing-9xl;
+    margin-top: 8.75rem;
 
     .preamble-lg{
         max-width: 40%
@@ -446,19 +508,35 @@ Trygga-häng
             }
         }
     }
+    .btn-las-mer{
+        display:none;
+    }
 }
 
 @media (max-width:$breakpoint-tablet) {
-    .activites{
+    .activities{
+        width: 100%;
 
         .preamble-lg{
             max-width: 80%;
         }
 
-        .cards-event{
-            .event-card{
-                width: 15.5rem;
+        .cards-activities{
+            width: 100%;
+            grid-template-columns: repeat (3,1fr);
+            
+            .activity-card{
+                width: 100%;
+                height: 430px;
+
+                &:nth-child(+13){
+                    display: none;
+                }
             }
+        }
+        .btn-las-mer{
+            display: flex;
+            align-self: center;
         }
     }
 }
@@ -466,4 +544,41 @@ Trygga-häng
     .activities{
         padding: $spacing-none $spacing-3xl;;
     }
+}
+
+/*================================================
+
+Aktivitet
+
+==================================================*/
+.formulaire{
+    margin : 40rem auto 0px;
+    width: 60%;
+
+    form{
+        display: flex;
+        flex-direction: column;
+        .form-wrapper{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            .form-group{
+                .input-wrapper{
+                    display: flex;
+                    align-items: center;
+                    
+                    input{
+                        background-color: transparent;
+                        border: none;
+                        font-family: $body;
+                        font-size: $font-size-sm;
+                        line-height: $line-height-lg;
+                        color:$text-secondary;
+
+                    }
+                }
+            }
+        }
+    }
+
 }

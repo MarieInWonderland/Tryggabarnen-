@@ -77,3 +77,22 @@ document.getElementById("panik").addEventListener("click", () => {
   window.location.href = "https://www.google.com";
 });
 
+//Läs mer btn 
+const loadMore_btn = document.getElementById("loadMore");
+const activities_cards = document.querySelectorAll(".activity-card");
+
+let visible = 12;
+
+loadMore_btn.addEventListener("click", () => {
+  for (let i = visible; i < visible + 3; i++) {
+    if (activities_cards[i]) {
+      activities_cards[i].style.display = "block";
+    }
+  }
+
+  visible += 3;
+  if (visible >= activities_cards.length) {
+    loadMore_btn.style.display = "none";
+  }
+});
+
