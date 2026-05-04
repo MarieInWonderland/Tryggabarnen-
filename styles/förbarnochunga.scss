@@ -552,42 +552,43 @@ Aktivitet
 
 ==================================================*/
 .formulaire{
-    margin : 40rem auto 10rem;
-    width: 60%;
+    margin : 35rem auto 20rem auto;
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: $spacing-3xl;
 
     form{
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: $spacing-2xl;
 
         .form-utan-btn{
-            gap: $spacing-3xl;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-2xl;
 
             .form-wrapper{
                 display: flex;
                 justify-content: space-between;
+                gap: $spacing-3xl;
                 width: 100%;
+                position: relative;
 
-                .text-area{
-                    display: flex;
-                    flex-direction: column;
-                }
-
-                .form-group{
+                .form-group, .text-area{
                     width: 100%;
                     display: flex;
-                    flex-direction: column;
 
                     .input-wrapper{
+                        min-width: 30px;
                         display: flex;
                         align-items: flex-start;
+                        justify-content: center;
                         gap: $spacing-md;
-
                         position: relative;
-                        background: transparent;
-                        border: none;
-                        outline: none;
-                        left: 0;
 
                         .border{
                             position: absolute;
@@ -596,20 +597,30 @@ Aktivitet
                             height: 100%;
                             left: 0;
                             pointer-events: none;
-                            pointer-events: none;
                             overflow: visible;
-                            aspect-ratio: none;
+                            /*aspect-ratio: none;*/
                         }
-                        
-                        input{
-                            background-color: transparent;
-                            border: none;
-                            font-family: $body;
-                            font-size: $font-size-sm;
-                            line-height: $line-height-lg;
-                            color:$text-secondary;
+
+                        .text-input{
+                            width: 100%;
+                            padding:$spacing-lg;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            gap: $spacing-md;
                         }
+
                     }
+                }
+                .text-input, input{
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    left: 0;
+                }
+
+                .form-group{
+                    flex-direction: column;
                 }
             }
         }
