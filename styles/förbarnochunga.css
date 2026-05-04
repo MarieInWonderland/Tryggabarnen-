@@ -1123,23 +1123,53 @@ Aktivitet
 
 ==================================================*/
 .formulaire {
-  margin: 40rem auto 0px;
+  margin: 40rem auto 10rem;
   width: 60%;
 }
 .formulaire form {
   display: flex;
   flex-direction: column;
+  gap: 12px;
 }
-.formulaire form .form-wrapper {
+.formulaire form .form-utan-btn {
+  gap: 16px;
+}
+.formulaire form .form-utan-btn .form-wrapper {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.formulaire form .form-wrapper .form-group .input-wrapper {
+.formulaire form .form-utan-btn .form-wrapper .text-area {
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
-.formulaire form .form-wrapper .form-group .input-wrapper input {
+.formulaire form .form-utan-btn .form-wrapper .form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.formulaire form .form-utan-btn .form-wrapper .form-group .input-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  position: relative;
+  background: transparent;
+  border: none;
+  outline: none;
+  left: 0;
+}
+.formulaire form .form-utan-btn .form-wrapper .form-group .input-wrapper .border {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  pointer-events: none;
+  overflow: visible;
+  aspect-ratio: none;
+}
+.formulaire form .form-utan-btn .form-wrapper .form-group .input-wrapper input {
   background-color: transparent;
   border: none;
   font-family: "BuenosAires";
