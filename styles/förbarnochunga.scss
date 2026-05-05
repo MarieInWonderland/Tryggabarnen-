@@ -105,6 +105,15 @@
 .activity{
     background-image: url(../img/pictures/activitiet-hero.webp);
 }
+
+@media (max-width:$breakpoint-tablet){
+    .hero{
+        .hero-information-activity{
+            min-width: 100%;
+            margin: $spacing-none $spacing-5xl;
+        }
+    }
+}
 @media (max-width:$breakpoint-mobile){
     .hero{
         padding: $spacing-3xl ;
@@ -397,12 +406,12 @@ Trygga-häng
         width: 100%;
         min-height: fit-content;
         display: grid;
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         grid-template-rows: repeat (4,1fr);
         gap: $spacing-4xl;
 
         .activity-card{
-            width: 20.063rem;
+            // width: 20.063rem;
             height: 26.875rem;
             padding: $spacing-3xl;
             background-position: center;
@@ -570,6 +579,7 @@ Aktivitet
             display: flex;
             flex-direction: column;
             gap: $spacing-2xl;
+            
 
             .form-wrapper{
                 display: flex;
@@ -583,11 +593,23 @@ Aktivitet
                     display: flex;
 
                     .input-wrapper{
-                        min-width: 30px;
                         display: flex;
                         align-items: flex-start;
                         justify-content: center;
                         gap: $spacing-md;
+
+                    }
+
+                    .text-area{
+                        display: flex;
+                        align-items: flex-start;
+                        flex-direction: column ;
+                        justify-content: center;
+                        gap: $spacing-md;
+                    }
+
+                    .input-bordure{
+                        min-width: 30px;
                         position: relative;
 
                         .border{
@@ -609,21 +631,23 @@ Aktivitet
                             align-items: center;
                             gap: $spacing-md;
                         }
-
+                        .text-input, input{
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                        left: 0;
+                        }
                     }
                 }
-                .text-input, input{
-                    background: transparent;
-                    border: none;
-                    outline: none;
-                    left: 0;
-                }
-
+            
                 .form-group{
                     flex-direction: column;
                 }
             }
         }
     }
+}
+
+@media (max-width:$breakpoint-tablet){
 
 }
