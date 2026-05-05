@@ -1150,10 +1150,13 @@ Aktivitet
 .formulaire form .form-utan-btn .form-wrapper {
   display: flex;
   width: 100%;
+  gap: 16px;
 }
 .formulaire form .form-utan-btn .form-wrapper .form-group {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
 }
 .formulaire form .form-utan-btn .text-area {
   display: flex;
@@ -1172,7 +1175,10 @@ Aktivitet
   overflow: visible;
   aspect-ratio: none;
 }
-.formulaire form .form-utan-btn .input-border .border input, .formulaire form .form-utan-btn .input-border .border textarea {
+.formulaire form .form-utan-btn .input-border .text-input {
+  display: flex;
+}
+.formulaire form .form-utan-btn input, .formulaire form .form-utan-btn textarea {
   width: 100%;
   border: none;
   background-color: transparent;

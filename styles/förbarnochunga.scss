@@ -583,10 +583,13 @@ Aktivitet
             .form-wrapper{
                 display: flex;
                 width: 100%;
+                gap: $spacing-3xl;
 
                 .form-group{
                     display:flex;
                     flex-direction: column;
+                    width: 100%;
+                    align-items: flex-start;
                 }
             }
 
@@ -607,13 +610,15 @@ Aktivitet
                     pointer-events: none;
                     overflow: visible;
                     aspect-ratio: none;
-
-                    input, textarea{
-                        width: 100%;
-                        border: none;
-                        background-color: transparent;
-                    }
                 }
+                .text-input{
+                    display: flex;
+                }
+            }
+            input, textarea{
+            width: 100%;
+            border: none;
+            background-color: transparent;
             }
 
 
