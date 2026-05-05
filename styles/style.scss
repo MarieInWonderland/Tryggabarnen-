@@ -582,11 +582,13 @@ MAIN
                 flex-direction: column;
             }
         }
+        
     }
 }  
 @media (max-width:$breakpoint-mobile) {
     .content-block{
         flex-direction: column;
+        margin-bottom: 5rem;
         .picture{
             width: 100%;
         }
@@ -598,6 +600,13 @@ MAIN
     .about-us{
         margin-top: 30rem;
     }
+    .trygga-hang-info{
+        width: 100%;
+    }
+    .stodchat, .what-is-trygga-hang{
+    margin-top: 10rem;
+}
+    
 }
 
 /*Events*/
@@ -715,7 +724,7 @@ MAIN
 }
 @media (max-width:$breakpoint-mobile) {
     .events{
-        padding: $spacing-none $spacing-3xl;;
+        padding: $spacing-none $spacing-3xl;
     }
 }
 

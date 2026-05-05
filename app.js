@@ -78,25 +78,52 @@ document.getElementById("panik").addEventListener("click", () => {
 });
 
 //Läs mer btn 
-let loadMore_btn = document.getElementById("loadMore");
+console.log(window.location.pathname);
+if(window.location.pathname === '/trygga-hang.html') {
+  
+let loadMoreBtn = document.getElementById("loadMore");
+console.log(loadMoreBtn);
+
 let activities_cards = document.querySelectorAll(".activity-card");
 
-let visible = 9;
 
-if(window.location.pathname === '/trygga-häng.html') {
-  loadMore_btn.addEventListener("click", () => {
-    for (let i = visible; i < visible + 3; i++) {
-      if (activities_cards[i]) {
-          activities_cards[i].style.display = "block";
-        }
-      }
+  if (window.innerWidth <= 769 && window.innerWidth >= 573) {
+    let visible = 9;
+
+    loadMoreBtn.addEventListener("click", () => {
+      console.log('klick');
       
-        visible += 3;
-        if (visible >= activities_cards.length) {
-            loadMore_btn.style.display = "none";
+      for (let i = visible; i < visible + 3; i++) {
+        if (activities_cards[i]) {
+            activities_cards[i].style.display = "flex";
           }
-  });
-          
+        }
+        
+          visible += 3;
+          if (visible >= activities_cards.length) {
+              loadMoreBtn.style.display = "none";
+            }
+    });
+        
+  }else if (window.innerWidth <= 572) {
+    let visible = 6;
+
+    loadMoreBtn.addEventListener("click", () => {
+      console.log('klick på mobil');
+      
+      for (let i = visible; i < visible + 6; i++) {
+        if (activities_cards[i]) {
+            activities_cards[i].style.display = "flex";
+          }
+        }
+        
+          visible += 6;
+          if (visible >= activities_cards.length) {
+              loadMoreBtn.style.display = "none";
+            }
+    });
+  }
+
 } else if(window.location.pathname === '/aktivitet.html') {
 
   //Form 
@@ -137,11 +164,11 @@ if(window.location.pathname === '/trygga-häng.html') {
 
   //se alla 
   document.getElementById("se-alla").addEventListener("click", () => {
-  window.location.href = "trygga-häng.html";
+  window.location.href = "trygga-hang.html";
 });
 } else if(window.location.pathname === '/tack.html') {
   //Tillbaka till trygga häng aktiviter
   document.getElementById("tillbaka").addEventListener("click", () => {
-  window.location.href = "trygga-häng.html";
+  window.location.href = "trygga-hang.html";
   });
 }

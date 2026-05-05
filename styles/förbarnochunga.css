@@ -647,6 +647,7 @@ Styles
     line-height: 32px;
   }
 }
+/*Hero used for för barn och unga, trygga häng, aktivitet and Stödverksamhet*/
 .hero {
   width: 100vw;
   height: 29rem;
@@ -757,7 +758,7 @@ Styles
     width: 50%;
   }
   .hero .hero-information {
-    width: 100%;
+    width: 90%;
   }
 }
 /*Your right*/
@@ -925,7 +926,7 @@ Stödversamhet
     grid-template-columns: repeat(1, 1fr);
   }
 }
-/*Information bottom*/
+/*Information bottom used also in trygga-hang*/
 .informations {
   margin-top: 14.75rem;
   padding: 0px 48px;
@@ -957,6 +958,7 @@ Stödversamhet
 }
 .informations .information-bottom .other-information .info-title-and-lign .info-title {
   display: flex;
+  cursor: pointer;
 }
 .informations .information-bottom .other-information .info-title-and-lign p {
   text-align: center;
@@ -969,6 +971,7 @@ Stödversamhet
   .informations .fler-trygga {
     flex-direction: column;
     gap: 24px;
+    align-items: center;
     padding: 24px 0px;
   }
   .informations .fler-trygga .other-information {
@@ -977,6 +980,21 @@ Stödversamhet
   }
   .informations .fler-trygga .other-information .info-title-and-lign {
     align-items: flex-start;
+  }
+}
+@media (max-width: 572px) {
+  .informations {
+    margin-top: 5rem;
+    padding: 0px 16px;
+  }
+  .informations .information-bottom {
+    margin-bottom: 0rem;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px;
+  }
+  .informations .information-bottom .other-information {
+    width: 100%;
   }
 }
 /*================================================
@@ -1004,6 +1022,16 @@ Trygga-häng
   text-align: center;
 }
 
+@media (max-width: 572px) {
+  .heart-informations {
+    flex-direction: column;
+    justify-content: flex;
+    align-items: center;
+  }
+  .heart-informations .heart-card {
+    width: 100%;
+  }
+}
 /*Activities*/
 .activities {
   display: flex;
@@ -1021,8 +1049,7 @@ Trygga-häng
   min-height: -moz-fit-content;
   min-height: fit-content;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-template-rows: repeat 4, 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 .activities .cards-activities .activity-card {
@@ -1117,21 +1144,21 @@ Trygga-häng
 }
 
 @media (max-width: 769px) {
-  .activities {
-    width: 100%;
-  }
   .activities .preamble-lg {
     max-width: 80%;
   }
   .activities .cards-activities {
     width: 100%;
-    grid-template-columns: repeat 3, 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
   }
   .activities .cards-activities .activity-card {
     width: 100%;
-    height: 430px;
+    height: 350px;
+    padding: 8px;
+    border-radius: 20px !important;
   }
-  .activities .cards-activities .activity-card:nth-child(+13) {
+  .activities .cards-activities .activity-card:nth-child(n+10) {
     display: none;
   }
   .activities .btn-las-mer {
@@ -1142,6 +1169,12 @@ Trygga-häng
 @media (max-width: 572px) {
   .activities {
     padding: 0px 16px;
+  }
+  .activities .cards-activities {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .activities .cards-activities .activity-card:nth-child(n+7) {
+    display: none;
   }
 }
 /*================================================

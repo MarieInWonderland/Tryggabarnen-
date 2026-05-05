@@ -1133,6 +1133,7 @@ MAIN
 @media (max-width: 572px) {
   .content-block {
     flex-direction: column;
+    margin-bottom: 5rem;
   }
   .content-block .picture {
     width: 100%;
@@ -1143,6 +1144,12 @@ MAIN
   }
   .about-us {
     margin-top: 30rem;
+  }
+  .trygga-hang-info {
+    width: 100%;
+  }
+  .stodchat, .what-is-trygga-hang {
+    margin-top: 10rem;
   }
 }
 /*Events*/
