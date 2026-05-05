@@ -81,6 +81,9 @@ Button
 .button--filled:hover {
   background-color: #eab200;
 }
+.button--filled:disabled {
+  background-color: #fff3cd;
+}
 
 .button--outlined {
   position: relative;
@@ -1138,12 +1141,14 @@ MAIN
   }
 }
 /*Events*/
+/*Used on index and in aktivitet*/
 .events {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
   padding: 0px 48px;
+  margin-bottom: 5.938rem;
 }
 .events .preamble-lg {
   max-width: 40%;
@@ -1239,7 +1244,7 @@ MAIN
 /*Testionial*/
 .testimonial {
   max-width: 45%;
-  margin: 5.938rem auto;
+  margin: 0px auto;
   display: flex;
   flex-direction: column;
   align-items: flex-end;

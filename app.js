@@ -48,8 +48,8 @@ document.querySelectorAll('.book-md').forEach(item => {
 //clic on the outside to go out
 document.addEventListener('click', (e) => {
   
-  const isClickInsideMenu = menuPanel.contains(e.target);
-  const isClickOnToggle = navToggle.contains(e.target);
+  let isClickInsideMenu = menuPanel.contains(e.target);
+  let isClickOnToggle = navToggle.contains(e.target);
 
   if (!isClickInsideMenu && !isClickOnToggle) {
     closeMenu();
@@ -78,21 +78,70 @@ document.getElementById("panik").addEventListener("click", () => {
 });
 
 //Läs mer btn 
-const loadMore_btn = document.getElementById("loadMore");
-const activities_cards = document.querySelectorAll(".activity-card");
+let loadMore_btn = document.getElementById("loadMore");
+let activities_cards = document.querySelectorAll(".activity-card");
 
-let visible = 12;
+let visible = 9;
 
-loadMore_btn.addEventListener("click", () => {
-  for (let i = visible; i < visible + 3; i++) {
-    if (activities_cards[i]) {
-      activities_cards[i].style.display = "block";
-    }
+if(window.location.pathname === '/trygga-häng.html') {
+  loadMore_btn.addEventListener("click", () => {
+    for (let i = visible; i < visible + 3; i++) {
+      if (activities_cards[i]) {
+          activities_cards[i].style.display = "block";
+        }
+      }
+      
+        visible += 3;
+        if (visible >= activities_cards.length) {
+            loadMore_btn.style.display = "none";
+          }
+  });
+          
+} else if(window.location.pathname === '/aktivitet.html') {
+
+  //Form 
+  
+  let inputs = document.querySelectorAll("input");
+  let button = document.getElementById("submitBtn");
+  
+  function checkForm() {
+    let isValid = true;
+    
+    inputs.forEach(input => {
+      if (input.value.trim() === "") {
+        isValid = false;
+      }
+    });
+    
+    button.disabled = !isValid;
   }
+  
+  inputs.forEach(input => {
+    input.addEventListener("input", checkForm);
+  });
+  
+  //Count 
+  let textarea = document.getElementById("message");
+  let current = document.getElementById("current");
+  
+  textarea.addEventListener("input", () => {
+    console.log('input');
+    
+    current.textContent = textarea.value.length;
+  });
+  
+  //send form  
+  document.getElementById("submitBtn").addEventListener("click", () => {
+    window.location.href = "tack.html";
+  });
 
-  visible += 3;
-  if (visible >= activities_cards.length) {
-    loadMore_btn.style.display = "none";
-  }
+  //se alla 
+  document.getElementById("se-alla").addEventListener("click", () => {
+  window.location.href = "trygga-häng.html";
 });
-
+} else if(window.location.pathname === '/tack.html') {
+  //Tillbaka till trygga häng aktiviter
+  document.getElementById("tillbaka").addEventListener("click", () => {
+  window.location.href = "trygga-häng.html";
+  });
+}

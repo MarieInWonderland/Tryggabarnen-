@@ -81,6 +81,9 @@ Button
 .button--filled:hover {
   background-color: #eab200;
 }
+.button--filled:disabled {
+  background-color: #fff3cd;
+}
 
 .button--outlined {
   position: relative;
@@ -739,9 +742,11 @@ Styles
 }
 
 @media (max-width: 769px) {
+  .hero .in-danger {
+    width: 30%;
+  }
   .hero .hero-information-activity {
-    min-width: 100%;
-    margin: 0px 24px;
+    width: 90%;
   }
 }
 @media (max-width: 572px) {
@@ -749,7 +754,7 @@ Styles
     padding: 16px;
   }
   .hero .in-danger {
-    width: 80%;
+    width: 50%;
   }
   .hero .hero-information {
     width: 100%;
@@ -1164,6 +1169,8 @@ Aktivitet
 }
 .formulaire form .form-utan-btn .input-border {
   position: relative;
+  width: 100%;
+  padding: 8px;
 }
 .formulaire form .form-utan-btn .input-border .border {
   position: absolute;
@@ -1182,4 +1189,24 @@ Aktivitet
   width: 100%;
   border: none;
   background-color: transparent;
+}
+.formulaire form .form-utan-btn textarea {
+  padding: 16px;
+  outline: none;
+}
+.formulaire form .form-utan-btn .char-count {
+  align-self: flex-end;
+}
+
+@media (max-width: 769px) {
+  .formulaire {
+    width: 100%;
+    padding: 0px 24px;
+    margin: 35rem auto 10rem auto;
+  }
+}
+@media (max-width: 572px) {
+  .form-wrapper {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=förbarnochunga.css.map */
