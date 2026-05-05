@@ -995,7 +995,7 @@ MAIN
     bottom: -350px;
   }
 }
-/*Content block section*/
+/*Content block section used in index, trygga-häng, för barn och unga and stödversamhet*/
 .content-block {
   display: flex;
   align-items: center;
@@ -1044,7 +1044,7 @@ MAIN
   height: auto;
 }
 .content-block .card-info {
-  align-self: flex-end;
+  justify-content: flex-end;
 }
 .content-block .article-content {
   max-width: 50%;
@@ -1114,12 +1114,17 @@ MAIN
   margin-top: 15rem;
 }
 
+.what-is-trygga-hang .article-content {
+  min-width: 70%;
+}
+
 @media (max-width: 769px) {
   .content-block {
     padding: 0px 24px;
   }
   .content-block .article-content {
-    width: 50%;
+    max-width: 40%;
+    min-width: 40%;
   }
   .content-block .article-content .about-us-btn {
     flex-direction: column;

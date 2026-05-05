@@ -962,6 +962,23 @@ Stödversamhet
   text-align: center;
 }
 
+@media (max-width: 769px) {
+  .informations {
+    padding: 0px 24px;
+  }
+  .informations .fler-trygga {
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 0px;
+  }
+  .informations .fler-trygga .other-information {
+    align-items: flex-start;
+    padding: 0px;
+  }
+  .informations .fler-trygga .other-information .info-title-and-lign {
+    align-items: flex-start;
+  }
+}
 /*================================================
 
 Trygga-häng

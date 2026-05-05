@@ -362,6 +362,24 @@ Stödversamhet
         }
     }
 }
+@media (max-width:$breakpoint-tablet) {
+    .informations{
+        padding:$spacing-none $spacing-5xl;
+
+        .fler-trygga{
+            flex-direction: column;
+            gap: $spacing-5xl;
+            padding: $spacing-5xl $spacing-none;
+            .other-information{
+                align-items: flex-start;
+                padding:0px;
+                .info-title-and-lign{
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+}
 
 /*================================================
 
