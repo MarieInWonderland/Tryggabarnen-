@@ -770,17 +770,6 @@ Styles
   padding: 0px 48px;
   position: relative;
 }
-.your-right .lign {
-  width: 90px;
-  height: auto;
-  fill: #34140b;
-  rotate: -55.72°;
-  position: absolute;
-}
-.your-right .lign1 {
-  left: 347.76px;
-  top: 126.09px;
-}
 .your-right .your-right-content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -790,7 +779,7 @@ Styles
 }
 .your-right .your-right-content .your-right-item {
   height: 328px;
-  width: 305px;
+  max-width: 305px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -809,12 +798,18 @@ Styles
 @media (max-width: 769px) {
   .your-right .your-right-content {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
   }
 }
 @media (max-width: 572px) {
   .your-right {
     padding: 0px 16px;
+  }
+  .your-right .your-right-content {
+    display: flex;
+    overflow-y: scroll;
+  }
+  .your-right .your-right-content .your-right-content {
+    min-width: 216px;
   }
 }
 /*Stories*/

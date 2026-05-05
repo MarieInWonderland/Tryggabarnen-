@@ -140,21 +140,6 @@
     padding: $spacing-none $spacing-9xl;
     position: relative;
 
-    .lign{
-        width: 90px;
-        height: auto;
-        fill: $text-primary;
-        rotate: -55.72°;
-        position: absolute;
-    }
-
-    .lign1{
-        left: 347.76px;
-        top: 126.09px;
-    }
-
-    
-
     .your-right-content{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -164,7 +149,7 @@
 
         .your-right-item{
             height: 328px;
-            width: 305px;
+            max-width: 305px;
             display: flex;
             flex-direction: column;
             gap:$spacing-2xl; 
@@ -187,7 +172,7 @@
     .your-right{
         .your-right-content{
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2,1fr);
+            
         }
     }
 }
@@ -195,6 +180,13 @@
 @media (max-width:$breakpoint-mobile){
    .your-right{ 
     padding: $spacing-none $spacing-3xl;
+    .your-right-content{
+        display: flex;
+        overflow-y: scroll;
+        .your-right-content{
+            min-width: 216px;
+        }
+    }
    }
 }
 
