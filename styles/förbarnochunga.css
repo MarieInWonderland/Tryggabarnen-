@@ -774,16 +774,16 @@ Styles
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
-  gap: -6px;
   width: 100%;
 }
 .your-right .your-right-content .your-right-item {
-  height: 328px;
-  max-width: 305px;
+  min-height: 328px;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 12px;
   text-align: center;
+  margin-left: -6px;
 }
 .your-right .your-right-content .flexstart {
   justify-content: flex-start;
@@ -806,10 +806,17 @@ Styles
   }
   .your-right .your-right-content {
     display: flex;
-    overflow-y: scroll;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    min-width: 700px;
   }
-  .your-right .your-right-content .your-right-content {
-    min-width: 216px;
+  .your-right .your-right-content .your-right-item {
+    min-width: 0;
+    margin-right: 0px;
+    flex: 0 0 200px;
+  }
+  .your-right .your-right-content .your-right-item:first-child {
+    margin-left: 100px;
   }
 }
 /*Stories*/
