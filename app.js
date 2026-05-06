@@ -78,9 +78,25 @@ document.getElementById("panik").addEventListener("click", () => {
 });
 
 //Aktiviteter och stöd btn 
-  document.getElementsByClassName("aktiviteter").addEventListener("click", () => {
-  window.location.href = "stodverksamhet.html";
+let aktiviteter = document.getElementsByClassName ("aktiviteter");
+
+ for (let i = 0; i < aktiviteter.length; i++) {
+  aktiviteter[i].addEventListener("click", () => {
+    window.location.href = "stodverksamhet.html";
   });
+};
+
+//se alla 
+
+let se_alla = document.getElementsByClassName("se-alla");
+ for (let i = 0; i < se_alla.length; i++) {
+  se_alla[i].addEventListener("click", () => {
+    window.location.href = "trygga-hang.html";
+  });
+};
+  
+
+
 
 //Läs mer btn 
 console.log(window.location.pathname);
@@ -167,10 +183,6 @@ let activities_cards = document.querySelectorAll(".activity-card");
     window.location.href = "tack.html";
   });
 
-  //se alla 
-  document.getElementById("se-alla").addEventListener("click", () => {
-  window.location.href = "trygga-hang.html";
-});
 } else if(window.location.pathname === '/tack.html') {
   //Tillbaka till trygga häng aktiviter
   document.getElementById("tillbaka").addEventListener("click", () => {

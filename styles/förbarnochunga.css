@@ -177,7 +177,7 @@ Highlight
   -o-object-fit: fill;
      object-fit: fill;
   overflow: visible;
-  transform: scaleX(1.05);
+  transform: scaleX(1.1) scaleY(1.6);
 }
 .highlight-content .text {
   position: relative;
@@ -631,21 +631,21 @@ Styles
 }
 /*Decor*/
 .decor-md {
-  font-family: "Delicious Handrawn";
+  font-family: "BuenosAires";
   font-size: 30px;
   line-height: 36px;
 }
 
 @media (max-width: 769px) {
   .decor-md {
-    font-family: "Delicious Handrawn";
+    font-family: "BuenosAires";
     font-size: 30px;
     line-height: 36px;
   }
 }
 @media (max-width: 572px) {
   .decor-md {
-    font-family: "Delicious Handrawn";
+    font-family: "BuenosAires";
     font-size: 24px;
     line-height: 32px;
   }

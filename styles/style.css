@@ -177,7 +177,7 @@ Highlight
   -o-object-fit: fill;
      object-fit: fill;
   overflow: visible;
-  transform: scaleX(1.05);
+  transform: scaleX(1.1) scaleY(1.6);
 }
 .highlight-content .text {
   position: relative;
@@ -631,21 +631,21 @@ Styles
 }
 /*Decor*/
 .decor-md {
-  font-family: "Delicious Handrawn";
+  font-family: "BuenosAires";
   font-size: 30px;
   line-height: 36px;
 }
 
 @media (max-width: 769px) {
   .decor-md {
-    font-family: "Delicious Handrawn";
+    font-family: "BuenosAires";
     font-size: 30px;
     line-height: 36px;
   }
 }
 @media (max-width: 572px) {
   .decor-md {
-    font-family: "Delicious Handrawn";
+    font-family: "BuenosAires";
     font-size: 24px;
     line-height: 32px;
   }
@@ -988,6 +988,12 @@ MAIN
     flex: 1;
     gap: 8px;
   }
+  .hero-statistics .statistics .statistic {
+    max-width: 216px;
+  }
+  .hero-statistics .statistics .statistic .underligne {
+    max-width: 90%;
+  }
 }
 @media (max-width: 572px) {
   .hero-statistics {
@@ -1076,32 +1082,6 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 }
 .content-block .article-content .text-section .title h2 {
   line-height: 1.05;
-  /*.highlight-brand{
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.05em 0.18em;
-      white-space: nowrap;
-      vertical-align: baseline;
-
-      .highlight {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          z-index: 0;
-          pointer-events: none;
-          overflow: visible;
-          transform: scaleX(1) scaleY(1.15);
-          transform-origin: center;
-      }
-
-      .text{
-          position: relative;
-          z-index: 1;
-      }
-  }*/
 }
 .content-block .article-content .text-section .title h2 .text-highlight {
   background-image: url(../img/graphic-element/highlight.svg);
@@ -1133,8 +1113,11 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
   .content-block {
     padding: 0px 24px;
   }
+  .content-block .img-about-us {
+    max-width: 216px;
+  }
   .content-block .article-content {
-    max-width: 40%;
+    max-width: 60%;
     min-width: 40%;
   }
   .content-block .article-content .about-us-btn {
@@ -1186,9 +1169,10 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
   gap: 20px;
 }
 .events .cards-event .event-card {
-  width: 20.063rem;
+  min-width: 20.063rem;
+  max-width: 100%;
   height: 26.875rem;
-  padding: 16px;
+  padding: 20px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1236,14 +1220,17 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 }
 .events .cards-event .event-card .highlight-content .highlight-title {
   color: rgba(52, 20, 11, 0.6);
-  opacity: 60%;
   width: 95%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
+.events .cards-event .event-card .highlight-content .highlight-title:hover {
+  color: #610228;
+}
 .events .cards-event .event-card .highlight-content .title-event {
   display: flex;
+  gap: 24px;
   color: #f6f2ec;
   fill: #f6f2ec;
 }
@@ -1256,7 +1243,7 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
     max-width: 80%;
   }
   .events .cards-event .event-card {
-    width: 15.5rem;
+    min-width: 15.5rem;
   }
 }
 @media (max-width: 572px) {
@@ -1266,8 +1253,8 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 }
 /*Testionial*/
 .testimonial {
-  max-width: 45%;
-  margin: 0px auto;
+  max-width: 60%;
+  margin: 251px auto;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -1296,6 +1283,7 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 .testimonial .testimonial-text .name {
   display: flex;
   gap: 1px;
+  align-items: center;
 }
 
 @media (max-width: 769px) {

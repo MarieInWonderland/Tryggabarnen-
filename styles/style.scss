@@ -409,6 +409,14 @@ MAIN
             padding: $spacing-3xl $spacing-2xl;
             flex: 1;
             gap: $spacing-lg;
+
+            .statistic{
+                max-width: 216px;
+
+                .underligne{
+                    max-width: 90%;
+                }
+            }
         }
     }
 }
@@ -448,7 +456,6 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
             max-width: 400px;
             margin: auto;
         }
-
 
         .trygga-hang-info{
             align-self: flex-end;
@@ -520,32 +527,6 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
                 h2 {
                     line-height: 1.05;
 
-                    /*.highlight-brand{
-                        position: relative;
-                        display: inline-flex;
-                        align-items: center;
-                        justify-content: center;
-                        padding: 0.05em 0.18em;
-                        white-space: nowrap;
-                        vertical-align: baseline;
-
-                        .highlight {
-                            position: absolute;
-                            inset: 0;
-                            width: 100%;
-                            height: 100%;
-                            z-index: 0;
-                            pointer-events: none;
-                            overflow: visible;
-                            transform: scaleX(1) scaleY(1.15);
-                            transform-origin: center;
-                        }
-
-                        .text{
-                            position: relative;
-                            z-index: 1;
-                        }
-                    }*/
                     .text-highlight{
                         background-image: url(../img/graphic-element/highlight.svg);
                         background-size: cover;
@@ -557,18 +538,19 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
                 }
             }   
         }
-        }
-        .about-us-btn{
-            display: flex;
-            justify-content: flex-start;
-            gap: $spacing-xl;
+    }
+    .about-us-btn{
+        display: flex;
+        justify-content: flex-start;
+        gap: $spacing-xl;
 
-            .btn-primary-outlined{
-                color:$text-primary; 
-                fill:$text-primary;
-            }
+        .btn-primary-outlined{
+            color:$text-primary; 
+            fill:$text-primary;
         }
     }
+}
+
 .about-us, .stodchat, .what-is-trygga-hang{
     margin-top: 15rem;
 }
@@ -584,14 +566,17 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
     .content-block{
         padding:$spacing-none $spacing-5xl;
 
+        .img-about-us{
+            max-width: 216px;
+        }
+
         .article-content{
-            max-width: 40%;
+            max-width: 60%;
             min-width: 40%;
             .about-us-btn{
                 flex-direction: column;
             }
-        }
-        
+        }   
     }
 }  
 @media (max-width:$breakpoint-mobile) {
@@ -614,7 +599,7 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
     }
     .stodchat, .what-is-trygga-hang{
     margin-top: 10rem;
-}
+    }
     
 }
 
@@ -641,9 +626,10 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
         gap: $spacing-4xl;
 
         .event-card{
-            width: 20.063rem;
+            min-width: 20.063rem;
+            max-width: 100%;
             height: 26.875rem;
-            padding: $spacing-3xl;
+            padding: $spacing-4xl;
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -685,6 +671,7 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
                     font-weight: 700;
                 }
             }
+
             .highlight-content{
                 cursor: pointer;
                 display: flex;
@@ -698,14 +685,17 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 
                 .highlight-title{
                     color: $effects-brown-a;
-                    opacity: 60%;
                     width: 95%;
                     height: 100%;
                     object-fit: cover;
+                    &:hover{
+                        color: $background-brand;
+                    }
                 }
                 
                 .title-event{
                     display: flex;
+                    gap: $spacing-5xl;
                     color: $text-invert;
                     fill: $text-invert;
                 } 
@@ -726,7 +716,7 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 
         .cards-event{
             .event-card{
-                width: 15.5rem;
+                min-width: 15.5rem;
             }
         }
     }
@@ -739,8 +729,8 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 
 /*Testionial*/
 .testimonial{
-    max-width: 45%;
-    margin: 0px auto;
+    max-width: 60%;
+    margin: 251px auto;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -769,6 +759,7 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
         .name{
             display: flex;
             gap: $spacing-xs;
+            align-items: center;
         }
     }
 }

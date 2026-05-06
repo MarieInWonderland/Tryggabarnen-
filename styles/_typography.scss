@@ -501,14 +501,14 @@ Styles
 
 /*Decor*/
 .decor-md{
-    font-family: $decor;
+    font-family: $body;
     font-size: $font-size-3xl;
     line-height: $line-height-4xl;
 }
 
 @media (max-width:$breakpoint-tablet){
     .decor-md{
-    font-family: $decor;
+    font-family: $body;
     font-size: $font-size-3xl;
     line-height: $line-height-4xl;
     }
@@ -516,7 +516,7 @@ Styles
 
 @media (max-width:$breakpoint-mobile){
     .decor-md{
-    font-family: $decor;
+    font-family: $body;
     font-size: $font-size-2xl;
     line-height: $line-height-3xl;
     }
