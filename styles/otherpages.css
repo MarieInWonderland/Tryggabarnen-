@@ -1,0 +1,1280 @@
+@charset "UTF-8";
+/* =============
+General 
+================*/
+@import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*=================
+Variables Core
+===================*/
+/*Gray*/
+/*Yellow*/
+/*Maroon*/
+/*Brown*/
+/*==================
+Variables Tockens
+====================*/
+/*Color*/
+/*Text*/
+/*Background*/
+/*Border*/
+/*Effects*/
+/*Illustrations*/
+/*Highlights*/
+/*Logo*/
+/*Button*/
+/*Outlined*/
+/*Primary*/
+/*Secondary*/
+/*Filled*/
+/*Primary*/
+/*Text*/
+/*Spacing*/
+/*Border-radius*/
+/*Border*/
+/*==================
+Breakpoints 
+====================*/
+/*==================
+Button 
+====================*/
+.button {
+  border-radius: 100000px;
+  padding: 12px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: none;
+  cursor: pointer;
+}
+.button .button__icon {
+  transition: all 0.3s ease;
+}
+.button:hover .button__icon {
+  transform: translateX(10px);
+}
+
+.button--filled {
+  background: #fdc104;
+  color: #1a1a1a;
+  fill: #1a1a1a;
+}
+.button--filled:hover {
+  background-color: #eab200;
+}
+.button--filled:disabled {
+  background-color: #fff3cd;
+}
+
+.button--outlined {
+  position: relative;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.button--outlined:hover {
+  background-color: rgba(52, 20, 11, 0.062745098);
+}
+.button--outlined .button__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.button--outlined .button__border {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  pointer-events: none;
+  overflow: visible;
+  aspect-ratio: none;
+}
+.button--outlined .long-btn {
+  transform: scaleX(1.3);
+}
+
+@media (max-width: 572px) {
+  .button--outlined .button {
+    padding: 12px 28px;
+  }
+  .button--outlined .long-btn {
+    transform: scaleX(1.2);
+  }
+}
+.panik {
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #FEDA68;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 0px 20px 20px 20px;
+  position: fixed;
+  right: 48px;
+  top: 668px;
+  z-index: 1000000;
+  cursor: pointer;
+}
+.panik h6 {
+  color: #34140b;
+}
+.panik .exit-icon {
+  color: #34140b;
+}
+.panik:hover {
+  background-color: #eab200;
+}
+
+@media (max-width: 572px) {
+  .panik {
+    padding: 12px 12px;
+  }
+  h6 {
+    margin: 0px;
+  }
+}
+/*==================
+Highlight 
+====================*/
+.highlight-content {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  /*justify-content: center;*/
+  padding: 0.05em 0.18em;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+.highlight-content .highlight {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  -o-object-fit: fill;
+     object-fit: fill;
+  overflow: visible;
+  transform: scaleX(1.1) scaleY(1.6);
+}
+.highlight-content .text {
+  position: relative;
+  z-index: 1;
+  color: #34140b;
+}
+
+.highlight-header {
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 0.15rem;
+}
+.highlight-header .highlight-bg {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  inset: 0;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: scaleX(1.05);
+}
+
+/*==================
+Icon 
+====================*/
+.icon {
+  width: 24px;
+  height: 24px;
+  padding: auto;
+}
+
+.icon-xl {
+  width: 36px;
+  height: 36px;
+  padding: auto;
+}
+
+.primary {
+  fill: #34140b;
+}
+
+.invert {
+  color: #f6f2ec;
+}
+
+/*==================
+Breakpoints 
+====================*/
+/*Font*/
+/*Delicious Handrawn*/
+.delicious-handrawn-regular {
+  font-family: "Delicious Handrawn", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Buenos Aires*/
+/*Regular*/
+@font-face {
+  font-family: "BuenosAires";
+  src: url("../font/buenosaires/BuenosAires-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+/*Book*/
+@font-face {
+  font-family: "BuenosAires";
+  src: url("../font/buenosaires/BuenosAires-Book.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+/*Black*/
+@font-face {
+  font-family: "BuenosAires";
+  src: url("../font/buenosaires/BuenosAires-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+/*Font-familly*/
+/*Font-size*/
+/*Font-weight*/
+/*Line-height*/
+/*=========================
+Styles
+===========================*/
+/*Heading*/
+.heading-huge {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 74px;
+  line-height: 80px;
+}
+
+.heading-5xl {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.heading-4xl {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 48px;
+}
+
+.heading-3xl {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.heading-2xl {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.heading-xl {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.heading-lg {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.heading-md {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (max-width: 769px) {
+  .heading-huge {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 72px;
+  }
+  .heading-5xl {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .heading-4xl {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .heading-3xl {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .heading-2xl {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .heading-xl {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .heading-md {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 572px) {
+  .heading-huge {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .heading-5xl {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .heading-4xl {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .heading-3xl {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .heading-2xl {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .heading-xl {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .heading-md {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+/*Preamble*/
+.preamble-5xl {
+  font-family: "BuenosAires";
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.preamble-3xl {
+  font-family: "BuenosAires";
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.preamble-lg {
+  font-family: "BuenosAires";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.preamble-md {
+  font-family: "BuenosAires";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (max-width: 769px) {
+  .preamble-5xl {
+    font-family: "BuenosAires";
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .preamble-3xl {
+    font-family: "BuenosAires";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .preamble-lg {
+    font-family: "BuenosAires";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .preamble-md {
+    font-family: "BuenosAires";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 572px) {
+  .preamble-5xl {
+    font-family: "BuenosAires";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .preamble-3xl {
+    font-family: "BuenosAires";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .preamble-lg {
+    font-family: "BuenosAires";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .preamble-md {
+    font-family: "BuenosAires";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+/*Body*/
+/*Book*/
+.book-xl {
+  font-family: "BuenosAires";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.book-lg {
+  font-family: "BuenosAires";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.book-md {
+  font-family: "BuenosAires";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.book-sm {
+  font-family: "BuenosAires";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media (max-width: 769px) {
+  .book-xl {
+    font-family: "BuenosAires";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .book-lg {
+    font-family: "BuenosAires";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .book-md {
+    font-family: "BuenosAires";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .book-sm {
+    font-family: "BuenosAires";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 572px) {
+  .book-xl {
+    font-family: "BuenosAires";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .book-lg {
+    font-family: "BuenosAires";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .book-md {
+    font-family: "BuenosAires";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .book-sm {
+    font-family: "BuenosAires";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+/*Black*/
+.black-lg {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.black-md {
+  font-family: "BuenosAires";
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.black-sm {
+  font-family: "BuenosAires";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media (max-width: 769px) {
+  .black-lg {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .black-md {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .black-sm {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 572px) {
+  .black-lg {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .black-md {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .black-sm {
+    font-family: "BuenosAires";
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+/*Decor*/
+.decor-md {
+  font-family: "BuenosAires";
+  font-size: 30px;
+  line-height: 36px;
+}
+
+@media (max-width: 769px) {
+  .decor-md {
+    font-family: "BuenosAires";
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+@media (max-width: 572px) {
+  .decor-md {
+    font-family: "BuenosAires";
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+/*Hero used for för barn och unga, trygga häng, aktivitet and Stödverksamhet*/
+.hero {
+  width: 100vw;
+  height: 29rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px 48px;
+  position: relative;
+}
+.hero .in-danger {
+  width: 15%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 20px;
+  border-radius: 20px 20px 20px 0px;
+  background-color: #fff3cd;
+}
+.hero .hero-information {
+  width: 43%;
+  padding: 24px;
+  background-color: rgba(52, 20, 11, 0.6);
+  backdrop-filter: blur(25px);
+  border-radius: 38px;
+  position: absolute;
+  bottom: -100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #f6f2ec;
+}
+.hero .hero-information-activity {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 24px;
+  background-color: rgba(97, 2, 40, 0.8);
+  backdrop-filter: blur(25px);
+  border-radius: 38px;
+  position: absolute;
+  bottom: -400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.hero .hero-information-activity .activity-coordinates {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+.hero .hero-information-activity .activity-coordinates .iconxl {
+  width: 48px;
+  height: 48px;
+}
+.hero .hero-information-activity .activity-coordinates .underline {
+  text-decoration: underline;
+}
+.hero .hero-information-activity .activity-coordinates .info-onelign {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  align-items: center;
+}
+.hero .hero-information-activity .activity-coordinates .info-twolign {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.hero .hero-information-activity .activity-coordinates .info-twolign .detail-information {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.for-barn {
+  background-image: url(../img/pictures/för-barn-och-unga-hero.png);
+}
+
+.stodverksamhet {
+  background-image: url(../img/pictures/stodverksamhet-hero.png);
+}
+
+.trygga-hang {
+  background-image: url(../img/pictures/trygga-hang-hero.png);
+}
+
+.activity {
+  background-image: url(../img/pictures/activitiet-hero.webp);
+}
+
+@media (max-width: 769px) {
+  .hero .in-danger {
+    width: 30%;
+  }
+  .hero .hero-information-activity {
+    width: 90%;
+  }
+}
+@media (max-width: 572px) {
+  .hero {
+    padding: 16px;
+  }
+  .hero .in-danger {
+    width: 50%;
+  }
+  .hero .hero-information {
+    width: 90%;
+  }
+}
+/*Your right*/
+.your-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0px 48px;
+  position: relative;
+}
+.your-right .your-right-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  width: 100%;
+  padding: 51px 0px;
+}
+.your-right .your-right-content .your-right-item {
+  min-height: 400px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  margin-left: -6px;
+}
+.your-right .your-right-content .flexstart {
+  justify-content: flex-start;
+}
+.your-right .your-right-content .flexend {
+  justify-content: flex-end;
+}
+.your-right .läs-mer {
+  align-self: flex-end;
+}
+
+@media (max-width: 769px) {
+  .your-right .your-right-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 572px) {
+  .your-right {
+    padding: 0px 16px;
+  }
+  .your-right .your-right-content {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    gap: 10px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .your-right .your-right-item {
+    width: 216px;
+    height: 328px;
+    margin-top: 0px;
+  }
+}
+/*Stories*/
+.stories {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 0px 48px;
+  margin: 7.5rem 0rem;
+}
+.stories .story-cards {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.stories .story-cards .story-card {
+  background-image: url(../img/graphic-element/testimonial-card.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 38px;
+  padding: 88px 65px 55px 76px;
+}
+.stories .story-cards .story-card .story-wrapper {
+  display: flex;
+  gap: -2px;
+}
+.stories .story-cards .story-card .story-wrapper .icon-quote {
+  width: 62px;
+  height: 62px;
+  color: #fee69b;
+}
+.stories .story-cards .story-card .story-wrapper .story {
+  width: 80%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.stories .story-cards .story-card .story-wrapper .story .autor {
+  display: flex;
+}
+.stories .story-cards .story-card .story-wrapper .story p {
+  color: #f6f2ec;
+}
+.stories .läs-mer {
+  align-self: flex-end;
+}
+
+@media (max-width: 769px) {
+  .stories .story-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 572px) {
+  .stories {
+    padding: 0px 16px;
+  }
+  .stories .story-cards .story-card {
+    padding: 24px 10px;
+  }
+}
+/*================================================
+
+Stödversamhet
+
+==================================================*/
+.different-groups {
+  margin-top: 14.75rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 155px;
+}
+.different-groups .group-card {
+  height: 100%;
+  background-color: #610228;
+  gap: 12px;
+  padding: 24px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.different-groups .group-card .group-title {
+  display: flex;
+  align-items: center;
+  color: #f6f2ec;
+  fill: #f6f2ec;
+}
+.different-groups .group-card p {
+  color: #f6f2ec;
+}
+
+@media (max-width: 769px) {
+  .different-groups {
+    padding: 0px 24px;
+  }
+}
+@media (max-width: 572px) {
+  .different-groups {
+    padding: 0px 16px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/*Information bottom used also in trygga-hang*/
+.informations {
+  margin-top: 14.75rem;
+  padding: 0px 48px;
+}
+.informations .information-bottom {
+  padding: 0px 48px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rem;
+}
+.informations .information-bottom .other-information {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+.informations .information-bottom .other-information .info-title-and-lign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.informations .information-bottom .other-information .info-title-and-lign .icon .lign {
+  color: #34140b;
+}
+.informations .information-bottom .other-information .info-title-and-lign .lign {
+  height: 4px;
+  width: 100%;
+}
+.informations .information-bottom .other-information .info-title-and-lign .info-title {
+  display: flex;
+  cursor: pointer;
+}
+.informations .information-bottom .other-information .info-title-and-lign p {
+  text-align: center;
+}
+
+@media (max-width: 769px) {
+  .informations {
+    padding: 0px 24px;
+  }
+  .informations .fler-trygga {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    padding: 24px 0px;
+  }
+  .informations .fler-trygga .other-information {
+    align-items: flex-start;
+    padding: 0px;
+  }
+  .informations .fler-trygga .other-information .info-title-and-lign {
+    align-items: flex-start;
+  }
+}
+@media (max-width: 572px) {
+  .informations {
+    margin-top: 5rem;
+    padding: 0px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+  }
+  .informations .information-bottom {
+    margin-bottom: 0rem;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px;
+  }
+  .informations .information-bottom .other-information {
+    width: 100%;
+  }
+  .verksamheter {
+    margin-bottom: 5rem;
+  }
+}
+/*================================================
+
+Trygga-häng
+
+==================================================*/
+/*Heart-information*/
+.heart-informations {
+  padding: 0px 48px;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+.heart-informations .heart-card {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.heart-informations .heart-card .heart-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 572px) {
+  .heart-informations {
+    flex-direction: column;
+    justify-content: flex;
+    align-items: center;
+  }
+  .heart-informations .heart-card {
+    width: 100%;
+  }
+}
+/*Activities*/
+.activities {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0px 48px;
+  margin-top: 8.75rem;
+}
+.activities .preamble-lg {
+  max-width: 40%;
+}
+.activities .cards-activities {
+  width: 100%;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.activities .cards-activities .activity-card {
+  height: 26.875rem;
+  padding: 16px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.activities .cards-activities .activity-card:first-child {
+  background-image: url(../img/pictures/img-prova-på-badminton.webp);
+  border-radius: 38px 0px 0px 38px;
+}
+.activities .cards-activities .activity-card:nth-child(2) {
+  background-image: url(../img/pictures/img-grillkväll.webp);
+}
+.activities .cards-activities .activity-card:nth-child(3) {
+  background-image: url(../img/pictures/img-skaparverkstad.webp);
+}
+.activities .cards-activities .activity-card:nth-child(4) {
+  background-image: url(../img/pictures/picknikochkubb.webp);
+  border-radius: 0px 38px 0px 0px;
+}
+.activities .cards-activities .activity-card:nth-child(5) {
+  background-image: url(../img/pictures/spelkväll.webp);
+}
+.activities .cards-activities .activity-card:nth-child(6) {
+  background-image: url(../img/pictures/prova-pa-drejning.webp);
+}
+.activities .cards-activities .activity-card:nth-child(7) {
+  background-image: url(../img/pictures/browling.webp);
+}
+.activities .cards-activities .activity-card:nth-child(8) {
+  background-image: url(../img/pictures/diy-smycken.webp);
+}
+.activities .cards-activities .activity-card:nth-child(9) {
+  background-image: url(../img/pictures/mello-and-taccos.webp);
+  border-radius: 0px 0px 0px 38px;
+}
+.activities .cards-activities .activity-card:nth-child(10) {
+  background-image: url(../img/pictures/kvallbad.webp);
+}
+.activities .cards-activities .activity-card:nth-child(11) {
+  background-image: url(../img/pictures/lar-dig-baka-buller.webp);
+}
+.activities .cards-activities .activity-card:nth-child(12) {
+  background-image: url(../img/pictures/prova-pa-klatring.webp);
+  border-radius: 0px 0px 38px 0px;
+}
+.activities .cards-activities .activity-card .date {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 8px;
+}
+.activities .cards-activities .activity-card .date h3 {
+  color: #f6f2ec;
+  text-align: center;
+}
+.activities .cards-activities .activity-card .date .month {
+  font-family: "BuenosAires";
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
+.activities .cards-activities .activity-card .highlight-content {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+}
+.activities .cards-activities .activity-card .highlight-content:hover .highlight-title {
+  color: #610228;
+}
+.activities .cards-activities .activity-card .highlight-content .highlight-title {
+  color: rgba(52, 20, 11, 0.6);
+  opacity: 60%;
+  width: 95%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.activities .cards-activities .activity-card .highlight-content .title-event {
+  display: flex;
+  color: #f6f2ec;
+  fill: #f6f2ec;
+}
+.activities .btn-las-mer {
+  display: none;
+}
+
+@media (max-width: 769px) {
+  .activities .preamble-lg {
+    max-width: 80%;
+  }
+  .activities .cards-activities {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .activities .cards-activities .activity-card {
+    width: 100%;
+    height: 350px;
+    padding: 8px;
+    border-radius: 20px !important;
+  }
+  .activities .cards-activities .activity-card:nth-child(n+10) {
+    display: none;
+  }
+  .activities .btn-las-mer {
+    display: flex;
+    align-self: center;
+  }
+}
+@media (max-width: 572px) {
+  .activities {
+    padding: 0px 16px;
+  }
+  .activities .cards-activities {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .activities .cards-activities .activity-card:nth-child(n+7) {
+    display: none;
+  }
+}
+/*================================================
+
+Aktivitet
+
+==================================================*/
+.formulaire {
+  margin: 35rem auto 20rem auto;
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 16px;
+}
+.formulaire form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.formulaire form .form-utan-btn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.formulaire form .form-utan-btn .form-wrapper {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+}
+.formulaire form .form-utan-btn .form-wrapper .form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+.formulaire form .form-utan-btn .text-area {
+  display: flex;
+  flex-direction: column;
+}
+.formulaire form .form-utan-btn .input-border {
+  position: relative;
+  width: 100%;
+  padding: 8px;
+}
+.formulaire form .form-utan-btn .input-border .border {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  pointer-events: none;
+  overflow: visible;
+  aspect-ratio: none;
+}
+.formulaire form .form-utan-btn .input-border .text-input {
+  display: flex;
+}
+.formulaire form .form-utan-btn input, .formulaire form .form-utan-btn textarea {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+.formulaire form .form-utan-btn textarea {
+  padding: 16px;
+  outline: none;
+}
+.formulaire form .form-utan-btn .char-count {
+  align-self: flex-end;
+}
+
+@media (max-width: 769px) {
+  .formulaire {
+    width: 100%;
+    padding: 0px 24px;
+    margin: 35rem auto 10rem auto;
+  }
+}
+@media (max-width: 572px) {
+  .form-wrapper {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=otherpages.css.map */

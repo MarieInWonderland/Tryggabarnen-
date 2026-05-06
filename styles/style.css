@@ -211,6 +211,12 @@ Icon
   padding: auto;
 }
 
+.icon-xl {
+  width: 36px;
+  height: 36px;
+  padding: auto;
+}
+
 .primary {
   fill: #34140b;
 }
@@ -1012,9 +1018,13 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 .content-block {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0px 56px;
-  gap: 20px;
+  gap: 56px;
   margin-bottom: 11.25rem;
+}
+.content-block .picture-stod {
+  max-width: 500px;
 }
 .content-block .picture {
   width: 50%;
@@ -1031,7 +1041,6 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
   flex-direction: column;
   align-items: flex-start;
   padding: 32px;
-  gap: 24px;
   background-color: #610228;
   border-radius: 38px 38px 0px 38px;
 }
@@ -1064,7 +1073,7 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
   justify-content: flex-end;
 }
 .content-block .article-content {
-  max-width: 50%;
+  max-width: 40%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1116,12 +1125,16 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
   .content-block .img-about-us {
     max-width: 216px;
   }
+  .content-block .picture {
+    width: auto;
+  }
   .content-block .article-content {
     max-width: 60%;
     min-width: 40%;
   }
   .content-block .article-content .about-us-btn {
     flex-direction: column;
+    align-items: flex-start;
   }
 }
 @media (max-width: 572px) {
@@ -1323,15 +1336,21 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 .to-the-adult .landscape-section .cards-section .landscape-card {
   background-color: #610228;
   padding: 16px 24px;
+  gap: 4px;
+  cursor: pointer;
+}
+.to-the-adult .landscape-section .cards-section .landscape-card:hover {
+  opacity: 90%;
 }
 .to-the-adult .landscape-section .cards-section .landscape-card .title {
   display: flex;
   align-items: center;
   color: #f6f2ec;
   fill: #f6f2ec;
+  gap: 4px;
 }
 .to-the-adult .landscape-section .cards-section .landscape-card p {
-  width: 70%;
+  width: 80%;
   color: #f6f2ec;
 }
 .to-the-adult .landscape-section .cards-section .landscape-card:first-child {
@@ -1376,13 +1395,17 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: 48px;
   padding: 0px 48px;
   margin-top: 11.625rem;
   margin-bottom: 11.625rem;
 }
-.donation .preamble-lg {
-  max-width: 40%;
+.donation .donation-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: 50%;
 }
 .donation .donation-content {
   min-width: 60%;
@@ -1392,6 +1415,8 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
   gap: 48px;
 }
 .donation .donation-content .donation-item {
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1406,21 +1431,35 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
   flex-direction: column;
   align-items: center;
 }
-.donation .donation-content .btn-donation:hover .under-link {
-  display: block;
-}
 .donation .donation-content .btn-donation .btn-text {
   display: flex;
+  align-items: center;
 }
 .donation .donation-content .btn-donation .under-link {
-  display: none;
   height: 4px;
   fill: #f6f2ec;
 }
+.donation .donation-content .btn-donation:hover .under-link {
+  fill: rgba(97, 2, 40, 0.8);
+  color: rgba(97, 2, 40, 0.8);
+}
+.donation .donation-content .btn-donation:hover .btn-text {
+  color: rgba(97, 2, 40, 0.8);
+  white-space: nowrap;
+}
 
 @media (max-width: 769px) {
-  .donation .preamble-lg {
-    max-width: 100%;
+  .donation .donation-text {
+    width: 100%;
+  }
+  .donation .donation-content {
+    gap: 8px;
+  }
+  .donation .donation-content .donation-item .btn-donation .heading-2xl {
+    white-space: nowrap;
+  }
+  .donation .donation-content .donation-item .btn-donation .under-link {
+    width: 80%;
   }
 }
 @media (max-width: 572px) {
@@ -1430,6 +1469,7 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
   }
   .donation .donation-content {
     flex-direction: column;
+    gap: 28px;
   }
 }
 /*===================
@@ -1438,10 +1478,10 @@ FOOTER
 footer {
   display: flex;
   flex-direction: column;
-  padding: 32px 48px;
+  padding: 40px 56px;
   gap: 32px;
   background-image: url(../img/graphic-element/footer.svg);
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
 }
