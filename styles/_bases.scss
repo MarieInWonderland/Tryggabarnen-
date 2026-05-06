@@ -284,6 +284,10 @@ Button
     .exit-icon{
         color: $text-primary;
     }
+
+    &:hover{
+        background-color: $btn-filled-primary-hover;
+    }
 }
 @media (max-width: $breakpoint-mobile) {
     .panik {

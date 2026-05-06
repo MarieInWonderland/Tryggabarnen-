@@ -148,7 +148,6 @@
 
         .your-right-item{
             min-height: 328px;
-            min-width: 0;
             display: flex;
             flex-direction: column;
             gap:$spacing-2xl; 
@@ -176,30 +175,27 @@
         }
     }
 }
-
+ 
 @media (max-width:$breakpoint-mobile){
-   .your-right{ 
-    padding: $spacing-none $spacing-3xl;
+   .your-right { 
+        padding: $spacing-none $spacing-3xl;
 
-    .your-right-content{
-        display: flex;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        min-width: 700px;
+        .your-right-content {
+            display: flex;
+            flex-direction: row;
+            overflow-x: scroll;
+            gap: $spacing-xl;
+            width: 100%;
+            justify-content: flex-start;
+        }
 
-        .your-right-item{
-            min-width: 0;
-            margin-right: 0px;
-            flex: 0 0 200px;
-            &:first-child{
-                margin-left: 100px;
-            }
-
+        .your-right-item {
+            width: 216px;
+            height: 328px;
+            margin-top: 0px;
         }
     }
-   }
 }
-
 
 /*Stories*/
 .stories{
@@ -329,6 +325,7 @@ Stödversamhet
 .informations{
     margin-top: 14.75rem;
     padding: $spacing-none $spacing-9xl;
+
     .information-bottom{
         padding: $spacing-none $spacing-9xl;
         display: flex;
@@ -391,17 +388,25 @@ Stödversamhet
     .informations{
         margin-top: 5rem;
         padding: $spacing-none $spacing-3xl;
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-5xl;
+        align-items: flex-start;
     
         .information-bottom{
             margin-bottom: 0rem;
             flex-direction: column;
             width: 100%;
             padding: $spacing-none;
+
             .other-information{
                 width: 100%;
             }
         }
     }
+    .verksamheter{
+            margin-bottom: 5rem;
+        }
     
 }
 

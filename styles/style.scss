@@ -37,8 +37,8 @@ nav{
     padding: $spacing-2xl $spacing-9xl;
     justify-content: space-between;
     align-items: center;
-    background-color: $effects-brown-a;
-    backdrop-filter: blur(25px);
+    background-color: $background-secondary;
+    /*backdrop-filter: blur(25px);*/
 
     .nav-header{
         display: flex;
@@ -55,7 +55,7 @@ nav{
         width:fit-content;
         display: flex;
         align-items: center;
-        gap: $spacing-none;
+        gap: $spacing-lg;
         list-style: none;
         padding: $spacing-4xl $spacing-none;
 
@@ -110,13 +110,16 @@ nav{
                         } 
                     }
                 }
+
                 //lign under link in hover mode 
                 .under-link{
                     display: none;
                     width: 100%;
                     height: 4px;
                     fill: $text-invert;
+                    margin-top: 4px;
                 }
+
                 //under menu 
                 .subnav{
                 position: absolute;
@@ -129,15 +132,15 @@ nav{
                 }
 
                 .subnav.open{
-                    margin-top: 0px;
                     top: 100%;
-                    padding: 0px;
+                    padding: $spacing-none;
                     display: flex;
                     flex-direction: column;
                     border-radius: $border-radius-none $border-radius-none $border-radius-md $border-radius-md;
                     background-color: $effects-brown-a;
                     backdrop-filter: blur(25px);
-                    gap: 0px;
+                    gap: $spacing-none;
+                    z-index: 999;
 
                     li {
                     padding: $spacing-xl $spacing-4xl; 
@@ -196,6 +199,7 @@ nav{
                 .bar:nth-child(1) {
                 top: 0;
                 }
+
                 .bar:nth-child(3) {
                 bottom: 0;
                 }
@@ -373,8 +377,6 @@ MAIN
         backdrop-filter: blur(25px);
         border-radius: $border-radius-none $border-radius-lg $border-radius-lg $border-radius-lg;
 
-
-
         .statistic{
             max-width: 100%;
             flex: 1;
@@ -384,17 +386,18 @@ MAIN
             gap: $spacing-4xl;
             
 
-            h2, p, path{
+            h2, p, use{
                 color:$text-invert; 
                 fill: $text-invert;
                 text-align: center;
             }
 
-            img{
-                width: 100%;
+            .underline{
+                height: 4px;
+                max-width: max-content;
             }
         }
-}
+    }
 }
 
 @media (max-width:$breakpoint-tablet) {
@@ -406,8 +409,6 @@ MAIN
             padding: $spacing-3xl $spacing-2xl;
             flex: 1;
             gap: $spacing-lg;
-
-        
         }
     }
 }
@@ -428,7 +429,9 @@ MAIN
 }
 
 
-/*Content block section used in index, trygga-häng, för barn och unga and stödversamhet*/
+/* Content block 
+Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
+
 .content-block{
     display: flex;
     align-items: center;
@@ -440,6 +443,12 @@ MAIN
         width: 50%;;
         display: flex;
         align-items:  center;
+
+        .img-about-us{
+            max-width: 400px;
+            margin: auto;
+        }
+
 
         .trygga-hang-info{
             align-self: flex-end;

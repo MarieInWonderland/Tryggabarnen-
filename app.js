@@ -77,6 +77,11 @@ document.getElementById("panik").addEventListener("click", () => {
   window.location.href = "https://www.google.com";
 });
 
+//Aktiviteter och stöd btn 
+  document.getElementsByClassName("aktiviteter").addEventListener("click", () => {
+  window.location.href = "stodverksamhet.html";
+  });
+
 //Läs mer btn 
 console.log(window.location.pathname);
 if(window.location.pathname === '/trygga-hang.html') {
@@ -172,3 +177,5 @@ let activities_cards = document.querySelectorAll(".activity-card");
   window.location.href = "trygga-hang.html";
   });
 }
+
+

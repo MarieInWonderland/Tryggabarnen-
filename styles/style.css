@@ -143,6 +143,9 @@ Button
 .panik .exit-icon {
   color: #34140b;
 }
+.panik:hover {
+  background-color: #eab200;
+}
 
 @media (max-width: 572px) {
   .panik {
@@ -678,8 +681,8 @@ nav {
   padding: 12px 48px;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(52, 20, 11, 0.6);
-  backdrop-filter: blur(25px);
+  background-color: #34140b;
+  /*backdrop-filter: blur(25px);*/
 }
 nav .nav-header {
   display: flex;
@@ -692,7 +695,7 @@ nav .nav-wrapper ul {
   width: fit-content;
   display: flex;
   align-items: center;
-  gap: 0px;
+  gap: 8px;
   list-style: none;
   padding: 20px 0px;
 }
@@ -745,6 +748,7 @@ nav .nav-wrapper ul li .under-link {
   width: 100%;
   height: 4px;
   fill: #f6f2ec;
+  margin-top: 4px;
 }
 nav .nav-wrapper ul li .subnav {
   position: absolute;
@@ -757,7 +761,6 @@ nav .nav-wrapper ul li .subnav {
   padding: 1rem;
 }
 nav .nav-wrapper ul li .subnav.open {
-  margin-top: 0px;
   top: 100%;
   padding: 0px;
   display: flex;
@@ -766,6 +769,7 @@ nav .nav-wrapper ul li .subnav.open {
   background-color: rgba(52, 20, 11, 0.6);
   backdrop-filter: blur(25px);
   gap: 0px;
+  z-index: 999;
 }
 nav .nav-wrapper ul li .subnav.open li {
   padding: 10px 20px;
@@ -964,13 +968,15 @@ MAIN
   align-items: center;
   gap: 20px;
 }
-.hero-statistics .statistics .statistic h2, .hero-statistics .statistics .statistic p, .hero-statistics .statistics .statistic path {
+.hero-statistics .statistics .statistic h2, .hero-statistics .statistics .statistic p, .hero-statistics .statistics .statistic use {
   color: #f6f2ec;
   fill: #f6f2ec;
   text-align: center;
 }
-.hero-statistics .statistics .statistic img {
-  width: 100%;
+.hero-statistics .statistics .statistic .underline {
+  height: 4px;
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 
 @media (max-width: 769px) {
@@ -995,7 +1001,8 @@ MAIN
     bottom: -350px;
   }
 }
-/*Content block section used in index, trygga-häng, för barn och unga and stödversamhet*/
+/* Content block 
+Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 .content-block {
   display: flex;
   align-items: center;
@@ -1007,6 +1014,10 @@ MAIN
   width: 50%;
   display: flex;
   align-items: center;
+}
+.content-block .picture .img-about-us {
+  max-width: 400px;
+  margin: auto;
 }
 .content-block .picture .trygga-hang-info {
   align-self: flex-end;
