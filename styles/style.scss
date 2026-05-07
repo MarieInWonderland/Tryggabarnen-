@@ -38,7 +38,6 @@ nav{
     justify-content: space-between;
     align-items: center;
     background-color: $background-secondary;
-    /*backdrop-filter: blur(25px);*/
 
     .nav-header{
         display: flex;
@@ -49,6 +48,7 @@ nav{
     }
 
 //Links 
+
     .nav-wrapper{
 
         ul{
@@ -213,9 +213,11 @@ nav{
                     .bar:nth-child(1) {
                         transform: rotate(45deg);
                     }
+
                     .bar:nth-child(2) {
                         opacity: 0;
                     }
+
                     .bar:nth-child(3) {
                         transform: rotate(-45deg);
                     }
@@ -254,6 +256,7 @@ nav{
                     background-color: transparent;
 
                     &:hover{
+
                         .under-link{
                             display:none; 
                         }
@@ -264,7 +267,6 @@ nav{
                     display: none;
                     flex-direction: column;
                     width: 100%;
-                
                     }
 
                     .subnav.open{
@@ -280,6 +282,7 @@ nav{
                             padding: $spacing-xl;
 
                             .text-content{
+
                                 .book-md{
                                     font-weight: 900;
                                 }
@@ -301,9 +304,11 @@ nav{
 
 @media (max-width:$breakpoint-mobile) {
     nav{
+
         .nav-wrapper{
             width: 100%;
         }
+
         .nav-wrapper.open{
             width: 100%;
             right: 0;
@@ -350,6 +355,7 @@ MAIN
                 color: $text-invert;
             }
         }
+
         .hero-btn{
             display: flex;
             justify-content: space-between;
@@ -361,6 +367,7 @@ MAIN
             }
         }
     }
+
     .statistics{
         min-width: 90%;
         display: flex;
@@ -402,9 +409,11 @@ MAIN
 
 @media (max-width:$breakpoint-tablet) {
     .hero-statistics{
+
         .hero-content{
             max-width: 80%;
         }
+
         .statistics{
             padding: $spacing-3xl $spacing-2xl;
             flex: 1;
@@ -424,7 +433,9 @@ MAIN
 @media (max-width:$breakpoint-mobile) {
     .hero-statistics{
         background-image: url(../img/pictures/hero-mobile.png);
+
         .hero-content{
+
             .hero-btn{
                 flex-direction: column;
             }
@@ -445,13 +456,11 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
     align-items: center;
     justify-content: center;
     padding:$spacing-none $spacing-10xl;
-    gap: $spacing-10xl;
-    margin-bottom: 11.25rem;
+    gap: $spacing-10xl; 
 
     .picture-stod{
        max-width: 500px;
     }
-
 
     .picture{
         width: 50%;;
@@ -561,6 +570,14 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
     margin-top: 15rem;
 }
 
+.about-us, .stodchat, .aktivitet-och-stod {
+    margin-bottom: 10rem;
+}
+
+/*.stochat-bis{
+    margin-bottom: 5rem;
+}*/
+
 .what-is-trygga-hang{
     .article-content{
         min-width: 70%;
@@ -593,9 +610,11 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
     .content-block{
         flex-direction: column;
         margin-bottom: 5rem;
+
         .picture{
             width: 100%;
         }
+
         .article-content{
             max-width: 100%;
             width: 100%;
@@ -604,9 +623,11 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
     .about-us{
         margin-top: 30rem;
     }
+
     .trygga-hang-info{
         width: 100%;
     }
+
     .stodchat, .what-is-trygga-hang{
     margin-top: 10rem;
     }
@@ -627,6 +648,7 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
     .preamble-lg{
         max-width: 40%
     }
+
     .cards-event{
         width: 100%;
         min-height: fit-content;
@@ -665,6 +687,7 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
                 background-image: url(../img/pictures/picknikochkubb.webp);
                 border-radius:$border-radius-none $border-radius-lg  $border-radius-lg $border-radius-none;
             }
+
             .date{
             display: flex;
             flex-direction: column;
@@ -688,6 +711,7 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
                 justify-content: flex-start;
 
                 &:hover{
+
                     .highlight-title{
                         color:$highlights-primary-dark;
                     }
@@ -698,6 +722,7 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
                     width: 95%;
                     height: 100%;
                     object-fit: cover;
+
                     &:hover{
                         color: $background-brand;
                     }
@@ -725,6 +750,7 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
         }
 
         .cards-event{
+
             .event-card{
                 min-width: 15.5rem;
             }
@@ -738,6 +764,7 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 }
 
 /*Testionial*/
+
 .testimonial{
     max-width: 60%;
     margin: 251px auto;
@@ -762,10 +789,12 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
             z-index: 0;
             overflow: visible;
         }
+
         .preamble-5xl{
             position: relative;
             z-index: 1;
         }
+
         .name{
             display: flex;
             gap: $spacing-xs;
@@ -902,8 +931,8 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
     }
 }
 
-
 /*Donation*/
+
 .donation{
     display: flex;
     flex-direction: column;
@@ -952,11 +981,14 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
                     height: 4px;
                     fill: $text-invert;
                 } 
+
                 &:hover{
+
                     .under-link{
                         fill: $maroon-500-A-80;
                         color: $maroon-500-A-80;
                     }
+
                     .btn-text{
                         color: $maroon-500-A-80;
                         white-space: nowrap;
@@ -967,16 +999,22 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 }
 @media (max-width:$breakpoint-tablet) {
     .donation{
+
         .donation-text{
             width: 100%;
         }
+
         .donation-content{
             gap: $spacing-lg;
+
             .donation-item{
+
                 .btn-donation{
+
                     .heading-2xl{
                        white-space: nowrap; 
                     }
+
                     .under-link{
                         width: 80%;
                     }
@@ -990,6 +1028,7 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
     .donation{
         padding: $spacing-none $spacing-3xl;
         margin-top: 5rem;
+
         .donation-content{
             flex-direction: column;
             gap: $spacing-6xl;
@@ -1001,6 +1040,7 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 /*===================
 FOOTER
 ===================*/
+
 footer{
     display: flex;
     flex-direction: column;

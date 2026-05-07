@@ -246,20 +246,18 @@ Button
     .long-btn{
         transform: scaleX(1.30);
     }
-
 }
-
-
 
 @media (max-width: $breakpoint-mobile) {
-.button--outlined{
-    .button {
-        padding: $spacing-2xl $spacing-6xl;
+    .button--outlined{
+        .button {
+            padding: $spacing-2xl $spacing-5xl;
+        }
+        
+        .long-btn{
+            transform: scaleX(1.2);
+        }
     }
-    .long-btn{
-        transform: scaleX(1.2);
-    }
-}
 }
 
 .panik{
@@ -293,6 +291,7 @@ Button
     .panik {
         padding: $spacing-2xl $spacing-2xl;
     }
+
     h6{
         margin: 0px;
     }

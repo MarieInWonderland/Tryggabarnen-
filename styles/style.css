@@ -116,7 +116,7 @@ Button
 
 @media (max-width: 572px) {
   .button--outlined .button {
-    padding: 12px 28px;
+    padding: 12px 24px;
   }
   .button--outlined .long-btn {
     transform: scaleX(1.2);
@@ -688,7 +688,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #34140b;
-  /*backdrop-filter: blur(25px);*/
 }
 nav .nav-header {
   display: flex;
@@ -1021,7 +1020,6 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
   justify-content: center;
   padding: 0px 56px;
   gap: 56px;
-  margin-bottom: 11.25rem;
 }
 .content-block .picture-stod {
   max-width: 500px;
@@ -1114,6 +1112,13 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
   margin-top: 15rem;
 }
 
+.about-us, .stodchat, .aktivitet-och-stod {
+  margin-bottom: 10rem;
+}
+
+/*.stochat-bis{
+    margin-bottom: 5rem;
+}*/
 .what-is-trygga-hang .article-content {
   min-width: 70%;
 }

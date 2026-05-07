@@ -1,7 +1,8 @@
 @import 'bases';       
 @import 'typography';
 
-/*Hero used for för barn och unga, trygga häng, aktivitet and Stödverksamhet*/
+/*Hero */
+/* used for för barn och unga, trygga häng, aktivitet and Stödverksamhet*/
 
 .hero{
     width: 100vw;
@@ -110,6 +111,7 @@
 
 @media (max-width:$breakpoint-tablet){
     .hero{
+
         .in-danger{
             width: 30%;
         }
@@ -120,7 +122,8 @@
 }
 @media (max-width:$breakpoint-mobile){
     .hero{
-        padding: $spacing-3xl ;
+        padding: $spacing-3xl;
+
         .in-danger{
             width: 50%;
         }
@@ -132,6 +135,7 @@
 }
 
 /*Your right*/
+
 .your-right{
     display: flex;
     flex-direction: column;
@@ -171,6 +175,7 @@
 
 @media (max-width:$breakpoint-tablet){
     .your-right{
+
         .your-right-content{
             grid-template-columns: repeat(2, 1fr);
             
@@ -200,6 +205,7 @@
 }
 
 /*Stories*/
+
 .stories{
     display: flex;
     flex-direction: column;
@@ -230,22 +236,27 @@
             .story-wrapper{
                 display: flex;
                 gap: -2px;
+                height: 100%;
+
                 .icon-quote{
                     width: 62px;
                     height: 62px;
                     color: $illustrations-brand-yellow;
                 }
+
                 .story{
                         width: 85%;
                         display: flex;
                         flex-direction: column;
                         align-items: flex-end;
                         justify-content: space-between;
+
                         .autor{
                             display: flex;
                             gap: $spacing-sm;
-                            height: 100%;
+                            height: fit-content;
                         }
+
                         p{
                             color:$text-invert;
                             height: 100%;
@@ -287,6 +298,7 @@ Stödversamhet
 
 .different-groups{
     margin-top: 14.75rem;
+    margin-bottom: 12rem;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2,1fr);
@@ -298,6 +310,8 @@ Stödversamhet
     .group-card{
         height: 100%;
         background-color: $background-brand;
+        display: flex;
+        flex-direction: column;
         gap: $spacing-2xl;
         padding: $spacing-5xl $spacing-3xl;
         border-radius: $border-radius-md;
@@ -308,9 +322,14 @@ Stödversamhet
             align-items: center;
             color: $text-invert;
             fill: $text-invert;
+            gap:$spacing-md;
         }
         p{
             color: $text-invert;
+        }
+
+        &:hover{
+            opacity: 90%;
         }
     }
 }
@@ -328,19 +347,22 @@ Stödversamhet
     }
 }
 
-/*Information bottom used also in trygga-hang*/
+/* Information bottom*/
+/* used also in trygga-hang*/
+
 .informations{
     margin-top: 14.75rem;
     padding: $spacing-none $spacing-9xl;
 
     .information-bottom{
-        padding: $spacing-none $spacing-9xl;
+        padding: $spacing-none 137.5px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        gap: $spacing-9xl;
         margin-bottom: 10rem;
 
         .other-information{
-            width: 80%;
+            width: 40%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -477,7 +499,6 @@ Trygga-häng
         gap: $spacing-4xl;
 
         .activity-card{
-            // width: 20.063rem;
             height: 26.875rem;
             padding: $spacing-3xl;
             background-position: center;
