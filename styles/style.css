@@ -226,6 +226,49 @@ Icon
 }
 
 /*==================
+Margin 
+====================*/
+.margin {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.margin-hero {
+  margin-top: 12rem;
+  margin-bottom: 10rem;
+}
+
+.margin-bottom {
+  margin-bottom: 10rem;
+}
+
+@media (max-width: 769px) {
+  .margin {
+    margin-top: 7.5rem;
+    margin-bottom: 7.5rem;
+  }
+  .margin-hero {
+    margin-top: 9.6rem;
+    margin-bottom: 7.5rem;
+  }
+  .margin-bottom {
+    margin-bottom: 7.5rem;
+  }
+}
+@media (max-width: 572px) {
+  .margin {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .margin-hero {
+    margin-top: 11rem;
+    margin-bottom: 5rem;
+  }
+  .margin-bottom {
+    margin-bottom: 5rem;
+  }
+}
+/*==================
 Breakpoints 
 ====================*/
 /*Font*/
@@ -1111,20 +1154,10 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
   fill: #34140b;
 }
 
-.about-us, .stodchat {
-  margin-top: 15rem;
-}
-
-.about-us, .stodchat, .aktivitet-och-stod {
-  margin-bottom: 10rem;
-}
-
-/*.stochat-bis{
-    margin-bottom: 5rem;
-}*/
 .what-is-trygga-hang {
   width: 80%;
-  margin: 15rem auto 120px auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .what-is-trygga-hang .article-content {
   min-width: 70%;
@@ -1152,7 +1185,6 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 @media (max-width: 572px) {
   .content-block {
     flex-direction: column;
-    margin-bottom: 5rem;
   }
   .content-block .picture {
     width: 100%;
@@ -1179,7 +1211,6 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
   align-items: flex-start;
   gap: 16px;
   padding: 0px 48px;
-  margin-bottom: 5.938rem;
 }
 .events .preamble-lg {
   max-width: 40%;
@@ -1279,11 +1310,12 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 /*Testionial*/
 .testimonial {
   max-width: 60%;
-  margin: 251px auto;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 24px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .testimonial .testimonial-text {
   display: flex;
@@ -1315,13 +1347,11 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
   .testimonial {
     max-width: 100%;
     padding: 56px;
-    margin: 150px auto;
   }
 }
 /*To the adult*/
 .to-the-adult {
   width: 100%;
-  margin-top: 10rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1385,7 +1415,6 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 @media (max-width: 572px) {
   .to-the-adult {
     padding: 0px 16px;
-    margin-top: 5rem;
   }
   .to-the-adult .landscape-section {
     flex-direction: column;
@@ -1410,8 +1439,6 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
   align-items: flex-start;
   gap: 48px;
   padding: 0px 48px;
-  margin-top: 11.625rem;
-  margin-bottom: 11.625rem;
 }
 .donation .donation-text {
   display: flex;
@@ -1478,7 +1505,6 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 @media (max-width: 572px) {
   .donation {
     padding: 0px 16px;
-    margin-top: 5rem;
   }
   .donation .donation-content {
     flex-direction: column;

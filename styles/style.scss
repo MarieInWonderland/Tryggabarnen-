@@ -570,21 +570,11 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
     }
 }
 
-.about-us, .stodchat{
-    margin-top: 15rem;
-}
-
-.about-us, .stodchat, .aktivitet-och-stod {
-    margin-bottom: 10rem;
-}
-
-/*.stochat-bis{
-    margin-bottom: 5rem;
-}*/
-
 .what-is-trygga-hang{
     width: 80%;
-    margin: 15rem auto 120px auto;
+    margin-left:auto;
+    margin-right: auto;
+
 
     .article-content{
         min-width: 70%;
@@ -616,7 +606,6 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 @media (max-width:$breakpoint-mobile) {
     .content-block{
         flex-direction: column;
-        margin-bottom: 5rem;
 
         .picture{
             width: 100%;
@@ -650,7 +639,6 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
     align-items: flex-start;
     gap: $spacing-3xl;
     padding: $spacing-none $spacing-9xl;
-    margin-bottom: 5.938rem;
 
     .preamble-lg{
         max-width: 40%
@@ -774,11 +762,12 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 
 .testimonial{
     max-width: 60%;
-    margin: 251px auto;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: $spacing-5xl;
+    margin-left: auto;
+    margin-right: auto;
 
     .testimonial-text{
         display: flex;
@@ -813,9 +802,7 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 @media (max-width:$breakpoint-tablet) {
     .testimonial{
         max-width: 100%;
-        padding: $spacing-10xl;
-        margin: 150px auto; 
-
+        padding: $spacing-10xl; 
     }
 }
 
@@ -823,7 +810,6 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 
 .to-the-adult{
     width: 100%;
-    margin-top: 10rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -909,7 +895,6 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 @media (max-width:$breakpoint-mobile){
     .to-the-adult{
         padding: $spacing-none $spacing-3xl;
-        margin-top: 5rem;
 
         .landscape-section{
             flex-direction: column;
@@ -947,8 +932,6 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
     align-items: flex-start;
     gap: $spacing-9xl;
     padding: $spacing-none $spacing-9xl;
-    margin-top: 11.625rem;
-    margin-bottom: 11.625rem;
 
     .donation-text{
         display: flex;
@@ -1035,7 +1018,6 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 @media (max-width:$breakpoint-mobile) {
     .donation{
         padding: $spacing-none $spacing-3xl;
-        margin-top: 5rem;
 
         .donation-content{
             flex-direction: column;
