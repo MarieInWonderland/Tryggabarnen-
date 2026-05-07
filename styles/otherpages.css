@@ -947,6 +947,8 @@ Stödversamhet
 }
 @media (max-width: 572px) {
   .different-groups {
+    margin-top: 10rem;
+    margin-bottom: 7rem;
     padding: 0px 16px;
     grid-template-columns: repeat(1, 1fr);
   }
@@ -958,7 +960,7 @@ Stödversamhet
   padding: 0px 48px;
 }
 .informations .information-bottom {
-  padding: 0px 137.5px;
+  padding: 0px;
   display: flex;
   justify-content: center;
   gap: 48px;
@@ -970,6 +972,7 @@ Stödversamhet
   flex-direction: column;
   align-items: center;
   padding: 40px;
+  gap: 8px;
 }
 .informations .information-bottom .other-information .info-title-and-lign {
   display: flex;
@@ -983,23 +986,51 @@ Stödversamhet
   height: 4px;
   width: 100%;
 }
+.informations .information-bottom .other-information .info-title-and-lign .lign-kort {
+  height: 4px;
+  width: 70%;
+}
 .informations .information-bottom .other-information .info-title-and-lign .info-title {
   display: flex;
   cursor: pointer;
+  align-items: center;
 }
 .informations .information-bottom .other-information .info-title-and-lign p {
   text-align: center;
+}
+.informations .fler-trygga {
+  width: 100%;
+}
+.informations .fler-trygga .other-information {
+  align-items: flex-start;
+  padding: 40px 0px 40px 0px;
+}
+.informations .fler-trygga .other-information .info-title-and-lign {
+  align-items: flex-start;
 }
 
 @media (max-width: 769px) {
   .informations {
     padding: 0px 24px;
+    margin-bottom: 5rem;
+  }
+  .informations .information-bottom {
+    padding: 0px;
+    gap: 24px;
+  }
+  .informations .information-bottom .other-information {
+    width: 100%;
+    padding: 0px 16px;
+  }
+  .informations .information-bottom .other-information .info-title-and-lign {
+    align-items: center;
   }
   .informations .fler-trygga {
     flex-direction: column;
-    gap: 24px;
-    align-items: center;
+    gap: 20px;
+    align-items: flex-start;
     padding: 24px 0px;
+    width: 60%;
   }
   .informations .fler-trygga .other-information {
     align-items: flex-start;
@@ -1038,7 +1069,7 @@ Trygga-häng
 ==================================================*/
 /*Heart-information*/
 .heart-informations {
-  padding: 0px 48px;
+  padding: 0px 145px;
   display: flex;
   justify-content: space-between;
   gap: 80px;
@@ -1056,6 +1087,12 @@ Trygga-häng
   text-align: center;
 }
 
+@media (max-width: 769px) {
+  .heart-informations {
+    padding: 0px 24px;
+    gap: 16px;
+  }
+}
 @media (max-width: 572px) {
   .heart-informations {
     flex-direction: column;
@@ -1273,6 +1310,18 @@ Aktivitet
   width: 100%;
   border: none;
   background-color: transparent;
+}
+.formulaire form .form-utan-btn input::-moz-placeholder, .formulaire form .form-utan-btn textarea::-moz-placeholder {
+  font-family: "BuenosAires";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.formulaire form .form-utan-btn input::placeholder, .formulaire form .form-utan-btn textarea::placeholder {
+  font-family: "BuenosAires";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
 }
 .formulaire form .form-utan-btn textarea {
   padding: 16px;

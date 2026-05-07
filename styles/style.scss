@@ -442,7 +442,11 @@ MAIN
         }
         .statistics{
             flex-direction: column;
-            bottom: -350px
+            bottom: -350px;
+
+            .statistic{
+                max-width:none;
+            }
         }
     }
 }
@@ -479,7 +483,7 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
             align-items: flex-start;
             padding: $spacing-7xl;
 
-            background-color: $background-brand;
+            background-color: $effects-brand-a;
             border-radius: $border-radius-lg $border-radius-lg $border-radius-none $border-radius-lg ;
 
             .title-text{
@@ -566,7 +570,7 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
     }
 }
 
-.about-us, .stodchat, .what-is-trygga-hang{
+.about-us, .stodchat{
     margin-top: 15rem;
 }
 
@@ -579,6 +583,9 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
 }*/
 
 .what-is-trygga-hang{
+    width: 80%;
+    margin: 15rem auto 120px auto;
+
     .article-content{
         min-width: 70%;
 
@@ -807,6 +814,7 @@ Section used in index, trygga-hang, for-barn-och-unga and stodversamhet*/
     .testimonial{
         max-width: 100%;
         padding: $spacing-10xl;
+        margin: 150px auto; 
 
     }
 }

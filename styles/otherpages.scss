@@ -342,6 +342,8 @@ Stödversamhet
 
 @media (max-width:$breakpoint-mobile){
     .different-groups{
+        margin-top: 10rem;
+        margin-bottom: 7rem;
         padding: $spacing-none $spacing-3xl;
         grid-template-columns: repeat(1, 1fr);
     }
@@ -355,7 +357,7 @@ Stödversamhet
     padding: $spacing-none $spacing-9xl;
 
     .information-bottom{
-        padding: $spacing-none 137.5px;
+        padding: $spacing-none;
         display: flex;
         justify-content: center;
         gap: $spacing-9xl;
@@ -367,6 +369,7 @@ Stödversamhet
             flex-direction: column;
             align-items: center;
             padding: $spacing-8xl;
+            gap:$spacing-lg;
 
             .info-title-and-lign{
                 display: flex;
@@ -382,9 +385,15 @@ Stödversamhet
                     width: 100%;
                 }
 
+                .lign-kort{
+                    height: 4px;
+                    width: 70%;
+                }
+
                 .info-title{
                     display: flex;
                     cursor: pointer;
+                    align-items: center;
                 }
 
                 p{
@@ -393,19 +402,50 @@ Stödversamhet
             }
         }
     }
+    .fler-trygga{
+        width: 100%;
+
+
+        .other-information{
+            align-items: flex-start;
+            padding: $spacing-8xl $spacing-none $spacing-8xl $spacing-none;
+
+            .info-title-and-lign{
+                align-items: flex-start;
+            }
+        }
+    }
 }
 @media (max-width:$breakpoint-tablet) {
     .informations{
         padding:$spacing-none $spacing-5xl;
+        margin-bottom: 5rem;
+
+        .information-bottom{
+            padding: $spacing-none;
+            gap:$spacing-5xl;
+
+            .other-information{
+                width: 100%;
+                padding: $spacing-none $spacing-3xl;
+
+                .info-title-and-lign{
+                    align-items: center;
+                }
+            }
+        }
 
         .fler-trygga{
             flex-direction: column;
-            gap: $spacing-5xl;
-            align-items: center;
+            gap: $spacing-4xl;
+            align-items: flex-start;
             padding: $spacing-5xl $spacing-none;
+            width: 60%;
+
             .other-information{
                 align-items: flex-start;
                 padding:0px;
+
                 .info-title-and-lign{
                     align-items: flex-start;
                 }
@@ -448,7 +488,7 @@ Trygga-häng
 /*Heart-information*/
 
 .heart-informations{
-    padding: $spacing-none $spacing-9xl;
+    padding: $spacing-none 145px;
     display: flex;
     justify-content: space-between;
     gap: $spacing-13xl;
@@ -465,6 +505,13 @@ Trygga-häng
             align-items: center;
             text-align: center;
         }
+    }
+}
+
+@media (max-width:$breakpoint-tablet){
+    .heart-informations{
+        padding: $spacing-none $spacing-5xl;
+        gap:$spacing-3xl;
     }
 }
 
@@ -721,6 +768,13 @@ Aktivitet
             width: 100%;
             border: none;
             background-color: transparent;
+
+                &::placeholder{
+                    font-family: $body;
+                    font-weight: $book;
+                    font-size: $font-size-sm;
+                    line-height: $line-height-lg;
+                }
             }
             textarea{
                 padding:$spacing-3xl;
